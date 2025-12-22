@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#037D8A</color>
+    <color name="colorPrimary_50">#80037D8A</color>
+    <color name="colorPrimaryDark">#006667</color>
+    <color name="colorAccent">#ffcb31</color>
+    <color name="colorAccentDark">#dfab11</color>
+    <color name="colorAccent_50">#80ffcb31</color>
+
+    <color name="generic_bg_grey">#E4E7EB</color>
+    <color name="generic_bg_grey_card">#F5F6F9</color>
+    <color name="grey_background">#E4E7EB</color>
+    <color name="grey_discovery_background">#F9FAFA</color>
+    <color name="greyish_brown">#3c3c3c</color>
+    <color name="greyish_brown_two">#4d4d4d</color>
+    <color name="greyish_brown_two_50">#4d4d4d7f</color>
+    <color name="light_gray">#f2f2f2</color>
+    <color name="light_grey_two">#757575</color>
+    <color name="light_gray_50">#80f2f2f2</color>
+    <color name="settings_grey">#a8a8a8</color>
+    <color name="horseshoe_stroke_color">#616161</color>
+    <color name="dark_grey">#333333</color>
+    <color name="background_grey">#cfcfcf</color>
+    <color name="default_color">#FAFAFA</color>
+    <color name="splash_background_pink">#D81B60</color>
+    <color name="grey_light">#FF616161</color>
+    <color name="icon_background_pink">#EC0677</color>
+    <color name="auth_background_pink">#EC0677</color>
+
+    <color name="article_numbered_list_background">#FAE9CC</color>
+    <color name="article_numbered_list_number">#FAE9CC</color>
+    <color name="article_bullet_list_background">#CCEDEB</color>
+    <color name="article_bullet_list_tick">#09707E</color>
+
+    <color name="health_unlocked_green">#32b678</color>
+    <color name="walking_plan_not_started_horseshoe">#e6f2f3</color>
+    <color name="light_grey">#BDBDBD</color>
+    <color name="very_light_pink">#f2f2f2</color>
+    <color name="very_light_grey">#f9f9f9</color>
+    <color name="background_light_grey">#f8f9f9</color>
+    <color name="black">#000000</color>
+    <color name="black_33">#212121</color>
+    <color name="black_33_opacity_30">#4D212121</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_50">#80000202</color>
+    <color name="border_grey">#979797</color>
+    <color name="border_grey_50_opacity">#80979797</color>
+
+    <color name="grey_empty_text">#939393</color>
+    <color name="unfinished_paint_color">#00a7a8</color>
+
+    <color name="iron_grey">#4b4b4b</color>
+    <color name="black_transparent_20">#33000000</color>
+
+    <color name="input_text_title">#1A1A1A</color>
+    <color name="error_red">#DE1C22</color>
+    <color name="error_input">#E20000</color>
+    <color name="button_color_stroke">#1A1A1A</color>
+    <color name="disconnect_color">#DF1642</color>
+    <color name="nhs_blue">#005EB8</color>
+
+    <color name="input_text">#AE1A1A1A</color>
+    <color name="input_border">#C7C7C7</color>
+    <color name="input_border_focus">#008286</color>
+    <color name="input_border_error">#DE1C22</color>
+    <color name="input_background_disabled">#E4E4E4</color>
+
+    <color name="divider_color">#e8ecef</color>
+    <color name="white">#ffffff</color>
+    <color name="white_transparent_94">#f0ffffff</color>
+    <color name="grey_44">#444444</color>
+    <color name="burgundy">#7F006A</color>
+    <color name="blue">#0E27FD</color>
+    <color name="yellow">#F7A425</color>
+    <color name="yellow_trophy">#FFCD31</color>
+    <color name="bar_chart_yellow">#efca4c</color>
+    <color name="grey_58">#585858</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="bhInactiveBackground">@color/light_grey_two</color>
+
+    <color name="colorAthensGray">#F5F6F9</color>
+    <color name="colorMentalHealth">#177AC0</color>
+</resources>

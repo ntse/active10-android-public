@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bhWhite"
+        android:elevation="5dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/article_video_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="22dp"
+            android:background="@color/bhInactiveBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="368:236"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcUrl="@{imageUrl}" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:src="@drawable/bh_audio_play"
+            app:layout_constraintBottom_toBottomOf="@id/article_video_placeholder"
+            app:layout_constraintEnd_toEndOf="@id/article_video_placeholder"
+            app:layout_constraintStart_toStartOf="@id/article_video_placeholder"
+            app:layout_constraintTop_toTopOf="@id/article_video_placeholder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

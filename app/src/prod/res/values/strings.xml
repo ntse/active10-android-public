@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="deeplink_link_host">nhs-active-10.onelink.me</string>
+    <string name="deeplink_link_todays_walk_path">/Wvth/todays-walks</string>
+    <string name="deeplink_link_my_walking_plans_path">/Wvth/my-walking-plans</string>
+    <string name="deeplink_link_share_path">/Wvth/share</string>
+</resources>

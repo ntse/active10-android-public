@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bhPagerIndicatorTitle" type="id" />
+    <item name="bhPagerIndicatorDescription" type="id" />
+    <item name="bhPagerIndicatorPrevButton" type="id" />
+    <item name="bhPagerIndicatorNextButton" type="id" />
+
+    <attr name="bhPagerIndicatorStyle" format="reference" />
+    <attr name="bhPagerIndicatorButtonStyle" format="reference" />
+
+    <declare-styleable name="BHPagerIndicator" >
+        <attr name="pagerTitle" format="string" />
+        <attr name="pagerDescription" format="string" />
+        <attr name="pagerButtonPrevText" format="string" />
+        <attr name="pagerButtonPrevContentDescription" format="string" />
+        <attr name="pagerButtonNextText" format="string" />
+        <attr name="pagerButtonNextContentDescription" format="string" />
+    </declare-styleable>
+
+</resources>

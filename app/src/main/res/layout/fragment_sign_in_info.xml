@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.signIn.SignInInfoFragment">
+
+    <include
+        android:id="@+id/signInInfoToolbar"
+        layout="@layout/custom_toolbar_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="25dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signInInfoToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/BU_25"
+            android:touchscreenBlocksFocus="false">
+
+            <com.flipsidegroup.active10.utils.view.HeadingTextView
+                android:id="@+id/signInInfoTitle"
+                style="@style/HeaderExtraLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Create an optional account using your NHS login" />
+
+            <include
+                android:id="@+id/signInInfoTipLayout"
+                layout="@layout/item_sign_in_icon_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BU_25"
+                android:layout_marginBottom="@dimen/BU_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signInInfoTitle" />
+
+            <LinearLayout
+                android:id="@+id/signInInfoLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BU_25"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/signInInfoTipLayout" />
+
+            <View
+                android:id="@+id/signInInfoDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:background="@color/divider_color"
+                app:layout_constraintTop_toTopOf="@id/signInInfoLL" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

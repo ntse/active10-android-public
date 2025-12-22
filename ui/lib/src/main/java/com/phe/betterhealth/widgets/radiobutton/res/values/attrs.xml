@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bhRadioGroupError" type="id" />
+
+    <attr name="bhRadioGroupErrorStyle" format="reference" />
+    <attr name="bhRadioButtonStyle" format="reference" />
+
+    <declare-styleable name="BHRadioGroup">
+        <attr name="bhRadioGroupStyle" format="reference" />
+        <attr name="errorMessage" />
+    </declare-styleable>
+
+    <declare-styleable name="BHRadioButton" />
+</resources>

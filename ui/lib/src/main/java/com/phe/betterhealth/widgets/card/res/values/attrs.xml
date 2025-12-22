@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bhCardWrapper" type="id" />
+    <item name="bhCardHeader" type="id" />
+    <item name="bhCardHeaderTitle" type="id" />
+    <item name="bhCardHeaderDescription" type="id" />
+    <item name="bhCardHeaderInfo" type="id" />
+    <item name="bhCardContent" type="id" />
+    <item name="bhCardFooter" type="id" />
+    <item name="bhCardFooterButton" type="id" />
+
+    <attr name="bhCardStyle" format="reference" />
+    <attr name="bhCardHeaderStyle" format="reference" />
+    <attr name="bhCardHeaderTitleStyle" format="reference" />
+    <attr name="bhCardHeaderInfoStyle" format="reference" />
+    <attr name="bhCardHeaderDescriptionStyle" format="reference" />
+    <attr name="bhCardFooterButtonStyle" format="reference" />
+
+    <declare-styleable name="BHCardView">
+        <attr name="cardHeaderTitle" format="string" />
+        <attr name="cardHeaderDescription" format="string" />
+        <attr name="cardHeaderInfo" format="string" />
+        <attr name="cardFooterButtonText" format="string" />
+        <attr name="cardFooterButtonContentDescription" format="string" />
+    </declare-styleable>
+</resources>

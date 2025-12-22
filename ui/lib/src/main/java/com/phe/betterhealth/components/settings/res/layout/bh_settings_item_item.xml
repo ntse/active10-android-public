@@ -1,0 +1,169 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.settings.SettingsAdapter">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="settingItem"
+            type="com.phe.betterhealth.components.settings.SettingsMenuItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:text="@{settingItem.name}"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="@dimen/settings_body_text_size"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/value_view_1"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_min="128dp"
+                tools:text="About you"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/value_view_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="2dp"
+                android:contentDescription="@{settingItem.contentDescription}"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="end"
+                android:maxLines="4"
+                android:text="@{settingItem.value}"
+                android:textAlignment="textEnd"
+                android:textColor="?colorPrimary"
+                android:textSize="@dimen/settings_body_text_size"
+                app:iconEnd="@{settingItem.markItem ? @drawable/ic_mark_settings_item : null}"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toTopOf="@id/value_view_2"
+                app:layout_constraintEnd_toStartOf="@id/chevron"
+                app:layout_constraintStart_toEndOf="@id/title_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="200dp"
+                app:layout_goneMarginBottom="18dp"
+                tools:text="@tools:sample/lorem/random"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/value_view_2"
+                style="?bhArticleCardContentStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="18dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLines="1"
+                android:text="@{settingItem.valueSecond}"
+                android:textColor="?colorPrimary"
+                android:visibility="@{settingItem.valueSecond != null}"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/chevron"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@id/title_view"
+                app:layout_constraintStart_toStartOf="@id/value_view_1"
+                app:layout_constraintTop_toBottomOf="@id/value_view_1"
+                app:layout_constraintWidth_min="wrap"
+                tools:text="22"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/chevron"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:padding="5dp"
+                android:src="@drawable/bh_chevron_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/subtitle"
+            style="?attr/bhSettingsSecondaryTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="end"
+            android:text="@{settingItem.subtitle}"
+            android:textSize="@dimen/settings_body_text_size"
+            android:visibility="@{settingItem.subtitle != null}"
+            app:layout_constraintBottom_toTopOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_container"
+            tools:text="Subtitle"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/description"
+            style="?attr/bhSettingsSecondaryTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="47dp"
+            android:layout_marginBottom="18dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_vertical"
+            android:text="@{settingItem.description}"
+            android:textSize="@dimen/settings_body_text_size"
+            android:visibility="@{settingItem.description != null ? View.VISIBLE : View.GONE}"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle"
+            app:lineHeight="24sp"
+            tools:text="Lorem ipsum" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bhDivider"
+            android:visibility="@{settingItem.divider}"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

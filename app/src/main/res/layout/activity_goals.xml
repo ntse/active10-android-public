@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <LinearLayout
+        android:id="@+id/goalsParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top">
+
+        <include
+            android:id="@+id/goalsToolbar"
+            layout="@layout/custom_toolbar" />
+
+        <include
+            android:id="@+id/goalsWhiteToolbar"
+            layout="@layout/custom_toolbar_white" />
+
+        <FrameLayout
+            android:id="@+id/goalsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goalsAddCustomGoalButton"
+            style="@style/SecondaryButtonLarge"
+            android:layout_marginTop="@dimen/BU_12"
+            android:text="@string/add_custom_motivation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goalsContinueButton"
+            style="@style/TealButtonLarge"
+            android:layout_marginBottom="@dimen/BU_24"
+            android:layout_marginTop="@dimen/BU_24"
+            android:text="@string/button_save_and_continue" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

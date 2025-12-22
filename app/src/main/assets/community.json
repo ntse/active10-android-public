@@ -1,0 +1,28 @@
+{
+   "about":{
+      "text":"Modern life makes it hard to be healthy. \n\nWithout knowing it, by the time we reach our 40s and 50s, many of us will have dramatically increased our chances of becoming ill later in life. The good news is we can fight back. \n\nOne You is here to help you get back to a healthier you - providing tools, ideas and encouragement to make the simple changes that can add up to a longer and happier life. \n\nBecause there is only One You"
+   },
+   "apps":[
+      {
+         "name":"Couch To 5K",
+         "description":"The Couch to 5K app has been designed to get you off the couch and running in just nine weeks.",
+         "ios":"https://itunes.apple.com/gb/app/one-you-couch-to-5k/id1082307672?mt=8",
+         "android":"https://play.google.com/store/apps/details?id=com.phe.couchto5K&hl=en_GB",
+         "icon":"couch_to_5k"
+      },
+      {
+         "name":"Easy Meals",
+         "description":"Our free Easy Meals app is a great way to eat tasty, healthier food the whole family will love.",
+         "ios":"https://itunes.apple.com/gb/app/one-you-easy-meals/id1082307333?mt=8",
+         "android":"https://play.google.com/store/apps/details?id=com.PHE.smartrecipes&hl=en_GB",
+         "icon":"easy_meals"
+      },
+      {
+         "name":"Drink Free Days",
+         "description":"A simple and easy way to track the days you drink alcohol and the days you don't.",
+         "ios":"https://itunes.apple.com/gb/app/one-you-drink-free-days/id1196694906?mt=8",
+         "android":"https://play.google.com/store/apps/details?id=com.phe.daysoff&hl=en_GB",
+         "icon":"drink_free"
+      }
+   ]
+}

@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <receiver
+            android:name=".BriskCounter$SensorBroadcast"
+            android:exported="false">
+            <intent-filter>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.cumulative" />
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.delta" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

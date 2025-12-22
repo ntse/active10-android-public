@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background"
+    tools:context=".presentation.todaywalk.TodayWalkFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/todayWalkToolbar"
+        style="@style/ToolbarBig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top"
+        app:title="@string/bottom_nav_menu_today_walk" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/BU_90"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/todayWalkToolbar" />
+
+    <com.flipsidegroup.active10.presentation.common.widgets.NotifyNestedScrollView
+        android:id="@+id/today_walk_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/BU_13"
+        android:paddingEnd="@dimen/BU_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todayWalkToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <com.phe.betterhealth.widgets.banner.BHBannerView
+                android:id="@+id/campaign_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <com.phe.betterhealth.widgets.banner.BHBannerView
+                android:id="@+id/today_walk_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="@dimen/elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/today_walk_banner"
+                app:layout_goneMarginTop="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_header_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/headerImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/numberImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:importantForAccessibility="no"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/headerImage"
+                        app:layout_constraintEnd_toEndOf="@id/headerImage"
+                        app:layout_constraintStart_toStartOf="@id/headerImage"
+                        app:layout_constraintTop_toTopOf="@id/headerImage"
+                        app:layout_constraintVertical_bias="0.7"
+                        tools:text="5" />
+
+                    <TextView
+                        android:id="@+id/todayWalkRewardTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/BU_8"
+                        android:layout_marginEnd="@dimen/BU_16"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@id/todayWalkRewardDescription"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/headerImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="@tools:sample/lorem" />
+
+                    <TextView
+                        android:id="@+id/todayWalkRewardDescription"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/BU_8"
+                        android:layout_marginEnd="@dimen/BU_16"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/headerImage"
+                        app:layout_constraintTop_toBottomOf="@id/todayWalkRewardTitle"
+                        tools:text="@tools:sample/lorem" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_header_pace_checker_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/card_header_pace_checker_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="17dp"
+                        android:src="@drawable/ic_pace_checker_banner"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/card_header_pace_checker_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Check out our new Pace Checker feature. Simply scroll down this page to find it."
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card_header_pace_checker_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lineHeight="24sp" />
+
+                    <TextView
+                        android:id="@+id/card_header_pace_checker_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Close"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="14sp"
+                        app:drawableEndCompat="@drawable/ic_close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/card_header_my_walks_new_feature_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/card_header_my_walks_new_feature_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@drawable/ic_pace_checker_banner" />
+
+                    <TextView
+                        android:id="@+id/card_header_my_walks_new_feature_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/card_header_my_walks_new_feature_icon"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lineHeight="24sp"
+                        tools:text="@tools:sample/lorem/random"
+                        tools:lines="3"/>
+
+                    <TextView
+                        android:id="@+id/card_header_my_walks_new_feature_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Close"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="14sp"
+                        app:drawableEndCompat="@drawable/ic_close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Close"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BU_10"
+                app:cardCornerRadius="@dimen/BU_10"
+                app:cardElevation="@dimen/elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardHeader"
+                tools:visibility="visible">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/headerHorseShoe"
+                        style="@style/HeaderLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/BU_54"
+                        android:background="@drawable/bg_cardview_top_corners"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/BU_15"
+                        android:paddingEnd="@dimen/BU_0"
+                        android:text="@string/current_active_10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.flipsidegroup.active10.utils.TodaysWalkHorseShoeProgressBar
+                        android:id="@+id/horseShoePB"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/today_walk_header_margin"
+                        app:layout_constraintBottom_toTopOf="@id/todays_walks_progress_current_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/headerHorseShoe"
+                        tools:layout_height="250dp" />
+
+                    <TextView
+                        android:id="@+id/todays_walks_progress_current_text"
+                        style="@style/HeaderMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="-12dp"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintBottom_toTopOf="@id/todaysTotalLabel"
+                        app:layout_constraintEnd_toStartOf="@id/todays_walks_progress_max_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/horseShoePB" />
+
+                    <TextView
+                        android:id="@+id/todays_walks_progress_max_text"
+                        style="@style/HeaderMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-12dp"
+                        android:layout_marginEnd="12dp"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/todays_walks_progress_current_text"
+                        app:layout_constraintTop_toBottomOf="@id/horseShoePB" />
+
+                    <ImageView
+                        android:id="@+id/horseShoeRewardImageView"
+                        android:layout_width="146dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/horseShoePB"
+                        app:layout_constraintEnd_toEndOf="@id/horseShoePB"
+                        app:layout_constraintStart_toStartOf="@id/horseShoePB"
+                        app:layout_constraintTop_toTopOf="@+id/horseShoePB"
+                        app:layout_constraintVertical_bias="0.33" />
+
+                    <TextView
+                        android:id="@+id/todaysTotalLabel"
+                        style="@style/HeaderLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/BU_54"
+                        android:layout_marginTop="@dimen/BU_10"
+                        android:background="@drawable/bg_cardview_top_corners"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/BU_15"
+                        android:paddingEnd="@dimen/BU_0"
+                        android:text="@string/today_s_total"
+                        app:layout_constraintTop_toBottomOf="@+id/todays_walks_progress_current_text" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/BU_0"
+                        android:background="@drawable/bg_cardview_top_corners"
+                        app:layout_constraintBottom_toTopOf="@+id/trophyTV"
+                        app:layout_constraintTop_toTopOf="@+id/briskCard" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/briskCard"
+                        android:layout_width="@dimen/BU_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/BU_15"
+                        android:layout_marginEnd="@dimen/BU_5"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:layout_constraintEnd_toStartOf="@+id/totalCard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/todaysTotalLabel">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/briskTotal"
+                                style="@style/HeaderMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:importantForAccessibility="no" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:importantForAccessibility="no"
+                                android:text="@string/brisk_walking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/totalCard"
+                        android:layout_width="@dimen/BU_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/BU_5"
+                        android:layout_marginEnd="@dimen/BU_15"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/briskCard"
+                        app:layout_constraintTop_toBottomOf="@+id/todaysTotalLabel">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:focusable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/minsTotal"
+                                style="@style/HeaderMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:importantForAccessibility="no" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="center"
+                                android:importantForAccessibility="no"
+                                android:text="@string/total_walking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/walkingLAV"
+                        android:layout_width="50dp"
+                        android:layout_height="80dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/horseShoePB"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:lottie_fileName="walking.json"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:id="@+id/trophyTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:background="@color/white"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingStart="@dimen/BU_15"
+                        android:paddingTop="@dimen/BU_10"
+                        android:paddingEnd="@dimen/BU_0"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_18"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/totalCard"
+                        tools:text="0 out of 3 Active 10's" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/trophyRV"
+                        android:layout_width="@dimen/BU_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/today_walk_trophy_bottom_margin"
+                        android:background="@drawable/bg_cardview_bottom_corners"
+                        android:gravity="center"
+                        android:padding="@dimen/BU_15"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/trophyTV"
+                        tools:itemCount="5"
+                        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_trophy"
+                        tools:orientation="horizontal" />
+
+                    <FrameLayout
+                        android:id="@+id/loading_walks_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@color/white_transparent_94"
+                        android:elevation="10dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            app:cardBackgroundColor="@color/input_border_focus"
+                            app:cardCornerRadius="8dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/HeaderLarge"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:gravity="center"
+                                    android:text="@string/loading_your_walks_title"
+                                    android:textColor="@color/white"
+                                    android:textSize="28sp" />
+
+                                <TextView
+                                    style="@style/HeaderMedium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="24dp"
+                                    android:gravity="center"
+                                    android:text="@string/loading_your_walks_message"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </FrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/today_walk_pace_checker_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="@dimen/elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/mainCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/today_walk_pace_checker_content_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.phe.betterhealth.widgets.common.HeadingTextView
+                        android:id="@+id/today_walk_pace_checker_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F5F6F9"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:paddingHorizontal="17dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="8dp"
+                        android:text="Check your walking pace"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="24sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/today_walk_pace_checker_button_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginVertical="20dp"
+                        app:cardBackgroundColor="@color/yellow_trophy"
+                        app:cardCornerRadius="33dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/today_walk_pace_checker_title"
+                        app:strokeColor="#906C00"
+                        app:strokeWidth="3dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/today_walk_pace_checker_button_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="23dp"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="Open Pace Checker"
+                                android:textColor="@color/bhTextPrimary"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/today_walk_pace_checker_button_icon"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/today_walk_pace_checker_button_icon"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginEnd="12dp"
+                                android:src="@drawable/ic_today_walk_pace_checker"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/BU_10"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="@dimen/elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/today_walk_pace_checker_container">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/helpContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/helpBriskImageView"
+                        android:layout_width="@dimen/BU_80"
+                        android:layout_height="@dimen/BU_80"
+                        android:layout_marginStart="@dimen/BU_15"
+                        android:layout_marginTop="@dimen/BU_15"
+                        android:layout_marginBottom="@dimen/BU_15"
+                        android:background="@drawable/img_what_is_brisk"
+                        android:contentDescription="@null"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/briskWalkingLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/BU_25"
+                        android:layout_marginTop="@dimen/BU_15"
+                        android:layout_marginEnd="@dimen/BU_8"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="start"
+                        android:text="@string/brisk_walking"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/text_size_16"
+                        app:layout_constraintBottom_toTopOf="@id/briskWalkingHelpLabel"
+                        app:layout_constraintEnd_toStartOf="@id/arrowHelp"
+                        app:layout_constraintStart_toEndOf="@+id/helpBriskImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/briskWalkingHelpLabel"
+                        style="@style/HeaderMedium"
+                        android:layout_width="@dimen/BU_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/BU_25"
+                        android:layout_marginEnd="@dimen/BU_8"
+                        android:layout_marginBottom="@dimen/BU_15"
+                        android:text="@string/brisk_help"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/arrowHelp"
+                        app:layout_constraintStart_toEndOf="@+id/helpBriskImageView"
+                        app:layout_constraintTop_toBottomOf="@id/briskWalkingLabel" />
+
+                    <ImageView
+                        android:id="@+id/arrowHelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/ic_chevron_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.flipsidegroup.active10.presentation.common.widgets.NotifyNestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

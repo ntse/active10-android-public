@@ -1,0 +1,26 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <variable
+            name="heading"
+            type="String" />
+    </data>
+
+    <com.phe.betterhealth.widgets.common.HeadingTextView
+        android:id="@+id/article_item_heading_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bhArticleWlpBackground"
+        android:elevation="5dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="5dp"
+        android:text="@{heading}"
+        android:textColor="@color/bhTextPrimary"
+        android:textSize="18sp"
+        tools:lines="2"
+        tools:text="@tools:sample/lorem/random" />
+</layout>

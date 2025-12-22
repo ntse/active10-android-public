@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.BetterHealth.RadioButton" parent="Widget.BetterHealth.Checkbox">
+        <item name="android:drawableEnd">@drawable/bh_radio_background</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="drawableSize">46dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,104 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.modules.progress.moodchooser.answer.ProgressMoodChooserAnswerDialog">
+
+    <data>
+
+        <variable
+            name="relatedArticle"
+            type="com.phe.betterhealth.components.moodbottomdialog.BHRelatedArticle" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bh_mood_bottom_dialog_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.BetterHealth.MoodBottomDialogCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:cardBackgroundColor="@color/bhWhite"
+                app:cardElevation="0dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bh_mood_bottom_dialog_title"
+                        style="@style/Widget.BetterHealth.CardHeaderTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        tools:text="Thats great!" />
+
+                    <TextView
+                        android:id="@+id/bh_mood_bottom_dialog_subtitle"
+                        style="@style/Widget.BetterHealth.InputLayout.Title.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal"
+                        tools:text="Mass placerat duis ultricies lacus" />
+
+                    <TextView
+                        android:id="@+id/bh_mood_bottom_dialog_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="23sp"
+                        android:lineSpacingMultiplier="0"
+                        tools:text="Massa placerat duis ultricies lacus Nunc mattis enim ut tellus. Ullamcorper a lacus vestibulum sed arcu non odio euismod. Vitae semper quis lectus nulla at. Arcu cursus vitae congue mauris rhoncus aenean vel elit." />
+
+                    <include
+                        android:id="@+id/bh_mood_bottom_dialog_article"
+                        layout="@layout/bh_mood_bottom_dialog_related_article"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="40dp"
+                        app:isVisible="@{relatedArticle != null}"
+                        app:relatedArticle="@{relatedArticle}" />
+
+                    <com.phe.betterhealth.widgets.button.BHButton
+                        android:id="@+id/bh_mood_bottom_dialog_close_button"
+                        style="@style/Widget.BetterHealth.Button.Large.Filled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="#177AC0"
+                        app:strokeWidth="0dp"
+                        tools:text="Close" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:id="@+id/bh_mood_bottom_dialog_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/background_panel_mood_icon"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_mood_great" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

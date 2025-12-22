@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_brisk_question_mark" />
+
+    <TextView
+        android:id="@+id/dialog_missing_data_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/missing_data"
+        android:textAllCaps="true"
+        android:textColor="@color/black_33"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/dialog_missing_data_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/missing_data_subtitle"
+        android:textColor="@color/black_33"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/missing_data_description"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/text_size_16"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_missing_data_submit_button"
+        style="@style/PrimaryButtonLarge"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="26dp"
+        android:enabled="true"
+        android:text="@string/button_continue" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_missing_data_dismiss_button"
+        style="@style/SecondaryButtonLarge"
+        android:layout_marginBottom="26dp"
+        android:enabled="true"
+        android:text="@string/dismiss" />
+
+</LinearLayout>

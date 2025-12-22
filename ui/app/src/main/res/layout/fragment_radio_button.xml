@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.phe.betterhealth.demo.views.RadioButtonDemo"
+    tools:ignore="HardcodedText,UselessParent">
+
+    <com.phe.betterhealth.widgets.radiobutton.BHRadioGroup
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorMessage="There is an error">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?colorPrimaryDark" />
+
+        <com.phe.betterhealth.widgets.radiobutton.BHRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:text="Saturday" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?colorPrimaryDark" />
+
+        <com.phe.betterhealth.widgets.radiobutton.BHRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:text="Friday" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?colorPrimaryDark" />
+
+        <com.phe.betterhealth.widgets.radiobutton.BHRadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="5dp"
+            android:text="Wednesday" />
+    </com.phe.betterhealth.widgets.radiobutton.BHRadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/stateToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State toggle" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/badgeIconIv"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/badge_small_height"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_goal_setter_badge" />
+
+        <TextView
+            android:id="@+id/numberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:importantForAccessibility="no"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/badgeIconIv"
+            app:layout_constraintEnd_toEndOf="@id/badgeIconIv"
+            app:layout_constraintStart_toStartOf="@id/badgeIconIv"
+            app:layout_constraintTop_toTopOf="@id/badgeIconIv"
+            app:layout_constraintVertical_bias="0.7"
+            tools:text="5" />
+
+        <TextView
+            android:id="@+id/badgeTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textColor="@color/grey_44"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toEndOf="@id/badgeIconIv"
+            app:layout_constraintStart_toStartOf="@id/badgeIconIv"
+            app:layout_constraintTop_toBottomOf="@id/badgeIconIv"
+            tools:text="Goal Setter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

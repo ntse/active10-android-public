@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bhBannerStyle" format="reference" />
+
+    <declare-styleable name="BHBanner">
+        <attr name="bannerInfoText" format="string"/>
+        <attr name="bannerInfoTextColor" format="color"/>
+
+        <attr name="bannerSubInfoText" format="string"/>
+        <attr name="bannerSubInfoTextColor" format="color"/>
+
+        <attr name="bannerImageSrc" format="string"/>
+
+        <attr name="bannerIconColor" format="color"/>
+        <attr name="bannerIconType" format="enum" >
+            <enum name="close" value="0"/>
+            <enum name="indicator" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

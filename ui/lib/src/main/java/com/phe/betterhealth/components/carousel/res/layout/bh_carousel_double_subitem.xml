@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.carousel.CarouselDoubleItemsAdapter">
+
+    <data>
+
+        <variable
+            name="hideImage"
+            type="Boolean" />
+
+        <variable
+            name="infoPage1"
+            type="com.phe.betterhealth.components.articles.ArticlePage" />
+
+        <variable
+            name="infoPage2"
+            type="com.phe.betterhealth.components.articles.ArticlePage" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/item1"
+            layout="@layout/bh_carousel_horizontal_subitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bodyTitle="@{infoPage1.title}"
+            app:categoryLabel="@{infoPage1.categoryLabel}"
+            app:imageUrl="@{infoPage1.imageUrl}"
+            app:hideImage="@{hideImage}"
+            app:showArrow="@{true}"
+            app:showElevation="@{false}" />
+
+        <include
+            android:id="@+id/item2"
+            layout="@layout/bh_carousel_horizontal_subitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{infoPage2 != null}"
+            app:bodyTitle="@{infoPage2.title}"
+            app:categoryLabel="@{infoPage2.categoryLabel}"
+            app:imageUrl="@{infoPage2.imageUrl}"
+            app:hideImage="@{hideImage}"
+            app:showArrow="@{true}"
+            app:showElevation="@{false}" />
+
+    </LinearLayout>
+
+</layout>

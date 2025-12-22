@@ -1,0 +1,48 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageButton
+        android:id="@+id/bh_carousel_indicator_button_left"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:src="@drawable/bh_indicator_left"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bh_carousel_indicator_counter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bh_carousel_indicator_counter"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bh_carousel_indicator_counter"
+        style="@style/Widget.BetterHealth.InputLayout.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bh_carousel_indicator_button_right"
+        app:layout_constraintStart_toEndOf="@id/bh_carousel_indicator_button_left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1 of 5" />
+
+    <ImageButton
+        android:id="@+id/bh_carousel_indicator_button_right"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="20dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:src="@drawable/bh_indicator_right"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bh_carousel_indicator_counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bh_carousel_indicator_counter"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible" />
+</merge>

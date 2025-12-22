@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.BetterHealth.Settings.PrimaryText" parent="">
+        <item name="android:textColor">@color/bhTextPrimary</item>
+    </style>
+    <style name="Widget.BetterHealth.Settings.SecondaryText" parent="">
+        <item name="android:textColor">@color/bhTextSecondary</item>
+    </style>
+    <style name="Widget.BetterHealth.Settings.SecondaryText.CorrectContrast" parent="Widget.BetterHealth.Settings.SecondaryText">
+        <item name="android:textColor">@color/bhTextPrimary</item>
+    </style>
+</resources>

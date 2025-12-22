@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.phe.betterhealth.demo.views.InputDemo"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First name"
+        android:visibility="gone"
+        app:helperText="Enter name here">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.phe.betterhealth.widgets.textfield.BHTextInputLayout
+        android:id="@+id/field1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:helperText="Enter name here"
+        app:inputTitle="First name"
+        app:inputTitleMarginBottom="18dp">
+
+        <com.phe.betterhealth.widgets.textfield.BHTextInputEditText
+            android:id="@+id/field1_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your first name" />
+    </com.phe.betterhealth.widgets.textfield.BHTextInputLayout>
+
+    <com.phe.betterhealth.widgets.textfield.BHTextInputLayout
+        android:id="@+id/field2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorMessage="Something is wrong"
+        app:inputTitle="Last Name"
+        app:inputTitleMarginBottom="8dp">
+
+        <com.phe.betterhealth.widgets.textfield.BHTextInputEditText
+            android:id="@+id/field2_edittext"
+            style="@style/Widget.BetterHealth.EditText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your first name" />
+    </com.phe.betterhealth.widgets.textfield.BHTextInputLayout>
+
+    <com.phe.betterhealth.widgets.textfield.BHTextInputLayout
+        android:id="@+id/field3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:hintAnimationEnabled="false"
+        app:inputTitle="Address">
+
+        <com.phe.betterhealth.widgets.textfield.BHTextInputEditText
+            android:id="@+id/field3_edittext"
+            style="@style/Widget.BetterHealth.EditText.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address" />
+    </com.phe.betterhealth.widgets.textfield.BHTextInputLayout>
+
+    <com.phe.betterhealth.widgets.textfield.BHTextInputLayout
+        android:id="@+id/field4"
+        style="@style/Widget.BetterHealth.InputLayout.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:inputTitle="Spinner">
+
+        <com.phe.betterhealth.widgets.textfield.BHSpinner
+            android:id="@+id/spinner_1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/app_name" />
+
+    </com.phe.betterhealth.widgets.textfield.BHTextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/stateToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State toggle" />
+    </LinearLayout>
+
+</LinearLayout>

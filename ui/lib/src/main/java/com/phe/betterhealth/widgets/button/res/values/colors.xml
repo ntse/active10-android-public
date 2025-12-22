@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bhButtonFilledColorText">@android:color/white</color>
+
+    <!--    <color name="bhButtonOutlineColorText">?colorPrimary</color>--><!-- can't be used because of 0x2 error -->
+    <color name="bhButtonOutlineColorBackground">@android:color/white</color>
+
+    <color name="bhButtonTertiaryColorText">#1a1a1a</color>
+    <color name="bhButtonTertiaryColorBackground">@android:color/white</color>
+
+    <color name="bhButtonDestructiveColorText">@android:color/black</color>
+    <color name="bhButtonDestructiveColorBackground">#DF1642</color>
+</resources>

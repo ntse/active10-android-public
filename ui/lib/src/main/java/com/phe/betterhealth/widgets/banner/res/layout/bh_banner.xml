@@ -1,0 +1,102 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bh_banner_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="112dp"
+    app:cardCornerRadius="@dimen/bh_banner_card_radius"
+    tools:cardBackgroundColor="@color/bhBannerStartColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bh_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bh_banner_bg"
+        android:minHeight="112dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bh_banner_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Widget.BetterHealth.Banner.Image"
+            tools:src="@drawable/bh_audio_play" />
+
+        <TextView
+            android:id="@+id/bh_banner_info_text"
+            style="?bhArticleCardContentStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="45dp"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/bhWhite"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@id/bh_banner_sub_info_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bh_banner_image"
+            app:layout_constraintTop_toTopOf="@id/bh_banner_image"
+            app:layout_goneMarginBottom="12dp"
+            tools:maxLines="3"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/bh_banner_sub_info_text"
+            style="?bhArticleCardContentStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="12dp"
+            android:lineSpacingExtra="4sp"
+            android:textColor="@color/bhWhite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/bh_banner_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bh_banner_image"
+            app:layout_constraintTop_toBottomOf="@id/bh_banner_info_text"
+            tools:maxLines="1"
+            tools:text="@tools:sample/lorem/random" />
+
+        <ImageButton
+            android:id="@+id/bh_banner_close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="close_icon"
+            android:padding="10dp"
+            android:src="@drawable/bh_ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/bh_banner_indicator_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="close_icon"
+            android:focusable="false"
+            android:importantForAccessibility="no"
+            android:padding="7dp"
+            android:src="@drawable/bh_indicator_right"
+            app:layout_constraintBottom_toBottomOf="@id/bh_banner_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bh_banner_image"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

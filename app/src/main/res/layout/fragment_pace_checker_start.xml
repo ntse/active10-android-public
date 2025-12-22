@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pace_checker_back"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:text="Back"
+        android:textColor="@color/bhTextPrimary"
+        android:textSize="14sp"
+        app:icon="@drawable/ic_back"
+        app:iconTint="@color/bhTextPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@id/pace_checker_button_continue"
+        app:layout_constraintTop_toBottomOf="@id/pace_checker_back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pace_checker_start_image"
+                android:layout_width="205dp"
+                android:layout_height="205dp"
+                android:src="@drawable/ic_pace_checker_help"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/pace_checker_start_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:gravity="center"
+                android:text="Welcome to Pace Checker"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="32sp"
+                app:layout_constraintTop_toBottomOf="@id/pace_checker_start_image"
+                app:lineHeight="48sp" />
+
+            <TextView
+                android:id="@+id/pace_checker_start_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/pace_checker_start_title"
+                app:lineHeight="24sp"
+                tools:maxLines="5"
+                tools:text="@tools:sample/lorem/random" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pace_checker_button_continue"
+        style="@style/TealButtonLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:letterSpacing="0"
+        android:paddingTop="20dp"
+        android:paddingBottom="18dp"
+        android:text="Got it"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

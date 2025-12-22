@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Widget.Pheactive10android.AppWidget.Container" parent="android:Widget">
+        <item name="android:padding">?attr/appWidgetPadding</item>
+        <item name="android:background">@drawable/bg_widget</item>
+    </style>
+
+    <style name="Widget.Pheactive10android.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:padding">?attr/appWidgetPadding</item>
+        <item name="android:background">@drawable/bg_widget</item>
+    </style>
+</resources>

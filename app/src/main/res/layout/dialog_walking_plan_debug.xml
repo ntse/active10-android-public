@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isGoogleFitChecked"
+            type="boolean" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_corners"
+            android:backgroundTint="@color/white"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/days_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="'Go without generator' is recommended for testing.\n\nHow many days you want to add?"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lineHeight="24sp" />
+
+            <EditText
+                android:id="@+id/days_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="number of days"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/days_description" />
+
+            <TextView
+                android:id="@+id/days_source_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Choose source of data"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/days_edit_text"
+                app:lineHeight="24sp" />
+
+            <RadioGroup
+                android:id="@+id/sourceRG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="6dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/days_source_info">
+
+                <RadioButton
+                    android:id="@+id/GoogleFitRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="From Google Fit" />
+
+                <RadioButton
+                    android:id="@+id/GeneratedRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Generated in app (optional)" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/brisk_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Brisk completed for day (percentage)"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility='@{isGoogleFitChecked == true ? View.GONE : View.VISIBLE}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sourceRG"
+                app:lineHeight="24sp" />
+
+            <EditText
+                android:id="@+id/brisk_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="From 0 to 2000"
+                android:inputType="number"
+                android:visibility='@{isGoogleFitChecked == true ? View.GONE : View.VISIBLE}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brisk_description" />
+
+            <TextView
+                android:id="@+id/non_brisk_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Non-brisk completed for day (percentage)"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility='@{isGoogleFitChecked == true ? View.GONE : View.VISIBLE}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brisk_edit_text"
+                app:lineHeight="24sp" />
+
+            <EditText
+                android:id="@+id/non_brisk_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="From 0 to 2000"
+                android:inputType="number"
+                android:visibility='@{isGoogleFitChecked == true ? View.GONE : View.VISIBLE}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/non_brisk_description" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_button"
+                style="@style/TealButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:letterSpacing="0.0"
+                android:text="Confirm"
+                app:layout_constraintBottom_toTopOf="@id/second_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/non_brisk_edit_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/second_button"
+                style="@style/SecondaryButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:letterSpacing="0.0"
+                android:text="Go without generator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

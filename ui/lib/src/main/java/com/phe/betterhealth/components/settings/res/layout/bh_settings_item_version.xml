@@ -1,0 +1,23 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.settings.SettingsAdapter">
+
+    <data>
+
+        <variable
+            name="settingItem"
+            type="com.phe.betterhealth.components.settings.SettingsVersion" />
+    </data>
+
+    <TextView
+        style="?attr/bhSettingsSecondaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="@{`Version ` + settingItem.name + `point` + settingItem.code}"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@{`Version ` + settingItem.name + `.` + settingItem.code}"
+        tools:text="Version 1.2.345 (2021-06-16T15:40)" />
+</layout>

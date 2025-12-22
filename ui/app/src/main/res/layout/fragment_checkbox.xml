@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.phe.betterhealth.demo.views.CheckboxDemo"
+    tools:ignore="HardcodedText">
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+
+    </com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout>
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorMessage="This is an error">
+
+        <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="CheckBox checked by default" />
+
+    </com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout>
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+            style="@style/Widget.BetterHealth.Checkbox.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox on card" />
+
+    </com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout>
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:errorMessage="This is an error">
+
+        <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+            style="@style/Widget.BetterHealth.Checkbox.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox on card" />
+
+    </com.phe.betterhealth.widgets.checkbox.BHCheckBoxLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/stateToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State toggle" />
+    </LinearLayout>
+
+</LinearLayout>

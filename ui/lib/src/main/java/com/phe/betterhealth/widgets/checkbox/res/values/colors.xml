@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bhCheckboxText">#1a1a1a</color>
+    <color name="bhCheckboxButtonBorder">#757575</color>
+    <color name="bhCheckboxError">#DF1642</color>
+    <color name="bhCheckboxSeparator">#f0f0f0</color>
+    <color name="bhCheckboxNegativeBackground">#1a1a1a</color>
+    <color name="bhCheckboxNegativeSeparator">#656565</color>
+    <color name="bhCheckboxNegativeError">#f9d3d4</color>
+</resources>

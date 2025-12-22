@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bhTextInputLayoutTitle" type="id" />
+
+    <attr name="bhSpinnerStyle" format="reference" />
+    <attr name="bhTextInputEditTextStyle" format="reference" />
+    <attr name="bhTextInputLayoutStyle" format="reference" />
+    <attr name="bhTextInputLayoutTitleStyle" format="reference" />
+
+    <declare-styleable name="BHTextInputLayout">
+        <attr name="inputTitle" format="string" />
+        <attr name="inputTitleMarginBottom" format="dimension" />
+        <attr name="errorMessage" />
+    </declare-styleable>
+
+    <declare-styleable name="BHTextInputEditText" />
+
+    <declare-styleable name="BHSpinner" />
+</resources>

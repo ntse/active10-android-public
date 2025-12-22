@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bh_banner_card_radius">10dp</dimen>
+</resources>

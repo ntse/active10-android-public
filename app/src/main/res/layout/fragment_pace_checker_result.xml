@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pace_checker_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:gravity="center"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lineHeight="48sp"
+            tools:text="You're walking briskly!" />
+
+        <TextView
+            android:id="@+id/pace_checker_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_title"
+            app:lineHeight="28sp"
+            tools:text="Your brisk walking is great, keep up the good work!" />
+
+        <TextView
+            android:id="@+id/pace_checker_average_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="55dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Your average walking speed was"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_description"
+            app:lineHeight="28sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pace_checker_average_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:descendantFocusability="beforeDescendants"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_average_title"
+            app:layout_goneMarginTop="99dp">
+
+            <ImageView
+                android:id="@+id/pace_checker_average_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/img_pace_checker_result_negative"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pace_checker_average_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:minWidth="115dp"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="104sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="132" />
+
+            <TextView
+                android:id="@+id/pace_checker_average_value_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="48dp"
+                android:layout_marginTop="-20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="steps per min"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="16sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pace_checker_average_value" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/pace_checker_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="27dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Brisk walking is 100 steps per minute"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/pace_checker_caption_icon"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_average_container"
+            app:lineHeight="24sp" />
+
+        <ImageView
+            android:id="@+id/pace_checker_caption_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="4dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toStartOf="@id/pace_checker_caption"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pace_checker_caption"
+            tools:src="@drawable/ic_todayswalks_teal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pace_checker_button_again"
+            style="@style/TealButtonLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0"
+            android:paddingTop="20dp"
+            android:paddingBottom="18dp"
+            android:text="Start again"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/pace_checker_button_close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_caption"
+            app:layout_constraintVertical_bias="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pace_checker_button_close"
+            style="@style/SecondaryButtonLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0"
+            android:paddingTop="20dp"
+            android:paddingBottom="18dp"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,42 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <variable
+            name="isCompleted"
+            type="boolean" />
+
+        <variable
+            name="isLast"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@{isLast ? 26f : 0f}"
+        android:background="@android:color/white"
+        android:elevation="5dp">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/article_item_complete_button"
+            style="@style/Widget.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="36dp"
+            android:text="@{isCompleted ? @string/mission_not_done : @string/mission_done}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp"
+            tools:text="I did it!"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

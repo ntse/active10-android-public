@@ -1,0 +1,66 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="bannerItem"
+            type="com.phe.betterhealth.demo.BannerItem" />
+
+        <variable
+            name="bannerItemTwo"
+            type="com.phe.betterhealth.demo.BannerItem" />
+
+        <variable
+            name="bannerItemThree"
+            type="com.phe.betterhealth.demo.BannerItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.phe.betterhealth.widgets.banner.BHBannerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:bannerIconColor="@{bannerItem.iconColor}"
+            app:bannerIconType="@{bannerItem.iconType}"
+            app:bannerImageSrc="@{bannerItem.imageSrc}"
+            app:bannerInfoText="@{bannerItem.infoText}"
+            app:bannerInfoTextColor="@{bannerItem.infoTextColor}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+        <com.phe.betterhealth.widgets.banner.BHBannerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:bannerIconColor="@{bannerItemTwo.iconColor}"
+            app:bannerIconType="@{bannerItemTwo.iconType}"
+            app:bannerImageSrc="@{bannerItemTwo.imageSrc}"
+            app:bannerInfoText="@{bannerItemTwo.infoText}"
+            app:bannerInfoTextColor="@{bannerItemTwo.infoTextColor}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+        <com.phe.betterhealth.widgets.banner.BHBannerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:bannerIconColor="@{bannerItemThree.iconColor}"
+            app:bannerIconType="@{bannerItemThree.iconType}"
+            app:bannerImageSrc="@{bannerItemThree.imageSrc}"
+            app:bannerInfoText="@{bannerItemThree.infoText}"
+            app:bannerInfoTextColor="@{bannerItemThree.infoTextColor}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_title" />
+    </LinearLayout>
+</layout>

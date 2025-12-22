@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <include
+        android:id="@+id/customGoalToolbar"
+        layout="@layout/custom_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top" />
+
+    <include
+        android:id="@+id/customGoalWhiteToolbar"
+        layout="@layout/custom_toolbar_white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top" />
+
+    <TextView
+        android:id="@+id/customGoalTitle"
+        style="@style/HeaderExtraLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/whats_motivating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customGoalToolbar" />
+
+    <EditText
+        android:id="@+id/enterCustomMotivation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_24"
+        android:layout_marginTop="@dimen/BU_40"
+        android:layout_marginEnd="@dimen/BU_24"
+        android:autofillHints="none"
+        android:background="@drawable/bg_edittext_outine"
+        android:gravity="top"
+        android:hint="@string/add_custom_motivation"
+        android:maxLength="100"
+        android:maxLines="3"
+        android:minHeight="100dp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="15dp"
+        android:textColorHint="@color/light_grey_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customGoalTitle"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/customGoalMaxChar"
+        style="@style/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/BU_10"
+        android:text="@string/character_limit"
+        android:textColor="@color/light_grey_two"
+        app:layout_constraintEnd_toEndOf="@+id/enterCustomMotivation"
+        app:layout_constraintTop_toBottomOf="@+id/enterCustomMotivation" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addCustomGoalButton"
+            style="@style/TealButtonLarge"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/BU_40"
+            android:enabled="false"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

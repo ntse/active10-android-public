@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.phe.betterhealth.demo.StartFragment"
+        android:label="Better Health UI View Demos"
+        tools:layout="@layout/fragment_start">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_buttonDemo"
+            app:destination="@id/buttonDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_checkboxDemo"
+            app:destination="@id/checkboxDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_inputDemo"
+            app:destination="@id/inputDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_radioButtonDemo"
+            app:destination="@id/radioButtonDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_bottomNavigationDemo"
+            app:destination="@id/bottomNavigationDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_carouselDemo"
+            app:destination="@id/carouselDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_cardDemo"
+            app:destination="@id/cardDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_pagerDemo"
+            app:destination="@id/pagerDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_shareDemo"
+            app:destination="@id/shareDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_bannerDemo"
+            app:destination="@id/bannerDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_moodSelectorDemo"
+            app:destination="@id/moodSelectorDemo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_moodBottomDialogDemo"
+            app:destination="@id/moodBottomDialogDemo" />
+    </fragment>
+    <fragment
+        android:id="@+id/buttonDemo"
+        android:name="com.phe.betterhealth.demo.views.ButtonDemo"
+        android:label="BH Button Demo"
+        tools:layout="@layout/fragment_button" />
+    <fragment
+        android:id="@+id/checkboxDemo"
+        android:name="com.phe.betterhealth.demo.views.CheckboxDemo"
+        android:label="BH CheckBox Demo"
+        tools:layout="@layout/fragment_checkbox" />
+    <fragment
+        android:id="@+id/inputDemo"
+        android:name="com.phe.betterhealth.demo.views.InputDemo"
+        android:label="BH Input Demo"
+        tools:layout="@layout/fragment_input" />
+    <fragment
+        android:id="@+id/radioButtonDemo"
+        android:name="com.phe.betterhealth.demo.views.RadioButtonDemo"
+        android:label="BH RadioButton Demo"
+        tools:layout="@layout/fragment_radio_button" />
+    <fragment
+        android:id="@+id/bottomNavigationDemo"
+        android:name="com.phe.betterhealth.demo.views.BottomNavigationDemo"
+        android:label="BH BottomNavigationView Demo"
+        tools:layout="@layout/fragment_bottom_navigation" />
+    <fragment
+        android:id="@+id/carouselDemo"
+        android:name="com.phe.betterhealth.demo.views.CarouselDemo"
+        android:label="BH Carousel Demo"
+        tools:layout="@layout/fragment_carousel" />
+    <fragment
+        android:id="@+id/cardDemo"
+        android:name="com.phe.betterhealth.demo.views.CardDemo"
+        android:label="BH Card Demo"
+        tools:layout="@layout/fragment_card" />
+    <fragment
+        android:id="@+id/pagerDemo"
+        android:name="com.phe.betterhealth.demo.views.PagerDemo"
+        android:label="BH Card Demo"
+        tools:layout="@layout/fragment_pager" />
+    <fragment
+        android:id="@+id/shareDemo"
+        android:name="com.phe.betterhealth.demo.views.ShareDemo"
+        android:label="ShareDemo"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/bannerDemo"
+        android:name="com.phe.betterhealth.demo.views.BannerDemo"
+        android:label="BannerDemo"
+        tools:layout="@layout/fragment_banner" />
+    <fragment
+        android:id="@+id/moodSelectorDemo"
+        android:name="com.phe.betterhealth.demo.views.MoodSelectorDemo"
+        android:label="MoodSelectorDemo"
+        tools:layout="@layout/fragment_mood_selector" />
+    <fragment
+        android:id="@+id/moodBottomDialogDemo"
+        android:name="com.phe.betterhealth.demo.views.MoodBottomDialogDemo"
+        android:label="MoodSelectorDemo"
+        tools:layout="@layout/fragment_mood_bottom_demo" />
+</navigation>

@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE resources [<!ENTITY appname "Active10">] >
+<resources>
+    <string name="intro_app_description">Active 10 is designed to help get you walking briskly for at
+        least 10 minutes each day to improve your health and your mood
+    </string>
+
+    <string name="splash_active">Active</string>
+    <string name="splash_10">10</string>
+    <string name="app_one">ONE</string>
+    <string name="app_you">YOU</string>
+    <string name="bh_logo_description">Better Health Let\'s do this</string>
+    <string name="nhs_logo_description">NHS</string>
+    <string name="ac10_logo_description">Active 10</string>
+    <string name="empty_toolbar_title">" "</string>
+
+    <string name="back">Back</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_close">Close</string>
+    <string name="button_go_to_go_jauntly">Continue to Go Jauntly</string>
+    <string name="button_no_thanks">No thanks</string>
+    <string name="button_allow_motion_fitness">Activate Google Fit</string>
+    <string name="button_allow_location">Allow location</string>
+    <string name="button_allow_notifications">Allow Notifications</string>
+    <string name="button_set_goals">Set goals</string>
+    <string name="button_save_and_continue">Save and continue</string>
+    <string name="save_and_continue">Save and continue</string>
+    <string name="button_decline">Decline</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_ok">Ok</string>
+    <string name="button_join_one_you">Join One You</string>
+    <string name="button_delete_goal">Delete goal</string>
+    <string name="button_done">Done</string>
+    <string name="button_save">Save</string>
+    <string name="button_skip">Skip</string>
+    <string name="button_add_my_details">Continue</string>
+
+    <string name="goal_getter">Goal getter</string>
+    <string name="high_achiever">High achiever</string>
+    <string name="target_chaser">Target chaser</string>
+    <string name="brisk_minutes">Brisk minutes</string>
+    <string name="stepping_up">Stepping up</string>
+    <string name="plans_and_routes">Plans and Routes</string>
+
+    <string name="button_lets_get_walking">Let\'s get walking</string>
+    <string name="intro_what_is_brisk">What is brisk?</string>
+    <string name="intro_every_minute_counts">Every minute counts</string>
+    <string name="intro_aim">Aim for 10 or more</string>
+    <string name="intro_aim_description">Aim for at least 10 minutes of brisk walking each day and we will support you every step of the way.</string>
+    <string name="intro_minute_description">Every minute of walking you do counts, but brisk is better. We\'ll record them all, even if
+        they\'re spread out across the day.
+    </string>
+    <string name="brisk_highlight">Brisk</string>
+    <string name="minute_highlight">minute</string>
+    <string name="aim_highlight">10</string>
+    <string name="intro_brisk_description">Brisk walking is simply walking quicker than usual at a pace that gets your
+        heart pumping.
+    </string>
+    <string name="intro_terms_title">Ready to get started?</string>
+    <string name="intro_terms_subtitle">In a moment you\'ll be asked to let the app turn on a few features on your
+        phone.</string>
+    <string name="migrating_intro_terms_subtitle">We need you to turn on these features on your phone to get the app working.
+        Even if you\'ve turned on before, we need your permission to keep using them.</string>
+    <string name="intro_fitness_terms">Fitness data: so that we can accurately record your walking</string>
+    <string name="intro_fitness_terms_highlight">Fitness data:</string>
+    <string name="intro_terms_location">Location: to help us understand how we can improve your experience</string>
+    <string name="intro_terms_location_highlight">Location:</string>
+    <string name="intro_terms_notification">Notifications: these are optional but will let us send you handy
+        reminders to keep you on track
+    </string>
+    <string name="intro_terms_notification_highlight">Notifications:</string>
+    <string name="intro_terms_and_conditions">I agree to your \nterms and conditions</string>
+    <string name="intro_terms_and_conditions_large">I agree to the terms and conditions</string>
+    <string name="intro_terms_and_conditions_highlight">Terms and conditions</string>
+
+    <string name="view_terms_and_conditions_intro">View terms and conditions</string>
+    <string name="view_privacy_and_policy">View privacy policy</string>
+    <string name="intro_terms_and_conditions_inline">I agree to terms and conditions</string>
+    <string name="intro_terms_and_conditions_error">We need you to accept our terms and conditions to use this app</string>
+
+    <string name="permission_fitness_data">Activate Google Fit</string>
+    <string name="motion_fitness">Activate Google Fit</string>
+    <string name="permission_fitness_data_description_today_walk">By connecting Active 10 and Google Fit, you can easily integrate your fitness activity from various sources to help you better understand your progress. We\’ll need this for the app to work.</string>
+    <string name="permission_fitness_data_description">By connecting Active 10 and Google Fit, you can easily integrate your fitness activity from various sources to help you better understand your progress.\n\nGoogle Fit is an open platform that lets you control your fitness data from multiple apps and devices.\n\nYou can disconnect from Google Fit at any time by going to Settings</string>
+    <string name="permission_location">Location</string>
+    <string name="permission_location_description">This will help us understand how the app is being used and improve
+        your experience in the future. It\'s optional and the app will still work without this permission.
+    </string>
+    <string name="permission_notifications">Stay on track</string>
+    <string name="permission_notifications_description">We\'ll only send notifications to keep you on-track.
+        Go to settings to turn them off.
+    </string>
+    <string name="permission_goals">Goals</string>
+    <string name="permission_goals_description">What is your goal? Thinking about your motivations can help you be more
+        successful. Add your goals
+    </string>
+
+    <string name="about_you_title">About you</string>
+    <string name="activity_level_title">Current activity level</string>
+    <string name="gender_subtitle">Sex (optional)</string>
+    <string name="name">Name</string>
+    <string name="age_title">Age</string>
+    <string name="age_subtitle">Age (optional)</string>
+    <string name="activity_optional">Current activity level (optional)</string>
+    <string name="gender_other">I\'d rather not say</string>
+    <string name="save_amp_continue">Save &amp; Continue</string>
+
+    <!-- Migrating users -->
+    <string name="migrating_active10_title">Active 10 has changed</string>
+    <string name="migrating_active10_highlight">Changed</string>
+    <string name="migrating_active10_description">We\'ve made improvements to how the app looks and works so that you
+        can get the most out of using it and maximise your health benefits.
+    </string>
+    <string name="migrating_intro_every_minute_counts">Now, every minute of brisk walking counts towards your Active 10
+        goals… even if they\'re spread across the day.
+    </string>
+    <string name="migrating_intro_aim_description">Your target is still to clock up 10 minutes of brisk walking each
+        day. Want to aim higher? Work up to three Active 10s a day.
+    </string>
+
+    <string name="permission_goal_list_title">I\'m doing Active 10 because…</string>
+    <string name="goal_subtitle">Please select one or more goals to continue</string>
+    <string name="goal_item_1">I want to feel fitter and healthier</string>
+    <string name="goal_item_2">I want to make regular walks a part of my lifestyle</string>
+    <string name="goal_item_3">I want to improve my mood</string>
+    <string name="goal_item_4">I\'ve been diagnosed with a health condition</string>
+    <string name="goal_item_5">I\'ve been advised to get more active</string>
+    <string name="goal_item_6">Add my own reason</string>
+    <string name="another_reason_subtitle">Another reason</string>
+    <string name="add_your_reason_hint">Add your reason...</string>
+
+    <string name="goal_swear_word">Woah, you can\'t use that word!</string>
+
+    <string name="permission_more_about_goals_title">Tell us more about your goal…</string>
+    <string name="goal_character_count">Characters left: %d</string>
+
+    <string name="dialog_motion_fitness_permission_title">Allow "Active 10" to access motion and fitness activity?
+    </string>
+    <string name="dialog_motion_fitness_permission_subtitle">For the app to track your walking, you\'ll need to allow
+        this
+        access.
+    </string>
+    <string name="dialog_terms_and_conditions_title">You\'ll need to accept our terms and conditions to use Active 10 app</string>
+    <string name="dialog_location_permission_title">Allow "Active 10" to access your location</string>
+    <string name="dialog_location_permission_subtitle">Allow "Active 10" to access your location while you are using the app?
+    </string>
+    <string name="dialog_sign_in_web_view_title">"Active 10" Wants to Use “login.nhs.uk” to Sign In
+    </string>
+    <string name="dialog_sign_in_web_view_subtitle">This allows the app and website to share information about you.
+    </string>
+    <string name="intro_terms_text">If you have any concerns about exercising or pre-existing conditions, consult your local GP or health professional before starting this programme.
+    </string>
+
+    <string name="intro_terms_text_cms">\n%s.\n\nFitness data: %s\n\nLocation: %s\n\nNotifications: %s</string>
+
+    <string name="migrating_intro_terms_text">\nWe need you to turn on these features on your phone to get the app working.
+        Even if you\'ve turned on before, we need your permission to keep using them.
+        \n\nFitness Data: access to your recent and future activity so that we can accurately record your walking\n\nLocation:
+        helps us understand how we can improve your experience\n\nNotifications: these are optional, but will let us send you
+        handy reminders to keep you on track
+    </string>
+    <string name="dialog_disconnect_description">This will remove your NHS login from the Active 10 app.
+        \n\nYou can still see your activity on your phone, but your previous walking data may be lost if you change device, or delete the app.</string>
+    <string name="dialog_disconnect_title">Disconnect from NHS login</string>
+    <string name="dialog_details_description">To update your details, we will need to direct you to the NHS website. You\'ll need your NHS username and password to hand.</string>
+    <string name="dialog_details_title">Update your details</string>
+    <string name="continue_nhs_website">Continue to NHS website</string>
+    <string name="dialog_alarm_permission_title">Allow "Active 10" to access alarm?</string>
+    <string name="dialog_alarm_permission_subtitle">For the walk reminder, you\'ll need to allow this access.</string>
+
+    <!-- Bottom navigation menu -->
+    <string name="bottom_nav_menu_today_walk">Today\'s walks</string>
+    <string name="bottom_nav_menu_my_walks">My walks</string>
+    <string name="bottom_nav_menu_discover">Discover</string>
+    <string name="bottom_nav_menu_settings">Settings</string>
+
+    <!-- Settings -->
+    <string name="settings_targets_title">Targets</string>
+    <string name="settings_my_account_title">My Account</string>
+    <string name="settings_my_preferences_title">My preferences</string>
+    <string name="settings_goals_title">Goals</string>
+    <string name="settings_my_goals">My goals</string>
+    <string name="settings_update_goals">Update goals</string>
+    <string name="settings_my_target">My target</string>
+    <string name="numb_of_a10">1 Active 10</string>
+    <string name="settings_my_target_value">%d Active 10s</string>
+    <string name="settings_my_details">My details</string>
+    <string name="settings_create_account">Create account with NHS login</string>
+    <string name="settings_log_in">Log in</string>
+    <string name="settings_my_rewards">My rewards</string>
+    <string name="settings_my_activity_level">My activity level</string>
+    <string name="settings_communication_preference">Communication preference</string>
+    <string name="settings_quick_unlock">Quick unlock</string>
+    <string name="settings_disconnect">Disconnect from NHS login</string>
+    <string name="settings_log_out">Log out</string>
+    <string name="settings_are_you_sure">Yes, disconnect</string>
+    <string name="settings_view_rewards">View rewards</string>
+
+    <string name="settings_next_walk_reminder_title">Next walk reminder</string>
+    <string name="settings_walk_reminder">Walk reminder</string>
+    <string name="settings_set_brisk_walk_reminder">Set a brisk walk reminder</string>
+    <string name="settings_reminder_change_action">Change</string>
+    <string name="settings_reminder_disabled">Disabled</string>
+    <string name="set_walk_reminder">Set a walk reminder</string>
+
+    <string name="settings_help_title">Help</string>
+    <string name="settings_how_it_works">How it works</string>
+    <string name="before_you_start">Before you start</string>
+    <string name="settings_before_you_start">Before you start</string>
+    <string name="settings_tips">Tips</string>
+    <string name="settings_faqs">FAQs</string>
+
+    <string name="settings_community_title">Community</string>
+    <string name="settings_about_one_you">About better health</string>
+    <string name="settings_share_app">Share app</string>
+    <string name="settings_notifications_title">Next walk reminder</string>
+    <string name="share_message">This is the Active 10 app, I thought you might like to see this\n</string>
+    <string name="share_intent_chooser_title">Share "&appname;" via</string>
+
+    <string name="settings_app_info">App info</string>
+    <string name="accessibility_statement">Accessibility statement</string>
+    <string name="settings_terms_and_conditions">Terms and conditions</string>
+    <string name="settings_privacy_policy">Privacy policy</string>
+    <string name="settings_privacy_policy_underlined"><u>View privacy policy</u></string>
+    <string name="settings_animations">Animations</string>
+    <string name="settings_acknowledgments">Acknowledgments</string>
+
+    <plurals name="settings_target_plural">
+        <item quantity="one">%d Active 10</item>
+        <item quantity="other">%d Active 10s</item>
+    </plurals>
+
+    <!-- Walk reminder -->
+    <string name="walk_reminder_title">Reminders</string>
+    <string name="walk_reminder_header">Set a reminder</string>
+    <string name="walk_reminder_edit_text">Stay on-track by setting up a reminder to keep you motivated. Choose the time
+        that works best for you each day.
+    </string>
+    <string name="walk_reminder_tap_to_edit">Tap time to edit.</string>
+    <string name="walk_reminder_turn_off">You can turn off reminders at anytime.</string>
+    <string name="walk_reminder_time_format">%s:%s %s</string>
+    <string name="brisk_reminder_notification_description">This is a reminder to get out there for your daily walk!</string>
+    <string name="brisk_reminder_notification_title">Active 10</string>
+
+    <!-- Faq -->
+    <string name="faq_title">FAQs</string>
+
+    <!-- Target -->
+    <string name="target_title">Set your targets</string>
+    <string name="target_subtitle">Setting and achieving targets can keep you motivated. Set your personalised targets here.</string>
+    <string name="increase_target_title">Increase your targets</string>
+    <string name="increase_target_subtitle">You can increase your targets to up to 5 Active 10’s per day</string>
+    <plurals name="target_plural">
+        <item quantity="zero">%d Active 10</item>
+        <item quantity="one">%d Active 10</item>
+        <item quantity="other">%d Active 10s</item>
+    </plurals>
+
+    <string name="set_target">Set target</string>
+    <string name="target3_active_10">30 minutes of brisk walking each day will help you reach the weekly physical activity recommendations for adults. Achieve this target regularly to unlock more targets along the way</string>
+    <string name="target_set_benefit">%d minutes of brisk walking each day</string>
+
+    <!-- About One You -->
+    <string name="community_about_one_you_toolbar_title">Better health</string>
+    <string name="community_one_you">One you</string>
+    <string name="community_app_download_now">Download now</string>
+    <string name="community_join_one_you">Join One You</string>
+    <string name="community_header_apps">Other apps</string>
+
+    <!-- Join one you -->
+    <string name="join_one_you_title">Join One You</string>
+    <string name="join_one_you_subtitle">Can we stay in touch to help you keep on track\n\nKeeping up a healthy
+        lifestyle takes some effort and willpower. Sign up to get our e-newsletter, freebies, information, special
+        offers, tips and tools that will help keep you motivated.
+    </string>
+    <string name="join_one_you_already_signed">Already signed up to One You?</string>
+    <string name="join_one_you_tick">Tick yes and enter your details - we will send you updates specific to this health
+        issue.
+    </string>
+    <string name="join_one_are_you">Are you…</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="post_code">Post code</string>
+    <string name="email_address">Email address</string>
+    <string name="join_one_you_subscription">I’d like to keep up to date in the future with the latest tips and offers
+        from One You.
+    </string>
+
+    <string name="enter_first_name">Enter your first name</string>
+    <string name="enter_last_name">Enter your last name</string>
+    <string name="enter_post_code">Enter your post code</string>
+    <string name="enter_email_address">Enter your email address</string>
+
+    <string name="join_one_you_error_title">Error</string>
+    <string name="join_one_you_invalid_postcode_error">Please enter a valid post code</string>
+    <string name="join_one_you_invalid_email_error">Please enter a valid email address</string>
+
+    <!-- Join One You confirmation -->
+    <string name="join_one_you_confirmation_news_full_title">Great news</string>
+    <string name="join_one_you_confirmation_news_highlight_title">Great</string>
+    <string name="join_one_you_confirmation_news_subtitle">Keep a look out for the One You email, for loads of support,
+        special offers, tips and tools to help you get back to a healthier you.
+    </string>
+    <string name="join_one_you_confirmation_back_to_discover">Back to discover</string>
+    <string name="join_one_you_confirmation_back_to_settings">Back to settings</string>
+
+    <!-- Health Unlocked -->
+    <plurals name="health_unlocked_my_goals">
+        <item quantity="one">My goal</item>
+        <item quantity="other">My goals</item>
+    </plurals>
+
+    <plurals name="health_unlocked_goals">
+        <item quantity="one">My goal</item>
+        <item quantity="many">My goals</item>
+    </plurals>
+
+    <string name="health_unlocked_no_goals_set">No goal set</string>
+    <string name="health_unlocked_no_goals_set_suggestion">SETTING A GOAL MAKE YOU 60% MORE LIKELY TO ACHIEVE IT
+    </string>
+    <string name="health_unlocked_set_goals">Set goals</string>
+    <string name="health_unlocked_update_goals">Update goals</string>
+    <string name="health_unlocked_goal_number">GOAL %d</string>
+    <string name="health_unlocked_tips">You might also like to know about…</string>
+    <string name="health_unlocked_top_articles">Top articles</string>
+
+    <!-- Horse shoe progress bar -->
+    <plurals name="progress_mins">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d mins</item>
+    </plurals>
+    <string name="horse_shoe_brisk_min">Brisk min</string>
+
+    <!-- Today's walk -->
+    <string name="today_walk_total_walking">Of total walking</string>
+    <string name="today_walk_total_brisk">Of which is brisk</string>
+    <string name="today_walk_x_a10">X%d</string>
+    <string name="today_walk_target">Today\'s Active 10 target</string>
+    <plurals name="today_walk_today_active_10">
+        <item quantity="one">Today\'s target is %d Active 10</item>
+        <item quantity="other">Today\'s target is %d Active 10s</item>
+    </plurals>
+    <string name="walk_data"><b>%d min</b> of total walking <b>%d min</b> of which is brisk</string>
+
+
+    <string name="today_walk_default_header">Let\'s get brisk walking to achieve today’s first Active 10!</string>
+    <string name="today_walk_nearly_one_active">Keep going to get today\'s first Active 10</string>
+    <string name="today_walk_nearly_two_active">Keep going to get your second Active 10 of the day</string>
+    <string name="today_walk_nearly_three_active">You\'re on a roll! Keep going for a third Active 10!</string>
+    <string name="today_walk_extra_active">You\'re on a roll! Great work today!</string>
+    <string name="today_walk_target_achieved">Congratulations, you hit your target!</string>
+    <string name="today_walk_one_active">Great work, you\'ve got one Active 10</string>
+    <string name="today_walk_two_active">Fantastic! Two Active 10s today so far!</string>
+    <string name="today_walk_three_active">Brilliant work! You\'ve achieved three Active 10s today!</string>
+    <string name="loading_your_walks_title">LOADING YOUR WALKS…</string>
+    <string name="loading_your_walks_message">We\'re just fetching your walking data for today</string>
+
+    <string name="today_walk_target_title">Target</string>
+    <string name="today_walk_help_title">Help</string>
+
+    <string name="ignoring_walks_to_time">Ignoring walks prior to %s</string>
+
+    <!--My walks-->
+
+    <string name="days_walk_tab">Days</string>
+    <string name="weeks_walk_tab">Weeks</string>
+    <string name="months_walk_tab">Months</string>
+
+    <string name="no_day_brisk_walk_today">Let</string>
+
+    <string name="my_walk_day_past_reward_target_hit">Great work! You hit your goal!</string>
+    <string name="no_walk_today">Your brisk walking and total walking circle will fill up once you start walking.</string>
+
+    <string name="my_walk_current_week_rewards">Keep coming back to see your progress this week.</string>
+
+    <string name="my_walk_week_period">%1$s %2$02d - %3$02d</string>
+    <string name="my_walk_week_period_diff_month">%1$s %2$02d - %3$s %4$02d</string>
+
+    <string name="brisk_walking">Brisk walking</string>
+    <string name="total_walking">Total walking</string>
+
+    <string name="chart_container_content_description">Breakdown of brisk minutes walked. Double tap to navigate to the walk presentation screen.</string>
+    <string name="chart_content_description">Chart representing the breakdown of brisk minutes walked. Double tap to go to the walk presentation screen. </string>
+
+    <string name="today">Today</string>
+
+    <string name="brisk_help">Need help with brisk walking?</string>
+    
+    <string name="my_walking_plans_title">My walking plans</string>
+    <string name="my_walking_plans_description">Claire, we\'ve partnered with Go Jauntly to bring you walks in your area</string>
+    <string name="my_walking_plans_button_text">My walking plans</string>
+
+    <string name="walks_near_title">Walks near me</string>
+
+    <!--Notifications-->
+
+    <string name="day_3_notification">How have you found your first few days of Active 10? Keep up the good work and
+        remember, walking is great for your health. Plus no lycra needed!
+    </string>
+    <string name="day_5_notification">Planning ahead is a great way to stay on track. Check out our tips
+        on how to fit an Active 10 in tomorrow.
+    </string>
+    <string name="day_7_notification">You’ve completed your first Active 10 week! We’ve got your results. Take a look to
+        see how you got on.
+    </string>
+    <string name="day_10_notification">It only takes 10 minutes to give your body a health kick. Take a look to see what
+        you’ve achieved so far
+    </string>
+    <string name="day_14_notification">You’re doing great with your Active 10s. Have you seen how many you’ve achieved
+        so far? Take a look
+    </string>
+    <string name="day_18_notification">Take a look at how many minutes walking you\'ve done today</string>
+    <string name="day_21_notification">You’ve had a great week with your Active 10s and we’ve got the results. Take au
+        look now
+    </string>
+
+    <string name="use_app_notification_1">Did you know an Active 10 can boost your mood? Try one today.</string>
+    <string name="use_app_notification_2">A brisk walk is a great way to clear your mind. Why not aim for an Active 10 tomorrow?
+    </string>
+    <string name="use_app_notification_3">Regular brisk walking can help reduce your risk of serious illnesses like
+        heart disease and type 2 diabetes.
+    </string>
+    <string name="use_app_notification_4">Active people sleep better. Do an Active 10 today and enjoy sweeter dreams
+        tonight!
+    </string>
+
+    <string name="notification_title">Active 10</string>
+
+    <string name="instruction_description_one">As you walk we\'ll track your brisk \nminutes on the meter</string>
+    <string name="instruction_description_two">Your total minutes walked each \nday are here, including how many \nwere brisk</string>
+    <string name="instruction_description_three">Just pop your phone in your \npocket and get walking - we\'ll do \nthe rest!</string>
+    <string name="lets_go">Let\'s go</string>
+    <string name="instruction_title">Getting started</string>
+    <string name="instruction_page_counter">STEP %d/3</string>
+
+    <string name="done">Done</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="prev">Prev</string>
+
+    <string name="logs_header">LOGS</string>
+
+    <!--Accessibility-->
+    <string name="heading">heading</string>
+    <string name="accessibility_button_description">Switch off/Switch on</string>
+    <string name="accessibility_target">Set your daily target as %d Active 10</string>
+    <string name="accessibility_target_selected">Daily target set to %d Active 10</string>
+    <string name="accessibility_download_cta">Download now</string>
+    <string name="accessibility_back">Go back</string>
+    <string name="accessibility_today_walk_bottom_label"> Today\'s total. %1d minutes of total walking, %2d minutes of which is brisk</string>
+    <string name="accessibility_today_walk_target">Today\'s target is %s. So far you achieved %s</string>
+    <plurals name="accessibility_target_plural">
+        <item quantity="one">%d Active 10</item>
+        <item quantity="other">%d Active 10s</item>
+    </plurals>
+
+    <string name="of_total_walking">of total walking</string>
+    <string name="of_brisk">of which is brisk</string>
+
+    <string name="accessibility_today_walk_horse_shoe">You have walked %d minutes towards your next Active 10</string>
+
+    <string name="accessibility_my_walks_horse_shoe">%s of total walking, %s of which is brisk</string>
+    <plurals name="accessibility_my_walks_horse_shoe_plural">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+
+    <plurals name="accessibility_reward_active_10_plural">
+        <item quantity="one">%d Active 10 badge this %s</item>
+        <item quantity="other">%d Active 10 badges this %s</item>
+    </plurals>
+
+    <plurals name="accessibility_reward_near_active_10_plural">
+        <item quantity="one">%d %d-minute badge this %s</item>
+        <item quantity="other">%d %d-minute badges this %s</item>
+    </plurals>
+    <plurals name="targets_set">
+        <item quantity="one">%d target set</item>
+        <item quantity="other">%d targets set</item>
+    </plurals>
+    <plurals name="my_walks_rewards_count">
+        <item quantity="one">%d Active 10 achieved</item>
+        <item quantity="other">%d Active 10s achieved</item>
+    </plurals>
+
+    <string name="dialog_no_internet_title">Oops! Looks like you are offline?</string>
+    <string name="toast_no_internet_message">Oops! Looks like you are offline!</string>
+    <string name="dialog_no_internet_subtitle">You\'ll need an internet connection to be able to connect the app with Google Fit.</string>
+    <string name="menu_item_content_description">%s button</string>
+    <string name="settings_menu_item_content_description">%s %s button</string>
+    <string name="button">Button</string>
+    <string name="switch_button">Switch</string>
+    <string name="link">Link</string>
+    <string name="about_one_you">%s about One You</string>
+    <string name="one_you">One You</string>
+    <string name="opens_in_new_window">%s, opens in new window</string>
+    <string name="view_terms_and_conditions">View terms and conditions</string>
+
+    <!--Review-->
+    <string name="review_dialog_title">Enjoying the app?</string>
+    <string name="review_dialog_message">Please think about writing us a review. It only takes a few minutes and we really value the feedback. </string>
+    <string name="review_dialog_leave_review">Leave review</string>
+    <string name="review_dialog_not_now">Not now</string>
+    <string name="change_hour_time_label">Hour %s %s. Double tap to change the time</string>
+    <string name="change_minute_time_label">Minute %s. Double tap to change the time</string>
+    <string name="tap_to_read_more">Tap to read more</string>
+    <string name="back_to_settings">Back to settings</string>
+    <string name="dialog_notifications_disabled_subtitle">Please go to your settings to turn this back on to receive reminders and help you keep track on your progress.</string>
+    <string name="dialog_notifications_disabled_title">Oops! Looks like you have disabled notifications. Please enable them in system settings.</string>
+    <string name="settings">Settings</string>
+
+    <!--Brisk Counter failure-->
+    <string name="brisk_counter_failure_user_message">Oops! We don’t seem to be able to access your walking data right now. Please check back later</string>
+    <string name="minutes">Minutes</string>
+    <string name="brisk_mins_this_week">Brisk mins this week</string>
+    <string name="brisk_mins_this_week_description">Brisk minutes this week</string>
+    <string name="days">Days</string>
+    <string name="brisk_mins_this_month">Brisk mins this month</string>
+    <string name="brisk_mins_this_month_description">Brisk minutes this month</string>
+    <string name="missing_data">Missing some data?</string>
+    <string name="missing_data_subtitle">It looks like you haven\'t opened Active 10 for a while.</string>
+    <string name="missing_data_description">After 5 days, your phone stops sharing your motion and fitness data with the app. To ensure we can continue to track your walking, please open the app at least once every 5 days.</string>
+    <string name="terms_and_conditions_title">Ready to get started?</string>
+    <string name="terms_and_conditions_subtitle">Please take a moment to review our updated terms and conditions</string>
+    <string name="button_submit">Submit</string>
+    <string name="update">Update</string>
+    <string name="update_your_details">Update your details</string>
+    <string name="not_now">Not now</string>
+    <string name="update_available">New update available</string>
+    <string name="update_subtitle">It looks like you are not using the latest version of the app that may contain important bug fixes or new functionality.</string>
+    <string name="nhs_user_details_description">This field shows your currently used email address. To change this email address please update from your NHS account. Changes made will also display here.</string>
+
+    <!--Notifications-->
+
+    <string name="onboarding_notification_tapped_event">onboarding_day_%d_tapped</string>
+    <string name="walkin_reminder_tapped_event">walking_reminder_tapped</string>
+    <string name="lapsed_notification_tapped_event">lapsed_day_%d_tapped
+</string>
+
+    <string name="carousel_counter">%d of %d</string>
+    <string name="carousel_content_description">Item %d of %d is currently selected</string>
+    <string name="carousel_no_next_items">No next elements, last item is selected</string>
+    <string name="carousel_go_to_next_items">Go to next element, %d next items available</string>
+
+    <string name="carousel_no_prev_items">No previous elements, first item is selected</string>
+    <string name="carousel_go_to_prev_items">Go to previous element, %d previous items available</string>
+    <string name="carousel_scrolling">Scrolling</string>
+    <string name="carousel_selected_page">Page %d selected</string>
+
+    <!--Reward-->
+    <string name="rewards">Rewards</string>
+    <string name="share_with_friends">Share this with friends</string>
+    <string name="earned_badge_time">Earned: %s</string>
+    <string name="no_rewards_month">No rewards this month.</string>
+    <string name="no_rewards_week">No rewards this week.</string>
+    <string name="no_rewards_day">No rewards this today.</string>
+    <string name="no_rewards_message">Try and get up to one Active 10 each day</string>
+
+    <string name="new_reward_badge_title">Introducing reward badges</string>
+    <string name="new_reward_badge_message">We\'ve made some updates to improve the app, including new Reward Badges for
+        a motivational boost. \n\n Enjoy.</string>
+    <string name="view_rewards_label">View rewards</string>
+    <string name="view_reward_label">View reward</string>
+    <string name="achieved_badge_label">achieved badge</string>
+    <string name="achieved_badge_with_position">achieved badge. Item %1$d of %2$d</string>
+    <string name="not_achieved_badge_label">not achieved badge</string>
+    <string name="not_achieved_badge_with_position">not achieved badge. Item %1$d of %2$d</string>
+    <string name="share_badge_with_friends">Share this badge with friends</string>
+    <string name="share_badge">Share with friends</string>
+    <string name="go_to_go_jauntly_badge">Continue to Go Jauntly</string>
+    <string name="lottie_load_error">Oops! We don’t seem to be able to load this animation.</string>
+    <string name="lottie_error">Lottie error</string>
+
+    <string name="dialog_lost_data_title">Missing data</string>
+    <string name="dialog_lost_data_text">You might have noticed some data missing in the last few weeks due to a problem with the app.\n\nWe have fixed the issue and we’re restoring your data now. This may take several minutes and the app will need to remain open for this process to complete.\n\nYou won’t be able to access my walks until the process is finished.
+</string>
+
+    <string name="dialog_restoring_data_title">Restoring data</string>
+    <string name="dialog_restoring_data_text">We’re busy returning your missing data. Sorry, this might take a couple of minutes to sort out. Feel free to navigate away from this screen while this happens.</string>
+
+    <string name="update_data_completed">Data update completed</string>
+    <string name="date_restore_error">Oops! Looks like we were unable to check for lost data at this time. We will try again tomorrow.</string>
+    <string name="loading">Loading…</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="no_internet_connection">Oops! Looks like you are offline!</string>
+
+    <string name="accessibility_button">Button</string>
+    <string name="accessibility_tab">Tab</string>
+    <string name="accessibility_select_tab">Select tab</string>
+    <string name="accessibility_click_button">Activate</string>
+    <string name="accessibility_selected">Selected %s</string>
+    <string name="accessibility_unselected">Not selected %s</string>
+
+    <string name="day_brisk_minutes">%s %d brisk minutes</string>
+    <string name="update_your_goals_content_description">Update your goals</string>
+
+    <!--User details-->
+    <string name="inactive_title">Inactive</string>
+    <string name="inactive_description">Less than 30 minutes a week</string>
+    <string name="moderatelyActive_title">Moderately active</string>
+    <string name="moderatelyActive_description">Between 30 \- 149 minutes a week</string>
+    <string name="active_title">Active</string>
+    <string name="active_description">More than 150 minutes a week</string>
+    <string name="underage_error">Your safety is important to us. If you are under the age of 16 please get parental permission before attempting this programme by yourself.</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">How many A10s you have</string>
+    <string name="total">Total</string>
+    <string name="active10s">Active 10s</string>
+    <string name="updated_at">Updated at: </string>
+    <string name="total_mins">Total mins</string>
+    <string name="brisk_mins">Brisk mins</string>
+    <string name="horseshoe_image_view">Horseshoe image view</string>
+    <string name="trophy_image_view">Trophy image view</string>
+    <string name="current_active_10">Current Active 10</string>
+    <string name="today_s_total">Today\'s totals</string>
+    <string name="total_active_10_s">Total Active 10\'s</string>
+    <string name="my_walk_good_work">Good work!</string>
+    <string name="my_walk_total_active10">Your total Active 10\'s will appear here</string>
+    <string name="ty_and_get_a10">That\'s %d Active 10\'s. Try an get up to one Active 10 each day</string>
+    <string name="view_all_badges">View all badges</string>
+    <string name="add_custom_motivation_title">Custom motivation</string>
+    <string name="add_custom_motivation">Add custom motivation</string>
+    <string name="add">Add</string>
+    <string name="whats_motivating_you">What\'s motivating you to make the change?</string>
+    <string name="what_is_your_goal">What is your goal? Thinking about your motivations can help you be more successful. Please select one or more goals to continue</string>
+    <string name="whats_motivating">What\'s motivating you to make the change?</string>
+    <string name="character_limit">Character limit: 100</string>
+    <string name="your_safety_is_important_to_us">Your safety is important to us</string>
+    <string name="under_the_age">If you are under the age of 16 please get parental permission before attempting this programme.</string>
+
+    <!--Introducing Widget dialog-->
+    <string name="introducing_widget_label">Introducing</string>
+    <string name="introducing_widget_title">The new Active10\nhome screen widget</string>
+    <string name="introducing_widget_message">Now you can keep track of\nyour progress straight from\nyour homescreen</string>
+
+    <!-- High Achiever dialog-->
+    <string name="high_achiever_title">High achiever!</string>
+    <string name="high_achiever_subtitle">Great work, you’re consistently out walking your targets! Why not challenge yourself and set a higher goal?</string>
+    <string name="high_achiever_increase_button">Increase now</string>
+    <string name="high_achiever_dont_ask_button">Don’t ask me again</string>
+    <string name="high_achiever_maybe_later_button">Maybe later</string>
+
+    <string name="more_to_explore">More to explore</string>
+    <string name="title_activity_youtube_player">YoutubePlayerActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tick_symbol">\u2713</string>
+    <string name="pace_checker_keep_unlocked">Please keep your phone <b>in hand</b> and <b>unlocked</b> while using Pace Checker.\n\n We recommend using Pace Checker <b>on flat terrain</b>. Uneven surfaces and steep inclines may affect the accuracy of Pace Checker.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ask_me_later">Ask me later</string>
+    <string name="continue_with_nhs_login">Continue to NHS login</string>
+    <string name="continue_without_nhs_login">Continue without login</string>
+    <string name="how_we_use_your_data">How we use your data</string>
+    <string name="creating_account">Connecting your account</string>
+    <string name="created_account_title">Success</string>
+    <string name="logged_out_account_title">Successful log out</string>
+    <string name="disconnected_account_title">Successful disconnect</string>
+    <string name="logged_out_account_message">You’ve logged out of your NHS Active 10 account.</string>
+    <string name="disconnected_account_message">You have successfully disconnected your NHS login from your Active 10 account</string>
+
+    <string name="animations_can_be_turned_on_off_in_settings">Pulsing animations can be turned on/off in settings</string>
+
+    <string name="root_detection_alert_title">Device security breach detected</string>
+    <string name="root_detection_alert_description">Your device has been detected as being rooted or jailbroken. For security reasons your device is not supported. Please refer to your app store for more information.</string>
+    <string name="root_detection_alert_button_text">Close app</string>
+
+    <string name="walks_near_details_see_overview">See the walk overview</string>
+    <string name="walks_near_details_start_with_go_jauntly">Start walk in Go Jauntly</string>
+    <string name="go_jauntly_popup_message">By clicking continue, you will be taken to the App store to download the Go Jauntly app, or redirected to the walk within Go Jauntly if you have it already.</string>
+    <string name="go_jauntly_popup_continue_button">Continue to Go Jauntly</string>
+    <string name="time_to_relax_no_targets_for_today">Time to relax - no targets for today.</string>
+    <string name="check_back_in_tomorrow">Check back in tomorrow!</string>
+    <string name="no_non_brisk_weekly_target">No non-brisk weekly target</string>
+    <string name="close_button">Close</string>
+    <string name="nhs_log_back_in_popup_title">Welcome back to NHS Active 10!</string>
+    <string name="nhs_log_back_in_popup_subtitle">We’ve logged you out so that we can keep your data secure.\n\nLog back in via NHS login to continue using personalised features to support your brisk walking.</string>
+    <string name="meters_short">%1$sm</string>
+    <string name="current_activity_level">Current activity level</string>
+    <string name="current_activity_level_description">This information is used to make the app a little more personal.</string>
+
+    <string name="auth_are_you_sure">Are you sure?</string>
+
+    <string name="acknowledgements_title">Acknowledgements</string>
+    <string name="licenses_title">Licenses</string>
+
+    <string name="deeplink_link_host">nhs-active-10-dev.onelink.me</string>
+    <string name="deeplink_link_todays_walk_path">/DUPt/todays-walks</string>
+    <string name="deeplink_link_my_walking_plans_path">/DUPt/my-walking-plans</string>
+    <string name="deeplink_link_share_path">/DUPt/share</string>
+
+    <string name="onboarding_set_quick_unlock_title">Set up Quick Unlock</string>
+    <string name="onboarding_set_quick_unlock_description">Use Biometrics to unlock Active 10 quickly and easily.\n\nYou\'ll need this when opening the app or after a period of inactivity to unlock the app.\n\nIf you share your device, others with access may be able to open the app.\n\nYou can change this later in Settings.</string>
+    <string name="auth_without_face_id_or_a_pin">Without Biometrics or a PIN, you\'ll need to open with NHS login every time.</string>
+    <string name="use_biometric">Use Biometrics</string>
+    <string name="set_up_a_pin">Set up a PIN</string>
+    <string name="yes_i_m_sure">Yes, I’m sure</string>
+
+    <string name="set_pin_title">Set up a PIN</string>
+    <string name="set_pin_description">Create a 4-digit PIN to open Active 10 quickly and securely without using NHS login.</string>
+    <string name="set_pin_confirm_title">Confirm your PIN</string>
+    <string name="set_pin_confirm_description">Enter your 4-digit PIN again.</string>
+    <string name="set_pin_mismatch_title">The PIN you entered doesn’t match</string>
+    <string name="set_pin_mismatch_description">Please try again.</string>
+    <string name="set_pin_mismatch_error">This PIN is incorrect</string>
+    <string name="try_again_button">Try again</string>
+    <string name="set_pin_too_many_attempts_title">Too many failed attempts</string>
+    <string name="set_pin_too_many_attempts_description">You’ve entered the wrong PIN twice. For security, you’ll need to sign in with NHS login to open the app.</string>
+
+    <string name="returning_user_title">Enter your PIN</string>
+    <string name="returning_user_description">Enter your 4-digit PIN so that you can continue to open Active 10 quickly and securely.</string>
+    <string name="returning_user_too_many_attempts_title">Too many failed attempts</string>
+    <string name="returning_user_too_many_attempts_description">You’ve entered the wrong PIN twice. For security, you’ll need to sign in with NHS login to open the app.</string>
+    <string name="returning_user_too_many_system_attempts_title">Too many failed attempts</string>
+    <string name="returning_user_too_many_system_attempts_description">Your Biometrics has failed too many times. For security, you’ll need to sign in with NHS login to open the app.</string>
+
+    <string name="onboarding_unlock_setup_title">Quick Unlock Set Up!</string>
+    <string name="onboarding_unlock_setup_description">You’ve successfully set up Quick Unlock. Now you can unlock Active 10 quickly and securely every time without using your full NHS login credentials.</string>
+
+    <string name="quick_unlock_enable_title">Enable your Quick Unlock settings</string>
+    <string name="quick_unlock_enable_description">Choose to use Biometrics or PIN to open Active 10 quickly and easily without needing NHS login each time.</string>
+    <string name="enable_biometric">Enable Biometrics</string>
+
+    <string name="biometric_enable_title">Manage your Quick Unlock settings</string>
+    <string name="biometric_enable_description">You are currently using your PIN ID to open Active 10 quickly and easily without needing NHS login each time. Using Biometrics is a more secure way of using Active 10.</string>
+    <string name="remove_quick_unlock">Remove Quick Unlock</string>
+
+    <string name="biometric_disable_title">Manage your Quick Unlock settings</string>
+    <string name="biometric_disable_description">Choose to remove Biometrics will allow you to set up a PIN ID. Not setting a PIN ID will require you to use NHS login each time you use Active 10.</string>
+    <string name="disable_biometric">Disable Biometrics</string>
+
+    <string name="quick_unlock_sure_title">Are you sure?</string>
+    <string name="quick_unlock_sure_description">Without Quick Unlock, you’ll need to open with NHS login every time.</string>
+    <string name="use_pin_id">Use PIN ID</string>
+
+    <string name="quick_unlock_dialog_description">To use Quick Unlock without Biometrics, you must set up a PIN.</string>
+    <string name="nhs_progress_bar_loaded">%1$s\%% loaded</string>
+    <string name="nhs_progress_bar_0_loaded">0% loaded</string>
+
+    <string name="no_consent_sure_title">Are you sure?</string>
+    <string name="no_consent_sure_description">Without an NHS login account on Active 10, you cannot access personalised features.</string>
+    <string name="no_consent_sure_primary_button">Create an account</string>
+    <string name="no_consent_sure_secondary_button">Continue without account</string>
+
+    <string name="walks_near_me_title">Walks Near Me</string>
+</resources>

@@ -1,0 +1,88 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <variable
+            name="header"
+            type="com.phe.betterhealth.components.articles.ArticleHeader" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:importantForAccessibility="no"
+        tools:background="?colorPrimary">
+
+        <ImageView
+            android:id="@+id/article_item_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="375:215"
+            android:background="@android:color/darker_gray"
+            android:scaleType="centerCrop"
+            android:transitionName="@{header.imageUrl}"
+            android:visibility="@{header.imageUrl != null &amp;&amp; !header.imageUrl.empty}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcUrl="@{header.imageUrl}"
+            tools:ignore="ContentDescription"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:id="@+id/article_item_header_mission_overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.51"
+            android:background="?colorPrimary"
+            android:visibility="@{header.missionCompleted}"
+            app:layout_constraintBottom_toBottomOf="@id/article_item_header_image"
+            app:layout_constraintEnd_toEndOf="@id/article_item_header_image"
+            app:layout_constraintStart_toStartOf="@id/article_item_header_image"
+            app:layout_constraintTop_toTopOf="@id/article_item_header_image" />
+
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:contentDescription="@string/mission_completed"
+            android:src="@drawable/bh_ic_mission_completed"
+            android:visibility="@{header.missionCompleted &amp;&amp; !header.imageUrl.empty}"
+            app:layout_constraintBottom_toBottomOf="@id/article_item_header_mission_overlay"
+            app:layout_constraintEnd_toEndOf="@id/article_item_header_mission_overlay"
+            app:layout_constraintStart_toStartOf="@id/article_item_header_mission_overlay"
+            app:layout_constraintTop_toTopOf="@id/article_item_header_mission_overlay" />
+
+        <TextView
+            android:id="@+id/article_item_header_category"
+            style="?bhArticleCardSubtitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="16dp"
+            android:text="@{header.category}"
+            android:textColor="@color/bhTextSecondary"
+            android:visibility="@{header.category != null}"
+            app:layout_constraintTop_toBottomOf="@id/article_item_header_image"
+            tools:text="Advice and Support" />
+
+        <com.phe.betterhealth.widgets.common.HeadingTextView
+            style="?bhArticleCardHeaderStyle"
+            android:id="@+id/article_item_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="7dp"
+            android:focusable="true"
+            android:text="@{header.title}"
+            android:textColor="@color/bhTextPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/article_item_header_category"
+            tools:text="Coping with cravings" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

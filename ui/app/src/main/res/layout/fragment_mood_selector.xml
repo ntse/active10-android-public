@@ -1,0 +1,18 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.phe.betterhealth.widgets.moodselector.BHMoodSelector
+        android:id="@+id/selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:moodSelectorBackButtonTopMargin="16dp"
+        app:moodSelectorAnswerFirstText="Answer 1 Long text text information"
+        app:moodSelectorAnswerFourthText="Answer 4"
+        app:moodSelectorAnswerSecondText="Answer 2"
+        app:moodSelectorAnswerThirdText="Answer 3"
+        app:moodSelectorEndColor="@color/bhMoodSelectorEndColor"
+        app:moodSelectorSecondButtonText="Skip"
+        app:moodSelectorStartColor="@color/bhMoodSelectorStartColor"
+        app:moodSelectorSubtitleText="Subtitle"
+        app:moodSelectorTitleText="Title" />
+</layout>

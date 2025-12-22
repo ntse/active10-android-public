@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bhArticleNumberedListBackground">#CAEDF1</color>
+    <color name="bhArticleBulletListBackground">#F5F6F9</color>
+    <color name="bhArticleMentalHealthCtaBackground">#177AC0</color>
+</resources>

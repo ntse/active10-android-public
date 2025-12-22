@@ -1,0 +1,114 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.modules.general.adapters.GeneralCarouselMotivationItemsAdapter">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="categoryLabel"
+            type="String" />
+
+        <variable
+            name="bodyTitle"
+            type="String" />
+
+        <variable
+            name="showArrow"
+            type="boolean" />
+
+        <variable
+            name="showElevation"
+            type="boolean" />
+
+        <variable
+            name="hideImage"
+            type="Boolean" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@{showElevation ? 8f : 0f}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/thumb_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="14dp"
+                android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
+                android:visibility="@{!imageUrl.empty &amp;&amp; !hideImage}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10dp"
+                app:srcUrl="@{imageUrl}"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/backgrounds/scenic"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/category_1"
+                style="?bhArticleCardContentStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@{categoryLabel}"
+                android:textColor="@color/bhTextPrimary"
+                app:layout_constraintBottom_toTopOf="@id/title_1"
+                app:layout_constraintEnd_toEndOf="@id/title_1"
+                app:layout_constraintStart_toEndOf="@id/thumb_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Motivations" />
+
+            <TextView
+                android:id="@+id/title_1"
+                style="?bhArticleCardContentStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_bold"
+                android:maxLines="3"
+                android:text="@{bodyTitle}"
+                android:textColor="@color/bhTextPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/chevron_1"
+                app:layout_constraintStart_toEndOf="@id/thumb_1"
+                app:layout_constraintTop_toBottomOf="@id/category_1"
+                app:layout_goneMarginEnd="15dp"
+                app:lineHeight="24sp"
+                tools:text="@tools:sample/lorem/random" />
+
+            <ImageView
+                android:id="@+id/chevron_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:padding="5dp"
+                android:src="@drawable/bh_chevron_right"
+                android:visibility="@{showArrow}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

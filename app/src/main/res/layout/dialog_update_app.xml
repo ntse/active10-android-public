@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_update_icon" />
+
+    <TextView
+        android:id="@+id/dialog_update_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:gravity="center"
+        android:text="@string/update_available"
+        android:textColor="@color/black_33"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/dialog_update_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_size_32"
+        android:paddingEnd="@dimen/margin_size_32"
+        android:text="@string/update_subtitle"
+        android:textColor="@color/black_33"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_update_update_button"
+        style="@style/TealButtonLarge"
+        android:layout_marginTop="40dp"
+        android:text="@string/update" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_update_not_now_button"
+        style="@style/SecondaryButtonLarge"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/BU_12"
+        android:layout_marginBottom="24dp"
+        android:text="@string/button_close"
+        android:layout_marginEnd="@dimen/BU_20"
+        android:layout_marginStart="@dimen/BU_20" />
+
+</LinearLayout>

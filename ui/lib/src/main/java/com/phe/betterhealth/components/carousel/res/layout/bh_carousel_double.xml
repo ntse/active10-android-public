@@ -1,0 +1,70 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="bodyTitle"
+            type="String" />
+
+        <variable
+            name="bodyDescription"
+            type="String" />
+
+        <variable
+            name="buttonTitle"
+            type="String" />
+
+        <variable
+            name="buttonAccessibilityLabel"
+            type="String" />
+
+        <variable
+            name="fullWidth"
+            type="Boolean" />
+
+        <variable
+            name="hideFooter"
+            type="Boolean" />
+    </data>
+
+    <com.phe.betterhealth.widgets.card.BHCardView
+        android:id="@+id/general_item_carousel_double_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@{fullWidth ? 0f : 12f}"
+        android:layout_marginBottom="20dp"
+        android:importantForAccessibility="no"
+        app:cardFooterButtonContentDescription="@{buttonAccessibilityLabel}"
+        app:cardFooterButtonText="@{hideFooter ? null : buttonTitle}"
+        app:cardHeaderDescription="@{bodyDescription}"
+        app:cardHeaderTitle="@{bodyTitle}"
+        app:cardRadius="@{fullWidth ? 0f : 10f}"
+        tools:cardFooterButtonText="View all missions"
+        tools:cardHeaderDescription="From handy distractions to practical advice, a range of things to help you get through the tough times"
+        tools:cardHeaderTitle="Help when you need it most">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/today_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="255dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.phe.betterhealth.widgets.carousel.BHCarouselIndicator
+                android:id="@+id/carousel_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pager" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.phe.betterhealth.widgets.card.BHCardView>
+</layout>

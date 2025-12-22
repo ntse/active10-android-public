@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_animation_duration">0</integer>
+    <integer name="enter_screen_animation_duration">2200</integer>
+    <fraction name="horse_shoe_progress_proportion">38%</fraction>
+    <integer name="confetti_animation_duration">45</integer>
+    <fraction name="instruction_walk_radius">10%</fraction>
+    <fraction name="today_total_walk_proportion">23%</fraction>
+</resources>

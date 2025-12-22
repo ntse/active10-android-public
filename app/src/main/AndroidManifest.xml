@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"
+        tools:node="remove" />
+
+    <queries>
+        <package android:name="com.phe.couchto5K" />
+        <package android:name="com.gojauntly.app" />
+    </queries>
+
+    <application
+        android:name=".Active10App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+
+        <receiver
+            android:name=".services.widget.SmallWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/small_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".services.widget.MediumWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/medium_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".presentation.walkpresentation.activities.WalkPresentationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.discover_details.DiscoverDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.goals.activities.GoalsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.tips.activities.TipsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.targets.activities.SetTargetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.howitworks.activity.HowItWorksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.faq.FaqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.walkreminder.WalkReminderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.onboarding.activities.UserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.onboarding.activities.PermissionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.onboarding.activities.IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.home.activities.HomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".presentation.userDetails.activities.UserDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.reward.RewardsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https"/>
+                <data android:host="@string/deeplink_link_host"/>
+                <data android:pathPrefix="@string/deeplink_link_todays_walk_path"/>
+                <data android:pathPrefix="@string/deeplink_link_share_path"/>
+                <data android:pathPrefix="@string/deeplink_link_my_walking_plans_path"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.discover_details.youtube.YoutubePlayerActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".presentation.legals.activity.LegalsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.onboarding.activities.CustomGoalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.pacechecker.PaceCheckerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.mentalhealth.mood.MentalHealthMoodActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.classicuserdetails.ClassicUserDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.nhsuserdetails.NhsUserDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.stayUpdated.StayUpdatedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.signIn.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.progressBar.ProgressBarActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.accountCreated.AccountCreatedActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.accountLoggedOut.AccountLoggedOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.onboarding.nhs.NhsLoginWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.nhsuserdetails.webview.NhsUpdateWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.information.InformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlapStatusBarTheme" />
+        <activity
+            android:name=".presentation.mywalkingplans.activity.MyWalkingPlansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.walkingplandetails.WalkingPlanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.walksnear.activity.WalksNearActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.walkingplanstatistics.WalkingPlanStatisticsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.walksneardetails.activity.WalksNearDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.fulscreenphoto.FullScreenPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.couch.CouchAdvertActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.circularwalk.CircularWalkDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.activitylevel.ActivityLevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.licenses.LicensesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.unlockSetup.UnlockSetupInitActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.unlockSetup.UnlockSetupSuccessActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.sure.AuthSureSignInActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.sure.AuthSureActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.setPin.SetPinActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.pinAuth.PinAuthActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.systemAuth.SystemAuthSignInActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.systemAuth.SystemAuthActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".presentation.authentication.settings.QuickUnlockSettingsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".presentation.onboarding.activities.TermsAndConditionsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".presentation.onboarding.nhs.sure.NoConsentSureActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".services.FcmService" />
+        <service
+            android:name=".services.MigrationService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".services.MyWalksService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".services.WalkingPlanService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".services.RecoverWalksService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".services.RecoverLostWalkService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <receiver android:name=".presentation.walkreminder.alarmreceiver.AlarmReceiver" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_30">
+
+            <ImageView
+                android:id="@+id/badgeIcon"
+                android:layout_width="@dimen/BU_170"
+                android:layout_height="@dimen/BU_180"
+                android:layout_gravity="center_horizontal"
+                android:importantForAccessibility="no"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_goal_setter_badge" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/badgeLottie"
+                android:layout_width="@dimen/BU_170"
+                android:layout_height="@dimen/BU_180"
+                android:scaleType="fitCenter"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_goal_setter_badge" />
+
+            <TextView
+                android:id="@+id/numberTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BU_68"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:importantForAccessibility="yes"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/badgeTitle"
+            style="@style/HeaderLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_20"
+            android:accessibilityHeading="true"
+            android:importantForAccessibility="yes"
+            tools:text="Goal setter" />
+
+        <TextView
+            android:id="@+id/badgeDescription"
+            style="@style/DescriptionMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_8"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/BU_30"
+            android:paddingEnd="@dimen/BU_30"
+            tools:text="You've picked your goals which is a great step to staying motivated!" />
+
+        <TextView
+            android:id="@+id/badgeEarnedTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:textColor="@color/grey_44"
+            android:textSize="@dimen/text_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/badgeDescriptionTv"
+            tools:text="Earned: 19 Mar 2025" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/share"
+            style="@style/PrimaryButtonLarge"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/share_badge_with_friends"
+            android:text="@string/share_badge" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goJauntlyButton"
+            style="@style/PrimaryButtonLarge"
+            android:layout_marginTop="10dp"
+            android:text="@string/button_go_to_go_jauntly" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close"
+            style="@style/SecondaryButtonLarge"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/BU_10"
+            android:layout_marginBottom="@dimen/BU_20"
+            android:text="@string/close_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shareBadgeBtn" />
+    </LinearLayout>
+</ScrollView>

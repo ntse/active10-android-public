@@ -1,0 +1,492 @@
+WARNING: Allowed license URL 'https://opensource.org/licenses/MIT' is unused
+WARNING: Allowed dependency 'com.github.YarikSOffice:lingver:1.3.0' is unused
+WARNING: Allowed dependency 'com.github.prolificinteractive:material-calendarview:2.0.0' is unused
+WARNING: Allowed dependency 'com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.6' is unused
+WARNING: Allowed dependency 'com.github.amitshekhariitbhu.Android-Debug-Database:debug-db-base:1.0.6' is unused
+
+androidx.activity:activity:1.8.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.activity:activity-compose:1.8.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.activity:activity-ktx:1.8.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.annotation:annotation:1.7.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.annotation:annotation-experimental:1.4.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.annotation:annotation-jvm:1.7.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.appcompat:appcompat:1.6.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.appcompat:appcompat-resources:1.6.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.arch.core:core-common:2.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.arch.core:core-runtime:2.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.asynclayoutinflater:asynclayoutinflater:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.autofill:autofill:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.cardview:cardview:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.collection:collection:1.4.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.collection:collection-jvm:1.4.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.collection:collection-ktx:1.4.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.animation:animation:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.animation:animation-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.animation:animation-core:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.animation:animation-core-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.foundation:foundation:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.foundation:foundation-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.foundation:foundation-layout:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.foundation:foundation-layout-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material:material-icons-core:1.6.3
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material:material-icons-core-android:1.6.3
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material:material-ripple:1.6.3
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material:material-ripple-android:1.6.3
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material3:material3:1.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.material3:material3-android:1.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.runtime:runtime:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.runtime:runtime-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.runtime:runtime-saveable:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.runtime:runtime-saveable-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-geometry:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-geometry-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-graphics:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-graphics-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-text:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-text-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-tooling-preview:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-tooling-preview-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-unit:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-unit-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-util:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.compose.ui:ui-util-android:1.6.8
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.concurrent:concurrent-futures:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.constraintlayout:constraintlayout:2.1.4
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.constraintlayout:constraintlayout-core:1.0.4
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.coordinatorlayout:coordinatorlayout:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.core:core:1.12.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.core:core-ktx:1.12.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.core:core-splashscreen:1.0.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.cursoradapter:cursoradapter:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.customview:customview:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.customview:customview-poolingcontainer:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.databinding:databinding-adapters:8.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.databinding:databinding-common:8.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.databinding:databinding-ktx:8.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.databinding:databinding-runtime:8.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.databinding:viewbinding:8.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.datastore:datastore:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.datastore:datastore-core:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.datastore:datastore-preferences:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.datastore:datastore-preferences-core:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.documentfile:documentfile:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.drawerlayout:drawerlayout:1.1.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.dynamicanimation:dynamicanimation:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.emoji2:emoji2:1.3.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.emoji2:emoji2-views-helper:1.3.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.exifinterface:exifinterface:1.3.7
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.fragment:fragment:1.6.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.fragment:fragment-ktx:1.6.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.interpolator:interpolator:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.legacy:legacy-support-core-ui:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.legacy:legacy-support-core-utils:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.legacy:legacy-support-v4:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-common:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-common-java8:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-livedata:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-livedata-core:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-livedata-ktx:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-process:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-runtime:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-runtime-ktx:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-service:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-viewmodel:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.loader:loader:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.localbroadcastmanager:localbroadcastmanager:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.media:media:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.print:print:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.profileinstaller:profileinstaller:1.3.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.recyclerview:recyclerview:1.3.2
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.resourceinspection:resourceinspection-annotation:1.0.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.room:room-common:2.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.room:room-runtime:2.5.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.savedstate:savedstate:1.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.savedstate:savedstate-ktx:1.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.slidingpanelayout:slidingpanelayout:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.sqlite:sqlite:2.3.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.sqlite:sqlite-framework:2.3.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.startup:startup-runtime:1.1.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.swiperefreshlayout:swiperefreshlayout:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.tracing:tracing:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.transition:transition:1.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.vectordrawable:vectordrawable:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.vectordrawable:vectordrawable-animated:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.versionedparcelable:versionedparcelable:1.1.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.viewpager:viewpager:1.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.viewpager2:viewpager2:1.1.0-beta02
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.work:work-runtime:2.8.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.work:work-runtime-ktx:2.8.1
+ - SPDX identifier 'Apache-2.0' allowed
+androidx.work:work-rxjava2:2.8.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.afollestad.material-dialogs:core:3.3.0
+ - Unknown license URL 'https://github.com/afollestad/material-dialogs/blob/main/LICENSE.md' allowed because Apache-2.0 License
+com.airbnb.android:lottie:6.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.airbnb.android:paris:2.0.2
+ - Unknown license name 'null' with no URL is NOT allowed
+ - Coordinate version is allowed because Apache-2.0 License
+com.airbnb.android:paris-annotations:2.0.2
+ - Unknown license name 'null' with no URL is NOT allowed
+ - Coordinate version is allowed because Apache-2.0 License
+com.getkeepsafe.relinker:relinker:1.4.3
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.PhilJay:MPAndroidChart:v3.1.0
+ - Artifact declares no licenses!
+ - Coordinate version is allowed because Apache-2.0 License
+com.github.YarikSOffice:lingver:1.3.0
+ - SPDX identifier 'MIT' allowed
+com.github.adrielcafe:PageIndicatorView:1.0.6
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.bumptech.glide:annotations:4.16.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.bumptech.glide:disklrucache:4.16.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.bumptech.glide:gifdecoder:4.16.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.bumptech.glide:glide:4.16.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.prolificinteractive:material-calendarview:2.0.0
+ - SPDX identifier 'MIT' allowed
+com.github.skydoves:balloon:1.5.4
+ - SPDX identifier 'Apache-2.0' allowed
+com.github.tapadoo:alerter:7.2.4
+ - SPDX identifier 'MIT' allowed
+com.google.accompanist:accompanist-drawablepainter:0.23.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.android.datatransport:transport-api:3.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.android.datatransport:transport-backend-cct:3.1.9
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.android.datatransport:transport-runtime:3.1.9
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.android.gms:play-services-ads-identifier:18.0.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-auth:20.7.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-auth-api-phone:18.0.1
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-auth-base:18.0.4
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-base:18.0.1
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-basement:18.2.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-cloud-messaging:17.0.1
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-fido:20.0.1
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-fitness:21.1.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement-api:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement-base:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement-impl:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement-sdk:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-measurement-sdk-api:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-stats:17.0.2
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.gms:play-services-tasks:18.0.2
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.android.material:material:1.11.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.android.play:core-common:2.0.2
+ - Unknown license URL 'https://developer.android.com/guide/playcore/license' allowed because Play Core Library License
+com.google.android.play:integrity:1.2.0
+ - Unknown license URL 'https://developer.android.com/google/play/integrity/overview#tos' allowed because Google Play Integrity Terms of Service
+com.google.android.play:review:2.0.1
+ - Unknown license URL 'https://developer.android.com/guide/playcore/license' allowed because Play Core Library License
+com.google.android.play:review-ktx:2.0.1
+ - Unknown license URL 'https://developer.android.com/guide/playcore/license' allowed because Play Core Library License
+com.google.code.findbugs:jsr305:3.0.2
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.code.gson:gson:2.10.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.dagger:dagger:2.48
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.dagger:dagger-android:2.48
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.dagger:dagger-android-support:2.48
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.dagger:dagger-lint-aar:2.48
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.errorprone:error_prone_annotations:2.15.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-abt:21.1.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-analytics:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.firebase:firebase-analytics-ktx:21.3.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.firebase:firebase-annotations:16.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-common:20.3.3
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-common-ktx:20.3.3
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-components:17.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-config:21.4.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-crashlytics:18.4.3
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-crashlytics-ktx:18.4.3
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-datatransport:18.1.8
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-encoders:17.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-encoders-json:18.0.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-encoders-proto:16.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-iid-interop:17.1.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.firebase:firebase-installations:17.1.4
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-installations-interop:17.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-measurement-connector:19.0.0
+ - Unknown license URL 'https://developer.android.com/studio/terms.html' allowed because Android Studio Terms of Service
+com.google.firebase:firebase-messaging:23.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-messaging-ktx:23.2.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-perf:20.4.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-perf-ktx:20.4.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:firebase-sessions:1.0.2
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.firebase:protolite-well-known-types:18.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.guava:listenablefuture:1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.google.protobuf:protobuf-javalite:3.21.11
+ - SPDX identifier 'BSD-3-Clause' allowed
+com.guolindev.permissionx:permissionx:1.7.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.jakewharton.rxbinding2:rxbinding:2.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.jakewharton.rxbinding2:rxbinding-kotlin:2.2.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.jakewharton.threetenabp:threetenabp:1.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.jakewharton.timber:timber:5.0.1
+ - SPDX identifier 'Apache-2.0' allowed
+com.makeramen:roundedimageview:2.3.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.phe.betterhealth:ui-components:1.4.0-SNAPSHOT
+ - Artifact declares no licenses!
+ - Coordinate version is allowed because TODO 
+com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0
+ - Unknown license URL 'https://github.com/PierfrancescoSoffritti/android-youtube-player/blob/master/LICENSE' allowed because MIT License
+com.scottyab:rootbeer-lib:0.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.okhttp3:logging-interceptor:4.11.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.okhttp3:okhttp:4.12.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.okio:okio:3.8.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.okio:okio-jvm:3.8.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.retrofit2:adapter-rxjava2:2.9.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.retrofit2:converter-gson:2.9.0
+ - SPDX identifier 'Apache-2.0' allowed
+com.squareup.retrofit2:retrofit:2.9.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.coil-kt:coil:2.6.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.coil-kt:coil-base:2.6.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.coil-kt:coil-compose:2.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.coil-kt:coil-compose-base:2.1.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.jsonwebtoken:jjwt-api:0.12.6
+ - SPDX identifier 'Apache-2.0' allowed
+io.jsonwebtoken:jjwt-impl:0.12.6
+ - SPDX identifier 'Apache-2.0' allowed
+io.jsonwebtoken:jjwt-orgjson:0.12.6
+ - SPDX identifier 'Apache-2.0' allowed
+io.reactivex.rxjava2:rxandroid:2.1.1
+ - SPDX identifier 'Apache-2.0' allowed
+io.reactivex.rxjava2:rxjava:2.2.21
+ - SPDX identifier 'Apache-2.0' allowed
+io.reactivex.rxjava2:rxkotlin:2.4.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.realm:realm-android-kotlin-extensions:10.18.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.realm:realm-android-library:10.18.0
+ - SPDX identifier 'Apache-2.0' allowed
+io.realm:realm-annotations:10.18.0
+ - SPDX identifier 'Apache-2.0' allowed
+javax.inject:javax.inject:1
+ - SPDX identifier 'Apache-2.0' allowed
+joda-time:joda-time:2.12.4
+ - SPDX identifier 'Apache-2.0' allowed
+net.danlew:android.joda:2.12.5
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains:annotations:23.0.0
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-stdlib:1.9.23
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-stdlib-common:1.9.23
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.20
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.20
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-reactive:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jetbrains.kotlinx:kotlinx-coroutines-rx2:1.7.3
+ - SPDX identifier 'Apache-2.0' allowed
+org.jsoup:jsoup:1.16.1
+ - Unknown license URL 'https://jsoup.org/license' allowed because MIT License
+org.mongodb:bson:3.12.1
+ - SPDX identifier 'Apache-2.0' allowed
+org.reactivestreams:reactive-streams:1.0.3
+ - SPDX identifier 'CC0-1.0' allowed
+org.threeten:threetenbp:1.3.6
+ - Unknown license URL 'https://raw.githubusercontent.com/ThreeTen/threetenbp/master/LICENSE.txt' allowed because BSD-3-Clause License

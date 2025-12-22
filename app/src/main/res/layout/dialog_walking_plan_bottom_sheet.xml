@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="screen"
+            type="com.flipsidegroup.active10.data.models.api.ScreenContent" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/buttons_container"
+            tools:background="@color/greyish_brown_two_50">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bh_background_border_radius_top"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <com.phe.betterhealth.widgets.common.HeadingTextView
+                        android:id="@+id/header"
+                        style="@style/Widget.TextView.Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="26dp"
+                        android:layout_marginTop="60dp"
+                        android:text='@{screen.title}'
+                        android:textColor="@color/black_33"
+                        android:textSize="34sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="You’ve hit your targets 3 weeks in a row!" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        style="@style/Widget.TextView.Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="24dp"
+                        android:textColor="@color/black_33"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/header"
+                        app:textHtml='@{screen.description}'
+                        tools:lines="40"
+                        tools:text="@tools:sample/lorem/random" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/background_general_circle"
+                    android:padding="28dp"
+                    android:src="@drawable/ic_walking_plan_bottom_dialog"
+                    app:layout_constraintBottom_toTopOf="@id/panel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/panel"
+                    tools:ignore="ContentDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                android:id="@+id/continue_button"
+                style="@style/TealButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text='@{screen.firstButtonTitle}'
+                app:layout_constraintBottom_toTopOf="@id/close_button"
+                app:layout_constraintVertical_bias="0"
+                tools:text="Start my new plan!" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                android:id="@+id/close_button"
+                style="@style/SecondaryButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="26dp"
+                android:layout_marginBottom="10dp"
+                android:text='@{screen.secondButtonTitle}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                tools:text="Continue with this plan" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

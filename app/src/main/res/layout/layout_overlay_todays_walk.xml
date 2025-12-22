@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/overlayRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <com.flipsidegroup.active10.presentation.todaywalk.instruction.OverlayImageView
+        android:id="@+id/overlayIV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        tools:background="@color/colorPrimary" />
+
+    <RelativeLayout
+        android:id="@+id/headerRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp">
+
+        <TextView
+            android:id="@+id/instructionStepsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="@string/instruction_page_counter"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/instructionTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="@string/instruction_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_17" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stepOneRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerRL"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/instructionOneNextBT"
+            style="@style/InstructionButtonStyle"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginBottom="40dp"
+            android:text="@string/next" />
+
+        <TextView
+            android:id="@+id/stepOneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/instruction_description_one"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/tipOneArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stepOneTv"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/tip_up_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stepTwoRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerRL"
+        android:layout_alignStart="@+id/stepOneRL"
+        android:layout_marginStart="0dp"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/stepTwoCenterV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stepTwoCenterV"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/instructionTwoBackBT"
+                style="@style/InstructionButtonStyle"
+                android:layout_marginEnd="16dp"
+                android:text="@string/previous"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/instructionTwoNextBT"
+                style="@style/InstructionButtonStyle"
+                android:layout_marginStart="16dp"
+                android:text="@string/next" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stepTwoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonsLL"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:paddingTop="23dp"
+            android:text="@string/instruction_description_two"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/tipTwoArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stepTwoTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/tip_down_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stepThreeRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerRL"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/buttonsThreeLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/instructionThreeBackBT"
+                style="@style/InstructionButtonStyle"
+                android:layout_marginEnd="16dp"
+                android:text="@string/previous" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/instructionThreeNextBT"
+                style="@style/InstructionButtonStyle"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_active_yellow"
+                android:text="@string/lets_go"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stepThreeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/instruction_description_three"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+</RelativeLayout>

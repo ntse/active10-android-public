@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Get social!",
+    "description": "Walking with friends or family is a great way to get support and stay motivated!",
+    "image": "tip_social"
+  },
+  {
+    "id": 2,
+    "title": "Set a reminder",
+    "description": "Use the app to set a reminder at a time of day that you want to get walking.",
+    "image": "tip_reminder"
+  },
+  {
+    "id": 3,
+    "title": "Keep track!",
+    "description": "Check back regularly to see your progress and keep you motivated to help reach your goals.",
+    "image": "tip_keep_track"
+  },
+  {
+    "id": 4,
+    "title": "Plan ahead!",
+    "description": "Think about times in the day you could walk briskly for a few minutes - it might be on the school run, or the way back from work.",
+    "image": "tip_plan_ahead"
+  }
+]

@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <import type="com.phe.betterhealth.components.share.ShareButtonStyle" />
+
+        <variable
+            name="button"
+            type="com.phe.betterhealth.components.articleswlp.ArticleButtonShareWlp" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="isLast"
+            type="boolean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@{isLast ? 26f : 0f}"
+        android:background="@color/bhArticleWlpBackground"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="5dp">
+
+        <include
+            android:id="@+id/bh_article_item_button_share"
+            layout="@layout/bh_share_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginBottom="@{button.shareButtonStyle == ShareButtonStyle.EXTENDED.value ? 17f : 26f}"
+            app:clickListener="@{clickListener}"
+            app:shareButton="@{button}"
+            tools:layout_marginBottom="26dp" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/dialog_terms_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_ready_to_start"
+        app:layout_constraintBottom_toTopOf="@id/dialog_terms_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_terms_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:text="@string/terms_and_conditions_title"
+        android:textColor="@color/black_33"
+        android:textSize="32sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@id/dialog_terms_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_terms_image" />
+
+    <TextView
+        android:id="@+id/dialog_terms_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/terms_and_conditions_subtitle"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/text_size_18"
+        app:layout_constraintBottom_toTopOf="@id/dialog_terms_terms_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_title" />
+
+    <TextView
+        android:id="@+id/dialog_terms_terms_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="start|center_vertical"
+        android:importantForAccessibility="yes"
+        android:minHeight="48dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/view_terms_and_conditions"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toStartOf="@id/dialog_terms_terms_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_subtitle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_terms_terms_tv" />
+
+    <ImageView
+        android:id="@+id/dialog_terms_terms_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_terms_terms_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dialog_terms_terms_tv"
+        app:layout_constraintTop_toTopOf="@id/dialog_terms_terms_tv" />
+
+    <TextView
+        android:id="@+id/dialog_terms_policy_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="start|center_vertical"
+        android:importantForAccessibility="yes"
+        android:minHeight="48dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/view_privacy_and_policy"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toStartOf="@id/dialog_terms_policy_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_terms_tv" />
+
+    <ImageView
+        android:id="@+id/dialog_terms_policy_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_terms_policy_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dialog_terms_policy_tv"
+        app:layout_constraintTop_toTopOf="@id/dialog_terms_policy_tv" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/divider_color"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_terms_policy_tv" />
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+        android:id="@+id/dialog_terms_checkbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:importantForAccessibility="yes"
+        android:paddingStart="24dp"
+        android:paddingEnd="12dp"
+        android:text="@string/intro_terms_and_conditions_large"
+        android:textColor="@color/black_33"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_policy_tv" />
+
+    <TextView
+        android:id="@+id/dialog_terms_need_too_agree_error"
+        style="@style/DescriptionError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="start|center_vertical"
+        android:labelFor="@+id/dialog_terms_radio_button"
+        android:text="@string/intro_terms_and_conditions_error"
+        android:visibility="invisible"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toTopOf="@id/dialog_terms_submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_checkbox"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dialog_terms_submit_button"
+        style="@style/PrimaryButtonLarge"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
+        android:enabled="true"
+        android:text="@string/button_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_terms_need_too_agree_error" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

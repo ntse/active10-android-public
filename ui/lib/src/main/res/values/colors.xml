@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bhColorPrimary">#6200EE</color>
+    <color name="bhColorPrimaryDark">#3700B3</color>
+    <color name="bhColorAccent">#03DAC5</color>
+    <color name="bhRed">#cd3247</color>
+    <color name="bhWhite">#FFFFFF</color>
+    <color name="bhTickColor">#037D8A</color>
+    <color name="bhDivider">#eeeeee</color>
+    <color name="bhTextPrimary">#212121</color>
+    <color name="bhTextSecondary">#757575</color>
+    <color name="bhInactiveBackground">#e4e4e4</color>
+    <color name="avatar_backround_color">#dcebf6</color>
+    <color name="abbr_text_color">#177AC0</color>
+</resources>

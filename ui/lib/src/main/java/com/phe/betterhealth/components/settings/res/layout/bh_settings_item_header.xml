@@ -1,0 +1,83 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.settings.SettingsAdapter">
+
+    <data>
+
+        <variable
+            name="settingItem"
+            type="com.phe.betterhealth.components.settings.SettingsSection" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:accessibilityHeading="true"
+        android:background="@color/bhWhite"
+        android:minHeight="68dp">
+
+        <com.phe.betterhealth.widgets.common.HeadingTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="17dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="@{settingItem.title}"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="@dimen/settings_header_text_size"
+            app:autoSizeMaxTextSize="50sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/value_view_1"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="My Preferences" />
+
+        <TextView
+            android:id="@+id/value_view_1"
+            style="?bhArticleCardContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_bold"
+            android:maxLines="2"
+            android:text="@{settingItem.value}"
+            android:textColor="?colorPrimary"
+            android:visibility="@{settingItem.value != null}"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/header_title"
+            app:layout_constraintEnd_toStartOf="@id/chevron"
+            app:layout_constraintStart_toEndOf="@id/header_title"
+            app:layout_constraintTop_toTopOf="@id/header_title"
+            app:layout_constraintWidth_max="200dp"
+            app:layout_goneMarginBottom="18dp"
+            tools:text="@tools:sample/lorem/random" />
+
+
+        <ImageView
+            android:id="@+id/chevron"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:padding="5dp"
+            android:src="@drawable/bh_chevron_right"
+            android:visibility="@{settingItem.value != null}"
+            app:layout_constraintBottom_toBottomOf="@id/header_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header_title"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bhDivider"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

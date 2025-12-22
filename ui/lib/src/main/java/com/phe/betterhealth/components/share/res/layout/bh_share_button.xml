@@ -1,0 +1,100 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.share.ShareButton">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.phe.betterhealth.components.share.ShareButtonStyle" />
+
+        <import type="com.phe.betterhealth.components.share.ShareButtonExtendedStyle" />
+
+        <variable
+            name="shareButton"
+            type="com.phe.betterhealth.components.share.ShareButton" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/bh_share_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/bh_share_button_standard"
+            style="@style/Widget.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@{shareButton.shareButtonAccessibilityLabel}"
+            android:onClick="@{(v) -> clickListener.onClick(v)}"
+            android:text="@{!shareButton.shareButtonTitle.empty ? shareButton.shareButtonTitle : @string/bh_share_title_default}"
+            android:visibility="@{ShareButtonStyle.STANDARD.value.equals(shareButton.shareButtonStyle)}"
+            tools:text="Share this"
+            tools:visibility="gone" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bh_share_button_expanded_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{ShareButtonStyle.EXTENDED.value.equals(shareButton.shareButtonStyle)}"
+            app:cardBackgroundColor="#f5f6f9"
+            app:cardCornerRadius="10dp"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="18dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="@{shareButton.shareButtonDescription}"
+                    android:textColor="@color/bhTextPrimary"
+                    android:textSize="18sp"
+                    tools:text="If you found this helpful why not share it with your Quit Buddy?" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_share_button_expanded_primary"
+                    style="@style/Widget.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@{shareButton.shareButtonAccessibilityLabel}"
+                    android:onClick="@{clickListener}"
+                    android:text="@{!shareButton.shareButtonTitle.empty ? shareButton.shareButtonTitle : @string/bh_share_title_default}"
+                    android:visibility="@{shareButton.shareButtonExtendedStyle == ShareButtonExtendedStyle.PRIMARY}"
+                    tools:text="Share this"
+                    tools:visibility="visible" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_share_button_expanded_secondary"
+                    style="@style/Widget.Button.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@{shareButton.shareButtonAccessibilityLabel}"
+                    android:onClick="@{clickListener}"
+                    android:text="@{!shareButton.shareButtonTitle.empty ? shareButton.shareButtonTitle : @string/bh_share_title_default}"
+                    android:visibility="@{shareButton.shareButtonExtendedStyle == ShareButtonExtendedStyle.SECONDARY}"
+                    tools:text="Share this"
+                    tools:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

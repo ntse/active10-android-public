@@ -1,0 +1,85 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.modules.general.GeneralScreenAdapter">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="categoryLabel"
+            type="String" />
+
+        <variable
+            name="bodyTitle"
+            type="String" />
+
+        <variable
+            name="buttonTitle"
+            type="String" />
+
+        <variable
+            name="bodyDescription"
+            type="String" />
+
+        <variable
+            name="fullWidth"
+            type="Boolean" />
+
+        <variable
+            name="buttonAccessibilityLabel"
+            type="String" />
+    </data>
+
+    <com.phe.betterhealth.widgets.card.BHCardView
+        android:id="@+id/general_item_carousel_small_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@{fullWidth ? 0f : 12f}"
+        android:layout_marginBottom="20dp"
+        android:importantForAccessibility="no"
+        app:cardFooterButtonContentDescription="@{buttonAccessibilityLabel}"
+        app:cardFooterButtonText="@{buttonTitle}"
+        app:cardHeaderDescription="@{bodyDescription}"
+        app:cardHeaderTitle="@{bodyTitle}"
+        app:cardRadius="@{fullWidth ? 0f : 10f}"
+        tools:cardFooterButtonText="View all missions"
+        tools:cardHeaderDescription="From handy distractions to practical advice, a range of things to help you get through the tough times"
+        tools:cardHeaderTitle="Help when you need it most">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/today_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- height: 243dp + 22dp + 20dp -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:minHeight="285dp"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingTop="24dp"
+                android:paddingBottom="20dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toTopOf="parent"
+                app:paddingStart="@{fullWidth ? 26f : 15f}"
+                tools:listitem="@layout/bh_carousel_small_subitem"
+                tools:paddingStart="15dp" />
+
+            <com.phe.betterhealth.widgets.carousel.BHCarouselIndicator
+                android:id="@+id/carousel_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.phe.betterhealth.widgets.card.BHCardView>
+
+</layout>

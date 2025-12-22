@@ -1,0 +1,183 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bh_mood_selector_root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bh_mood_selector_top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/bh_mood_selector_back_button_margin" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bh_mood_selector_back_button"
+            style="@style/Widget.Button.Back.Inverted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:text="@string/global_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bh_mood_selector_top_guideline" />
+
+        <com.phe.betterhealth.widgets.common.BottomFadingEdgeScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_button_first_button"
+            app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_back_button">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="20dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/bh_mood_selector_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="55dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/bh_mood_selector_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="55dp"  />
+
+                <com.phe.betterhealth.widgets.common.HeadingTextView
+                    android:id="@+id/bh_mood_selector_title"
+                    style="@style/Widget.TextView.Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/bhWhite"
+                    app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_subtitle"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="How did it go?" />
+
+                <TextView
+                    android:id="@+id/bh_mood_selector_subtitle"
+                    style="@style/Widget.TextView.Content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/bhWhite"
+                    app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_answer_great"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_title"
+                    tools:text="Take a moment to reflect on the one small thing you did today" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_mood_selector_answer_great"
+                    style="@style/Widget.Button.MoodChooser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingStart="5dp"
+                    app:icon="@drawable/ic_mood_great"
+                    app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_answer_good"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_subtitle"
+                    app:rippleColor="#A1D229"
+                    tools:text="It went great!" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_mood_selector_answer_good"
+                    style="@style/Widget.Button.MoodChooser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="0dp"
+                    app:icon="@drawable/ic_mood_good"
+                    app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_answer_ok"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_answer_great"
+                    app:rippleColor="#29D2A9"
+                    tools:text="It was tough, but I want to try again" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_mood_selector_answer_ok"
+                    style="@style/Widget.Button.MoodChooser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingStart="5dp"
+                    app:icon="@drawable/ic_mood_ok"
+                    app:layout_constraintBottom_toTopOf="@id/bh_mood_selector_answer_better"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_answer_good"
+                    app:rippleColor="#FFD402"
+                    tools:text="It was difficult" />
+
+                <com.phe.betterhealth.widgets.button.BHButton
+                    android:id="@+id/bh_mood_selector_answer_better"
+                    style="@style/Widget.Button.MoodChooser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:paddingStart="5dp"
+                    app:icon="@drawable/ic_mood_tired"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/bh_mood_selector_end"
+                    app:layout_constraintStart_toStartOf="@id/bh_mood_selector_start"
+                    app:layout_constraintTop_toBottomOf="@id/bh_mood_selector_answer_ok"
+                    app:rippleColor="#FF740D"
+                    tools:text="I'm not sure" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.phe.betterhealth.widgets.common.BottomFadingEdgeScrollView>
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/bh_mood_selector_button_first_button"
+            style="@style/Widget.BetterHealth.Button.Large.Outline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/bhWhite"
+            app:layout_constraintBottom_toTopOf="@+id/bh_mood_selector_button_second_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/bhWhite"
+            app:strokeWidth="2dp"
+            tools:text="Learn more" />
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/bh_mood_selector_button_second_button"
+            style="@style/Widget.BetterHealth.Button.Large.Outline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="23dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/bhWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/bhWhite"
+            app:strokeWidth="2dp"
+            tools:text="Skip" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

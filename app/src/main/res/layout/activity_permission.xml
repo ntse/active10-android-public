@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/permissionsParentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.flipsidegroup.active10.utils.NonSwipeableViewPager
+            android:id="@+id/permissionVP"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContainerCL"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <include
+            android:id="@+id/permissionToolbar"
+            layout="@layout/custom_toolbar_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueBTN_fitness"
+                style="@style/PrimaryButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="@dimen/BU_20"
+                android:background="@null"
+                android:letterSpacing="0"
+                android:stateListAnimator="@null"
+                android:text="@string/button_allow_motion_fitness"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"
+                app:backgroundTint="#0D000000"
+                app:cornerRadius="37.5dp"
+                app:icon="@drawable/ic_google_fit"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                app:iconTint="#ffffff"
+                app:iconTintMode="multiply"
+                app:layout_constraintBottom_toTopOf="@+id/noThanksBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/continueBTN"
+                style="@style/TealButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/BU_20"
+                android:text="@string/button_allow_notifications"
+                app:layout_constraintBottom_toTopOf="@+id/noThanksBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/noThanksBTN"
+                style="@style/SecondaryButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/BU_20"
+                android:text="@string/button_no_thanks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.signIn.SignInMainFragment">
+
+    <com.flipsidegroup.active10.utils.LockableNestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/BU_12"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/continueBTN"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:touchscreenBlocksFocus="false">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/signInIMG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/better_health_logo_background" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/nhsBanner"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="@dimen/BU_25"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_nhs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bhBanner"
+                android:layout_width="147dp"
+                android:layout_height="106dp"
+                android:layout_marginStart="@dimen/BU_25"
+                android:layout_marginTop="60dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/better_health_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:id="@+id/barrier_content_top"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/signInIMG"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_rounded_top_white"
+                app:layout_constraintBottom_toBottomOf="@id/content_background"
+                app:layout_constraintTop_toTopOf="@id/content_background" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/BU_25"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier_content_top">
+
+                <com.flipsidegroup.active10.utils.view.HeadingTextView
+                    android:id="@+id/signInTitle"
+                    style="@style/HeaderExtraLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/BU_30"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Create an optional account using your NHS login" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/signInRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/BU_12"
+                    android:importantForAccessibility="no"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/signInTitle"
+                    tools:listitem="@layout/item_sign_in_icon_description" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/signInGoToInfoBTN"
+                    style="@style/SecondaryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="0dp"
+                    android:ellipsize="end"
+                    android:letterSpacing="0"
+                    android:maxLines="1"
+                    android:text="@string/how_we_use_your_data"
+                    app:icon="@drawable/ic_green_right_arrow"
+                    app:iconGravity="end"
+                    app:iconTint="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/signInRV" />
+
+                <include
+                    android:id="@+id/signInTipLayout"
+                    layout="@layout/item_sign_in_icon_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/BU_24"
+                    app:layout_constraintTop_toBottomOf="@id/signInGoToInfoBTN" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.flipsidegroup.active10.utils.LockableNestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueBTN"
+        style="@style/NhsLoginButton"
+        android:layout_marginBottom="@dimen/BU_12"
+        android:layout_marginTop="@dimen/BU_12"
+        android:letterSpacing="0"
+        android:paddingTop="6dp"
+        android:text="@string/continue_with_nhs_login"
+        app:layout_constraintBottom_toTopOf="@id/skipBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skipBTN"
+        style="@style/SecondaryButtonLarge"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/BU_12"
+        android:layout_marginBottom="26dp"
+        android:clipToPadding="false"
+        android:text="@string/ask_me_later"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

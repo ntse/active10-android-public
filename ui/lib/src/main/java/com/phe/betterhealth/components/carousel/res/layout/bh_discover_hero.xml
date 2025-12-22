@@ -1,0 +1,91 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.modules.infoPage.ArticleListAdapter">
+
+    <data>
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <variable
+            name="categoryLabel"
+            type="String" />
+
+        <variable
+            name="bodyTitle"
+            type="String" />
+
+        <variable
+            name="bodyDescription"
+            type="String" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/thumb"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:background="@android:color/darker_gray"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcUrl="@{imageUrl}"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                style="?bhArticleCardSubtitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp"
+                android:text="@{categoryLabel}"
+                android:textColor="@color/bhTextSecondary"
+                app:layout_constraintTop_toBottomOf="@id/thumb"
+                tools:text="Advice and Support" />
+
+            <TextView
+                android:id="@+id/title"
+                style="?bhArticleCardHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:text="@{bodyTitle}"
+                android:textColor="@color/bhTextPrimary"
+                app:layout_constraintTop_toBottomOf="@id/subtitle"
+                tools:text="Coping with cravings" />
+
+            <TextView
+                android:id="@+id/content"
+                style="?bhArticleCardContentStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="17dp"
+                android:text="@{bodyDescription}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintVertical_bias="0"
+                app:lineHeight="24sp"
+                tools:text="If you can control your cravings for a cigarette, you'll significantly boost your chances of quitting." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

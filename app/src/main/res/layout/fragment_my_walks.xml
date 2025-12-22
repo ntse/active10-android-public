@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isTooltipEnabled"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:importantForAccessibility="@{isTooltipEnabled ? View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS : View.IMPORTANT_FOR_ACCESSIBILITY_AUTO}">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="?colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@id/top"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="0dp" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/myWalksToolbar"
+                style="@style/ToolbarBig"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/top"
+                app:title="@string/bottom_nav_menu_my_walks" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/BU_90"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/myWalksToolbar" />
+
+            <com.flipsidegroup.active10.utils.LockableNestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myWalksToolbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/periodContainerCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/mask_input_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:alpha="0"
+                        android:background="@android:color/black"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:translationZ="200dp"
+                        android:visibility="@{isTooltipEnabled ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/xd1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/BU_13"
+                        android:layout_marginEnd="@dimen/BU_13"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/period_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:indeterminate="true" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/period_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/periodTypeRG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="6dp"
+                                android:background="@drawable/bg_cardview_top_corners"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RadioButton
+                                    android:id="@+id/daysWalkRB"
+                                    style="@style/WalksRadioButtonStyle"
+                                    android:text="@string/days_walk_tab"
+                                    tools:checked="true" />
+
+                                <RadioButton
+                                    android:id="@+id/weeksWalkRB"
+                                    style="@style/WalksRadioButtonStyle"
+                                    android:text="@string/weeks_walk_tab" />
+
+                                <RadioButton
+                                    android:id="@+id/monthsWalkRB"
+                                    style="@style/WalksRadioButtonStyle"
+                                    android:text="@string/months_walk_tab" />
+                            </RadioGroup>
+
+                            <com.flipsidegroup.active10.utils.view.CenteringTabLayout
+                                android:id="@+id/myWalksIntervalTabLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/very_light_grey"
+                                android:descendantFocusability="beforeDescendants"
+                                app:tabIndicator="@drawable/walk_current_tab"
+                                app:tabIndicatorColor="@color/black"
+                                app:tabIndicatorHeight="6dp"
+                                app:tabMinWidth="100dp"
+                                app:tabMode="scrollable"
+                                app:tabPaddingEnd="12dp"
+                                app:tabPaddingStart="12dp"
+                                app:tabSelectedTextColor="@color/black"
+                                app:tabTextAppearance="@style/TabTextAppearance" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/progressRL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:paddingTop="25dp"
+                                android:paddingBottom="25dp">
+
+                                <com.flipsidegroup.active10.utils.MyWalkHorseShoeProgressBar
+                                    android:id="@+id/myWalkProgress"
+                                    android:layout_width="250dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/noBriskMessageTv"
+                                    android:layout_width="250dp"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/no_brisk_bg"
+                                    android:fontFamily="@font/roboto_bold"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/no_walk_today"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_17"
+                                    android:visibility="visible"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/currentProgressValueTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginTop="-12dp"
+                                    android:fontFamily="@font/roboto_condensed_bold"
+                                    android:importantForAccessibility="no"
+                                    android:textColor="@color/black_33"
+                                    android:textSize="24sp"
+                                    app:layout_constraintEnd_toEndOf="@id/currentProgressTV"
+                                    app:layout_constraintStart_toStartOf="@id/currentProgressTV"
+                                    app:layout_constraintTop_toBottomOf="@id/myWalkProgress"
+                                    tools:text="2888 Mins" />
+
+                                <TextView
+                                    android:id="@+id/currentProgressTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/BU_15"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:text="@string/brisk_walking"
+                                    android:textColor="@color/black_33"
+                                    android:textSize="@dimen/text_size_16"
+                                    app:layout_constrainedWidth="true"
+                                    app:layout_constraintEnd_toStartOf="@id/progressGuideline"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/currentProgressValueTV" />
+
+                                <TextView
+                                    android:id="@+id/maxProgressValueTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-12dp"
+                                    android:fontFamily="@font/roboto_condensed_bold"
+                                    android:importantForAccessibility="no"
+                                    android:textColor="@color/black_33"
+                                    android:textSize="24sp"
+                                    app:layout_constraintEnd_toEndOf="@id/maxProgressTV"
+                                    app:layout_constraintStart_toStartOf="@id/maxProgressTV"
+                                    app:layout_constraintTop_toBottomOf="@id/myWalkProgress"
+                                    tools:text="8888 Mins" />
+
+                                <TextView
+                                    android:id="@+id/maxProgressTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/BU_15"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:gravity="center"
+                                    android:importantForAccessibility="no"
+                                    android:text="@string/total_walking"
+                                    android:textColor="@color/black_33"
+                                    android:textSize="@dimen/text_size_16"
+                                    app:layout_constrainedWidth="true"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/progressGuideline"
+                                    app:layout_constraintTop_toBottomOf="@id/maxProgressValueTV" />
+
+                                <androidx.constraintlayout.widget.Guideline
+                                    android:id="@+id/progressGuideline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    app:layout_constraintGuide_percent="0.5" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/briskThisMonthCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:layout_marginStart="@dimen/BU_13"
+                        android:layout_marginEnd="@dimen/BU_13"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintTop_toBottomOf="@id/xd1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/barChartRL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/chart_container_content_description"
+                            android:focusableInTouchMode="true"
+                            android:importantForAccessibility="no"
+                            android:minHeight="300dp"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/chartTitleTV"
+                                style="@style/HeaderLarge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_cardview_top_corners"
+                                android:padding="@dimen/BU_15"
+                                android:text="@string/brisk_mins_this_week"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.flipsidegroup.active10.presentation.common.widgets.VerticalLabelView
+                                android:id="@+id/minutesTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/BU_5"
+                                app:layout_constraintBottom_toBottomOf="@+id/barChart"
+                                app:layout_constraintEnd_toStartOf="@id/barChart"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/barChart"
+                                app:layout_constraintWidth="wrap_content"
+                                app:text="MINUTES"
+                                app:textColor="@color/black"
+                                app:textSize="@dimen/text_size_11" />
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/barChart"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/BU_200"
+                                android:layout_marginStart="@dimen/BU_12"
+                                android:layout_toEndOf="@+id/minutesTV"
+                                android:contentDescription="@string/chart_content_description"
+                                android:importantForAccessibility="yes"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/minutesTV"
+                                app:layout_constraintTop_toBottomOf="@id/chartTitleTV" />
+
+                            <TextView
+                                android:id="@+id/chartXAxisLegendTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginVertical="@dimen/BU_5"
+                                android:text="@string/days"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_11"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/barChart"
+                                app:layout_constraintTop_toBottomOf="@id/barChart" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/totalA10Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:layout_marginStart="@dimen/BU_13"
+                        android:layout_marginEnd="@dimen/BU_13"
+                        android:importantForAccessibility="no"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintTop_toBottomOf="@id/briskThisMonthCard"
+                        tools:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.phe.betterhealth.widgets.common.HeadingTextView
+                                android:id="@+id/totalA10Header"
+                                style="@style/HeaderLarge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_cardview_top_corners"
+                                android:padding="@dimen/BU_15"
+                                android:text="@string/total_active_10_s"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <FrameLayout
+                                android:id="@+id/trophyContainer"
+                                android:layout_width="107dp"
+                                android:layout_height="85dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/totalA10Header">
+
+                                <ImageView
+                                    android:id="@+id/trophyImageView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    tools:background="@drawable/ic_mywalks_trophy_on" />
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/numberOfA10"
+                                android:layout_width="@dimen/BU_35"
+                                android:layout_height="@dimen/BU_35"
+                                android:background="@drawable/bg_green_oval_outlined"
+                                android:elevation="@dimen/elevation"
+                                android:fontFamily="@font/roboto_condensed_bold"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                app:layout_constraintEnd_toEndOf="@+id/trophyContainer"
+                                app:layout_constraintTop_toTopOf="@+id/trophyContainer"
+                                tools:text="2X" />
+
+                            <TextView
+                                android:id="@+id/totalA10Description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/BU_25"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="@dimen/BU_25"
+                                android:layout_marginBottom="18dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:textColor="@color/black_33"
+                                android:textSize="@dimen/text_size_16"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/trophyContainer"
+                                app:layout_constraintTop_toBottomOf="@+id/totalA10Header"
+                                tools:text="@string/ty_and_get_a10" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rewardsCV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:importantForAccessibility="no"
+                        android:layout_marginStart="@dimen/BU_13"
+                        android:layout_marginEnd="@dimen/BU_13"
+                        app:cardCornerRadius="@dimen/card_radius"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintTop_toBottomOf="@id/totalA10Card">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/badgesCL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no">
+
+                            <TextView
+                                android:id="@+id/rewardsHeader"
+                                style="@style/HeaderLarge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_cardview_top_corners"
+                                android:padding="@dimen/BU_15"
+                                android:text="@string/rewards"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/noBadgesIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/BU_30"
+                                android:layout_marginTop="@dimen/BU_15"
+                                android:layout_marginBottom="@dimen/BU_15"
+                                android:contentDescription="@null"
+                                android:src="@drawable/ic_no_badges"
+                                app:layout_constraintBottom_toBottomOf="@+id/rewardsSeparator"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/rewardsHeader" />
+
+                            <TextView
+                                android:id="@+id/noBadgesMessageTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:fontFamily="@font/roboto_regular"
+                                android:gravity="start"
+                                android:text="@string/no_rewards_message"
+                                android:textColor="@color/grey_44"
+                                android:textSize="@dimen/text_size_16"
+                                app:layout_constraintBottom_toBottomOf="@+id/rewardsSeparator"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/noBadgesIV"
+                                app:layout_constraintTop_toBottomOf="@+id/rewardsHeader" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rewardBadgesRV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:importantForAccessibility="no"
+                                android:nestedScrollingEnabled="false"
+                                android:visibility="gone"
+                                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                app:layout_constraintBottom_toBottomOf="@+id/rewardsSeparator"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/rewardsHeader"
+                                tools:itemCount="3"
+                                tools:listitem="@layout/item_reward_badge" />
+
+                            <ImageView
+                                android:id="@+id/viewRewardBadgesIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_marginEnd="5dp"
+                                android:contentDescription="@string/view_rewards_label"
+                                android:src="@drawable/ic_black_right_arrow"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/rewardsSeparator"
+                                app:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/viewRewards"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="@dimen/BU_15"
+                                android:fontFamily="@font/roboto_bold"
+                                android:importantForAccessibility="no"
+                                android:text="@string/view_all_badges"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_16"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/viewRewardBadgesIV"
+                                app:layout_constraintTop_toBottomOf="@id/rewardsSeparator" />
+
+                            <View
+                                android:id="@+id/rewardsSeparator"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="@dimen/BU_50"
+                                android:background="@color/grey_background"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <androidx.constraintlayout.widget.Group
+                                android:id="@+id/rewardsGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:constraint_referenced_ids="noBadgesMessageTV,noBadgesIV" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_walks_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rewardsCV" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.flipsidegroup.active10.utils.LockableNestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.flipsidegroup.active10.utils.view.HighlightView
+            android:id="@+id/highlight_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{isTooltipEnabled ? View.VISIBLE : View.GONE}">
+
+            <com.flipsidegroup.active10.utils.view.TooltipWidget
+                android:id="@+id/tooltip_widget"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.flipsidegroup.active10.utils.view.HighlightView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

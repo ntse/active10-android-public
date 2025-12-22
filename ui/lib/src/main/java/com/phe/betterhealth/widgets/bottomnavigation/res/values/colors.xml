@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bhNavigationStandard">#757575</color>
+    <color name="bhNavigationItemUnselectedText">#212121</color>
+    <color name="bhNavigationStandardCorrectContrast">#212121</color>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/HeaderExtraLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_50"
+        android:layout_marginTop="@dimen/BU_65"
+        android:layout_marginEnd="@dimen/BU_50"
+        android:gravity="center"
+        android:text="@string/your_safety_is_important_to_us" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_50"
+        android:layout_marginTop="@dimen/BU_30"
+        android:layout_marginEnd="@dimen/BU_50"
+        android:gravity="center"
+        android:text="@string/under_the_age" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continueBottomDialog"
+        style="@style/PrimaryButtonLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/BU_60"
+        android:layout_marginBottom="@dimen/BU_45"
+        android:text="@string/button_continue" />
+</LinearLayout>

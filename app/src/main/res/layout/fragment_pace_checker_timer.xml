@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:keepScreenOn="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pace_checker_close"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Close"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="14sp"
+            app:icon="@drawable/ic_close"
+            app:iconTint="@color/bhTextPrimary"
+            app:iconGravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/pulse_animation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="52dp"
+            android:layout_marginTop="-30dp"
+            android:visibility="invisible"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_caption"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="rings.json"
+            app:lottie_loop="true"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/pace_checker_dummy_pulse"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_pace_checker_timer_pulse"
+            app:layout_constraintBottom_toBottomOf="@id/pulse_animation"
+            app:layout_constraintEnd_toEndOf="@id/pulse_animation"
+            app:layout_constraintStart_toStartOf="@id/pulse_animation"
+            app:layout_constraintTop_toTopOf="@id/pulse_animation" />
+
+        <TextView
+            android:id="@+id/pace_checker_title"
+            style="@style/HeaderExtraLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:text="Pace Checker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_close"
+            app:lineHeight="48sp" />
+
+        <TextView
+            android:id="@+id/pace_checker_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Walk for 60 secs until you hear the bell. Try to match your steps to the speed of the pulsing rings below."
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_title"
+            app:lineHeight="24sp"
+            tools:maxLines="5" />
+
+        <TextView
+            android:id="@+id/pace_checker_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Brisk walking is 100 steps per minute"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_todayswalks_teal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_description"
+            app:lineHeight="24sp"
+            tools:maxLines="5" />
+
+        <TextView
+            android:id="@+id/pace_checker_timer_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:text="Countdown"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pulse_animation"
+            app:lineHeight="48sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pace_checker_timer_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:importantForAccessibility="no"
+            app:cardBackgroundColor="@color/generic_bg_grey_card"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/pace_checker_button_continue"
+            app:layout_constraintEnd_toEndOf="@id/pace_checker_button_continue"
+            app:layout_constraintStart_toStartOf="@id/pace_checker_button_continue"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_timer_label"
+            app:layout_constraintVertical_bias="0">
+
+            <TextView
+                android:id="@+id/pace_checker_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="12dp"
+                android:contentDescription="60 seconds"
+                android:fontFamily="@font/roboto_condensed_bold"
+                android:gravity="center"
+                android:text="00:60 sec"
+                android:textColor="@color/bhTextPrimary"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lineHeight="48sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/pace_checker_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="27dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="Please keep your phone in hand and unlocked while using Pace Checker"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/pace_checker_info_icon"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_timer_container"
+            app:lineHeight="24sp" />
+
+        <ImageView
+            android:id="@+id/pace_checker_info_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="4dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_info"
+            app:layout_constraintEnd_toStartOf="@id/pace_checker_info"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pace_checker_info" />
+
+        <TextView
+            android:id="@+id/pace_checker_turn_off_animations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="27dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="@string/animations_can_be_turned_on_off_in_settings"
+            android:textColor="@color/bhTextPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/pace_checker_turn_off_animations_icon"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_info"
+            app:lineHeight="24sp" />
+
+        <ImageView
+            android:id="@+id/pace_checker_turn_off_animations_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="4dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_settingsteal"
+            app:layout_constraintEnd_toStartOf="@id/pace_checker_turn_off_animations"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/pace_checker_turn_off_animations" />
+
+        <View
+            android:id="@+id/pace_checker_overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/black_50"
+            android:clickable="true"
+            android:focusable="true"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pace_checker_countdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:importantForAccessibility="yes"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="120sp"
+            android:translationZ="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/pulse_animation"
+            app:layout_constraintTop_toTopOf="@id/pulse_animation"
+            tools:text="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pace_checker_button_continue"
+            style="@style/TealButtonLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:letterSpacing="0"
+            android:paddingTop="20dp"
+            android:paddingBottom="18dp"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pace_checker_turn_off_animations"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

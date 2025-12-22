@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toolbarLeftTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@null"
+        android:drawablePadding="13dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:paddingStart="19dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/input_text_title"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone"
+        tools:drawableStart="@drawable/ic_left_arrow_toolbar"
+        tools:text="Back"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/toolbarCenterTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:letterSpacing="0.03"
+        android:textColor="@color/input_text_title"
+        android:textSize="@dimen/text_size_24"
+        android:visibility="gone"
+        tools:text="Todays walk"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toolbarRightTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@null"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:minHeight="0dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="19dp"
+        android:textAllCaps="false"
+        android:textColor="@color/input_text_title"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone"
+        tools:text="Tips"
+        tools:visibility="visible" />
+</androidx.appcompat.widget.Toolbar>

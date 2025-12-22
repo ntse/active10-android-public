@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="bhCheckBoxLayoutError" type="id" />
+
+    <attr name="bhCheckBoxLayoutStyle" format="reference" />
+    <attr name="bhCheckBoxLayoutErrorStyle" format="reference" />
+    <attr name="bhCheckBoxStyle" format="reference" />
+
+    <declare-styleable name="BHCheckBoxLayout">
+        <attr name="errorMessage" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BHCheckbox" />
+</resources>

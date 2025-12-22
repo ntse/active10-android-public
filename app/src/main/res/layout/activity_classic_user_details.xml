@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/detailsToolbar"
+            layout="@layout/custom_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/BU_24"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/updateBTN"
+            app:layout_constraintTop_toBottomOf="@id/detailsToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/BU_24"
+                android:layout_marginTop="@dimen/BU_24"
+                android:clipToPadding="false">
+
+                <com.flipsidegroup.active10.utils.view.HeadingTextView
+                    android:id="@+id/userDetailsTitleTV"
+                    style="@style/HeaderExtraLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_condensed_bold"
+                    android:text="@string/settings_my_details"
+                    android:textSize="@dimen/text_size_30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/userDetailsDescriptionTV"
+                    style="@style/Description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/BU_12"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_size_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userDetailsTitleTV"
+                    tools:text="lorem ipsum dolor amet" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/BU_32"
+                    app:layout_constraintTop_toBottomOf="@id/userDetailsDescriptionTV">
+
+                    <TextView
+                        android:id="@+id/genderTitleTV"
+                        style="@style/HeaderMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gender_subtitle"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <RadioGroup
+                        android:id="@+id/genderRadioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_16"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/BU_20"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/genderTitleTV"
+                        tools:visibility="visible">
+
+                        <RadioButton
+                            android:id="@+id/maleRB"
+                            style="@style/GenderCheckBoxStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:drawableTop="@drawable/sl_male"
+                            android:drawableBottom="@drawable/sl_checkbox_gender"
+                            android:drawablePadding="@dimen/BU_8"
+                            android:elevation="@dimen/BU_8"
+                            android:paddingTop="@dimen/BU_12"
+                            android:paddingBottom="@dimen/BU_12"
+                            android:text="@string/gender_male"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <RadioButton
+                            android:id="@+id/femaleRB"
+                            style="@style/GenderCheckBoxStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/BU_8"
+                            android:layout_weight="0.33"
+                            android:drawableTop="@drawable/sl_female"
+                            android:drawableBottom="@drawable/sl_checkbox_gender"
+                            android:drawablePadding="@dimen/BU_8"
+                            android:elevation="@dimen/BU_8"
+                            android:paddingTop="@dimen/BU_12"
+                            android:paddingBottom="@dimen/BU_12"
+                            android:text="@string/gender_female"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <RadioButton
+                            android:id="@+id/otherRB"
+                            style="@style/GenderCheckBoxStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/BU_8"
+                            android:layout_weight="0.33"
+                            android:drawableBottom="@drawable/sl_checkbox_gender"
+                            android:drawablePadding="8dp"
+                            android:elevation="@dimen/BU_8"
+                            android:gravity="bottom|center_horizontal"
+                            android:paddingStart="@dimen/BU_12"
+                            android:paddingEnd="@dimen/BU_12"
+                            android:paddingBottom="@dimen/BU_12"
+                            android:text="@string/gender_other"
+                            android:textSize="@dimen/text_size_16" />
+
+                    </RadioGroup>
+
+                    <com.flipsidegroup.active10.utils.DetailItemLayout
+                        android:id="@+id/ageLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/genderRadioGroup"
+                        tools:detailLabel="@tools:sample/lorem/random"
+                        tools:detailTitle="@tools:sample/lorem"
+                        tools:lines="3"
+                        tools:visibility="visible" />
+
+                    <com.flipsidegroup.active10.utils.ActivityLevelLayout
+                        android:id="@+id/activityLevelLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_32"
+                        android:layout_marginBottom="@dimen/BU_12"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ageLayout"
+                        tools:visibility="visible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateBTN"
+            style="@style/TealButtonLarge"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/BU_12"
+            android:layout_marginBottom="26dp"
+            android:clipToPadding="false"
+            android:text="@string/update_your_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

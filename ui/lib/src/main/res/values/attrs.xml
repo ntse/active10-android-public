@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text" format="string" />
+    <attr name="error" format="string" />
+    <attr name="checked" format="boolean" />
+
+    <declare-styleable name="PHERadioButton">
+        <attr name="text" />
+        <attr name="error" />
+        <attr name="checked" />
+    </declare-styleable>
+
+</resources>

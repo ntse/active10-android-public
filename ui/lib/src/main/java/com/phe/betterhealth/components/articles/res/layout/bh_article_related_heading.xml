@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="heading"
+            type="String" />
+
+        <variable
+            name="body"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:orientation="vertical">
+
+        <com.phe.betterhealth.widgets.common.HeadingTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:paddingHorizontal="22dp"
+            android:paddingBottom="5dp"
+            android:text="@{heading}"
+            android:textColor="@android:color/black"
+            android:textSize="32sp"
+            android:visibility='@{heading.isEmpty() ? View.GONE : View.VISIBLE}'
+            tools:lines="2"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            style="?bhArticleCardTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:focusable="true"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@{body}"
+            android:textColor="@android:color/black"
+            android:visibility='@{body.isEmpty() ? View.GONE : View.VISIBLE}'
+            app:lineHeight="28sp"
+            tools:lines="2"
+            tools:text="@tools:sample/lorem/random" />
+
+
+    </LinearLayout>
+
+</layout>

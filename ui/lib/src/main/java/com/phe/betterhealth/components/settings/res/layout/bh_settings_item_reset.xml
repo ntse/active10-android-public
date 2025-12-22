@@ -1,0 +1,66 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.settings.SettingsAdapter">
+
+    <data>
+
+        <variable
+            name="settingItem"
+            type="com.phe.betterhealth.components.settings.SettingsResetButton" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/reset_button"
+            style="@style/Widget.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/guideline_start"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/guideline_end"
+            android:backgroundTint="@color/bhRed"
+            android:text="@{settingItem.buttonLabel}"
+            android:textColor="@color/bhWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp"
+            tools:text="Reset app" />
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/Widget.TextView.Content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/guideline_start"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/guideline_end"
+            android:text="@{settingItem.buttonDescription}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reset_button"
+            tools:text="This will delete your progress so you can start again." />
+
+        <TextView
+            android:id="@+id/version"
+            style="@style/Widget.TextView.Content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/guideline_start"
+            android:layout_marginTop="@dimen/onboarding_content_margin_top"
+            android:layout_marginEnd="@dimen/guideline_end"
+            android:text="@{settingItem.buildVersion}"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content"
+            tools:text="Build version 7.6.2.656" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

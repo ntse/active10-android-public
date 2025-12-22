@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".presentation.onboarding.activities.UserActivity">
+
+        <TextView
+            android:id="@+id/optionMessageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:accessibilityTraversalBefore="@id/continueBTN"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:text="Set testing options"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20">
+
+            <requestFocus />
+        </TextView>
+
+        <ScrollView
+            android:id="@+id/scrollContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/continueBTN"
+            android:layout_below="@id/optionMessageTv"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resetWalkDataTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Walk data message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/mockedLoggedUserCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="30dp"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Mocked logged user"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/loginNotificationsTestCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="NHS login notifications after 30 seconds"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/useProdCmsCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Use prod CMS"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pace checker result steps"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/paceCheckerResultStepsEdit"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/bhTextPrimary"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/paceCheckerExistingUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Pace Checker existing user"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/resetWalkDataCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Ignore walks before now"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/migratingUserCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Migrating User"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/showOnboardingCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Show Onboarding"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/generateDataCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Generate random historic data"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/generate2Weeks1Active10CB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Generate 2 weeks of 1 Active10"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/generate2Weeks5Active10CB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Generate 2 weeks of 5 Active10"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/notificationsCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Notifications in mins"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/missingDataCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Show missing data after 10 mins"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/failRetrieveDataCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Should fail retrieve lost data"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/showUpdateAppDialogCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Should show Update App dialog"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/showRetrieveDataDialogCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Should show Retrieve Data dialog"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/showUpdateTermsDialogCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Should show Updated Terms and Conditions dialog"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/set30secInstead1minCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Auth: Set 30 sec instead 1 min (background)"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/set30secInstead5minCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Auth: Set 30 sec instead 5 min (foreground)"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/set30secInstead30minCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Auth: Set 30 sec instead 30 min"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <CheckBox
+                    android:id="@+id/set30secInstead12hCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layoutDirection="rtl"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Auth: Set 30 sec instead 12h"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/text_size_20" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="These options will work, when you're logged in"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/ageRadioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/age_20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20" />
+
+                        <RadioButton
+                            android:id="@+id/age_30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30" />
+
+                        <RadioButton
+                            android:id="@+id/age_40"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40" />
+
+                        <RadioButton
+                            android:id="@+id/age_50"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50" />
+
+                        <RadioButton
+                            android:id="@+id/age_60"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="60" />
+
+                        <RadioButton
+                            android:id="@+id/age_70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="70" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/genderRadioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/gender_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male" />
+
+                        <RadioButton
+                            android:id="@+id/gender_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/deviceIdPlaceholderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Unique Device ID"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/deviceIdTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/greyish_brown"
+                    android:textSize="@dimen/text_size_20" />
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueBTN"
+            style="@style/TealButtonLarge"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="26dp"
+            android:enabled="true"
+            android:text="@string/button_continue" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

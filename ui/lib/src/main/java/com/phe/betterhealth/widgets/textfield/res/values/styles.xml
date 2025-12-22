@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- InputLayout -->
+    <style name="Widget.BetterHealth.InputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/bhInputText</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/bhWhite</item>
+        <item name="boxStrokeColor">@color/bh_text_input_box_stroke</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/bh_input_border_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/bh_input_border_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/bh_input_border_radius</item>
+        <item name="boxCornerRadiusTopStart">@dimen/bh_input_border_radius</item>
+
+        <item name="errorIconDrawable">@null</item>
+        <item name="hintEnabled">false</item>
+        <item name="inputTitleMarginBottom">4dp</item>
+
+        <item name="helperTextTextAppearance">
+            @style/Widget.BetterHealth.Input.HelperTextAppearance.Medium
+        </item>
+        <item name="errorTextAppearance">
+            @style/Widget.BetterHealth.Input.ErrorTextAppearance.Medium
+        </item>
+        <item name="hintTextAppearance">@style/Widget.BetterHealth.Input.HintTextAppearance.Medium
+        </item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Small">
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Medium">
+        <item name="android:maxHeight">40dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Large">
+        <item name="android:maxHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+
+        <item name="helperTextTextAppearance">
+            @style/Widget.BetterHealth.Input.HelperTextAppearance
+        </item>
+        <item name="errorTextAppearance">@style/Widget.BetterHealth.Input.ErrorTextAppearance</item>
+        <item name="hintTextAppearance">@style/Widget.BetterHealth.Input.HintTextAppearance</item>
+    </style>
+
+    <!-- InputLayout title -->
+    <style name="Widget.BetterHealth.InputLayout.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bhInputTextTitle</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Title.Small">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Title.Medium">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.InputLayout.Title.Large">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- InputLayout helper -->
+    <style name="Widget.BetterHealth.Input.HelperTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/bhInputText</item>
+
+    </style>
+
+    <style name="Widget.BetterHealth.Input.HelperTextAppearance.Medium">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- InputLayout error -->
+    <style name="Widget.BetterHealth.Input.ErrorTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/bhInputBorderError</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Input.ErrorTextAppearance.Medium">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- InputLayout hint -->
+    <style name="Widget.BetterHealth.Input.HintTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/bhInputText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Input.HintTextAppearance.Medium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Input.HintTextAppearance.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="Widget.BetterHealth.EditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:textColor">@color/bhInputTextTitle</item>
+        <item name="android:textColorHint">@color/bhInputBorder</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="Widget.BetterHealth.EditText.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:letterSpacing">0.04</item>
+
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.EditText.Large">
+        <item name="android:textSize">16sp</item>
+
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.EditText.Medium">
+        <item name="android:textSize">14sp</item>
+
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <!-- Spinner -->
+    <style name="Widget.BetterHealth.InputLayout.Spinner">
+        <item name="endIconMode">dropdown_menu</item>
+        <item name="autoCompleteTextViewStyle">
+            @style/Widget.MaterialComponents.AutoCompleteTextView.OutlinedBox
+        </item>
+        <item name="android:maxHeight">40dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.EditText.Spinner" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:editable">false</item>
+        <item name="android:paddingStart">12dp</item>
+    </style>
+</resources>

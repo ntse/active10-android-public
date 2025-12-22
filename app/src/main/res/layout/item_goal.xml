@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+        android:id="@+id/goalCheckboxView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginBottom="@dimen/BU_4"
+        android:paddingStart="17dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        tools:text="Lorem Ipsum"
+        android:drawableEnd="@drawable/checkbox_background"
+    />
+
+</LinearLayout>

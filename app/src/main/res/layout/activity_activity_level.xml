@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include
+            android:id="@+id/activityLevelToolbar"
+            layout="@layout/custom_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/activity_level_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/actionButtonsLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activityLevelToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/BU_12">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/BU_20"
+                    android:paddingEnd="@dimen/BU_20"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.phe.betterhealth.widgets.common.HeadingTextView
+                        android:id="@+id/activity_level_title"
+                        style="@style/HeaderExtraLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:gravity="center"
+                        android:text="@string/current_activity_level"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/activity_level_subtitle"
+                        style="@style/Description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_10"
+                        android:gravity="center"
+                        android:text="@string/current_activity_level_description"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/activity_level_title" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/inactiveCheckboxLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/BU_12"
+                    android:layout_marginTop="@dimen/BU_20"
+                    android:layout_marginEnd="@dimen/BU_12"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:importantForAccessibility="yes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+                    <TextView
+                        android:id="@+id/inactiveCheckboxTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toTopOf="@id/inactiveCheckboxText"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelNoActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/inactiveCheckboxText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_regular"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelNoActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/inactiveCheckboxTitle" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/activityLevelNoActiveRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:layout_marginBottom="@dimen/BU_20"
+                        android:button="@drawable/radiobutton_background"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/moderatelyActiveCheckboxLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/BU_12"
+                    android:layout_marginTop="@dimen/BU_8"
+                    android:layout_marginEnd="@dimen/BU_12"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:importantForAccessibility="yes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inactiveCheckboxLayout">
+
+                    <TextView
+                        android:id="@+id/moderatelyActiveCheckboxTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toTopOf="@id/moderatelyActiveCheckboxText"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelModerateActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/moderatelyActiveCheckboxText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_regular"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelModerateActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/moderatelyActiveCheckboxTitle" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/activityLevelModerateActiveRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:layout_marginBottom="@dimen/BU_20"
+                        android:button="@drawable/radiobutton_background"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/veryActiveCheckboxLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/BU_12"
+                    android:layout_marginTop="@dimen/BU_8"
+                    android:layout_marginEnd="@dimen/BU_12"
+                    android:layout_marginBottom="@dimen/BU_12"
+                    android:clickable="true"
+                    android:descendantFocusability="blocksDescendants"
+                    android:focusable="true"
+                    android:importantForAccessibility="yes"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/moderatelyActiveCheckboxLayout"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/veryActiveCheckboxTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toTopOf="@id/veryActiveCheckboxText"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelVeryActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <TextView
+                        android:id="@+id/veryActiveCheckboxText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/BU_12"
+                        android:fontFamily="@font/roboto_regular"
+                        android:importantForAccessibility="no"
+                        android:textColor="#1a1a1a"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/activityLevelVeryActiveRB"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/veryActiveCheckboxTitle" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/activityLevelVeryActiveRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/BU_20"
+                        android:layout_marginBottom="@dimen/BU_20"
+                        android:button="@drawable/radiobutton_background"
+                        android:importantForAccessibility="no"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@+id/veryActiveCheckboxLayout" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@+id/moderatelyActiveCheckboxLayout" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@+id/inactiveCheckboxLayout" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toTopOf="@+id/inactiveCheckboxLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/actionButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/BU_16"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveButton"
+                style="@style/TealButtonLarge"
+                android:layout_marginTop="@dimen/BU_16"
+                android:layout_marginBottom="@dimen/BU_12"
+                android:enabled="false"
+                android:text="@string/save_and_continue" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/skipButton"
+                style="@style/SecondaryButtonLarge"
+                android:layout_marginBottom="@dimen/BU_16"
+                android:text="@string/button_skip" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

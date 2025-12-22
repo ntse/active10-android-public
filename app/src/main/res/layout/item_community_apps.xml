@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/appIV"
+        android:layout_width="@dimen/community_app_height"
+        android:layout_height="@dimen/community_app_height"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:riv_corner_radius="8dp"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/containerLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/appIV"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_bold"
+            android:labelFor="@+id/downloadBTN"
+            android:maxLines="1"
+            android:textColor="@color/greyish_brown"
+            android:textSize="@dimen/text_size_17"
+            tools:ignore="LabelFor"
+            tools:text="Couch To 5K" />
+
+        <TextView
+            android:id="@+id/appDescriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/greyish_brown"
+            android:textSize="@dimen/text_size_16"
+            tools:text="With easy access to Broadband and DSL the number of people using the Internet has skyrocket in recent years. Email." />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/downloadBTN"
+        style="@style/ActiveButtonSmallStyle"
+        android:layout_below="@+id/containerLL"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
+        android:layout_toEndOf="@+id/appIV"
+        android:contentDescription="@string/accessibility_download_cta"
+        android:text="@string/community_app_download_now" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/downloadBTN"
+        android:background="@color/settings_grey" />
+
+</RelativeLayout>

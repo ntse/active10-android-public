@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bh_carousel_counter">%1$s of %2$s</string>
+</resources>

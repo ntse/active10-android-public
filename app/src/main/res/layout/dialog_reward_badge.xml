@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_rounded_bg"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/badgeIconIv"
+        android:layout_width="200dp"
+        android:layout_height="210dp"
+        android:padding="30dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_goal_setter_badge" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/badgeLottie"
+        android:layout_width="200dp"
+        android:layout_height="210dp"
+        android:padding="30dp"
+        android:scaleType="fitCenter"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_goal_setter_badge" />
+
+    <TextView
+        android:id="@+id/badgeTitleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="45dp"
+        android:accessibilityHeading="true"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:gravity="center"
+        android:importantForAccessibility="yes"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_29"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBarrier"
+        tools:text="Goal setter" />
+
+    <TextView
+        android:id="@+id/badgeDescriptionTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:textColor="@color/grey_44"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/badgeTitleTv"
+        tools:text="You've picked your goals which is a great step to staying motivated!" />
+
+    <TextView
+        android:id="@+id/badgeEarnedTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center"
+        android:textColor="@color/grey_44"
+        android:textSize="@dimen/text_size_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/badgeDescriptionTv"
+        tools:text="Earned: 16 Nov 2020" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shareBadgeBtn"
+        style="@style/PrimaryButtonLarge"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/share_badge_with_friends"
+        android:text="@string/share_with_friends"
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/badgeEarnedTimeTv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/closeBtn"
+        style="@style/SecondaryButtonLarge"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/close_button"
+        android:layout_marginEnd="@dimen/BU_20"
+        android:layout_marginStart="@dimen/BU_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shareBadgeBtn" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/imageBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="badgeLottie,badgeIconIv"
+        tools:layout_editor_absoluteY="501dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

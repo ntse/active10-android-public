@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bhMoodSelectorStyle" format="reference" />
+
+    <declare-styleable name="BHMoodSelector">
+        <attr name="moodSelectorStartColor" format="color" />
+        <attr name="moodSelectorEndColor" format="color" />
+
+        <attr name="moodSelectorBackButtonTopMargin" format="dimension" />
+
+        <attr name="moodSelectorTitleText" format="string" />
+        <attr name="moodSelectorSubtitleText" format="string" />
+
+        <attr name="moodSelectorAnswerFirstText" format="string" />
+        <attr name="moodSelectorAnswerSecondText" format="string" />
+        <attr name="moodSelectorAnswerThirdText" format="string" />
+        <attr name="moodSelectorAnswerFourthText" format="string" />
+
+        <attr name="moodSelectorFirstButtonText" format="string" />
+        <attr name="moodSelectorSecondButtonText" format="string" />
+    </declare-styleable>
+</resources>

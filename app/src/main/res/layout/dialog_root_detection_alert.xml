@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bh_background_border_radius_top"
+        android:paddingBottom="43dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_root_detection_alert"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <com.phe.betterhealth.widgets.common.HeadingTextView
+            android:id="@+id/header"
+            style="@style/Widget.TextView.Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginTop="16dp"
+            android:text='@string/root_detection_alert_title'
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/Widget.TextView.Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/root_detection_alert_description"
+            android:textColor="@color/bhTextPrimary"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            app:lineHeight="30sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/close_button"
+            style="@style/TealButtonLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26dp"
+            android:text="@string/root_detection_alert_button_text"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="global_back">Back</string>
+    <string name="mission_completed">Completed</string>
+    <string name="mission_done">I did it!</string>
+    <string name="mission_not_done">I haven’t done it yet</string>
+    <string name="read_more">Read more</string>
+</resources>

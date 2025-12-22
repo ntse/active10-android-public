@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AEAEAE"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show_button_great"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_mood_great"
+            android:gravity="center"
+            android:text="Show Bottom Dialog"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/show_button_good"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_mood_good"
+            android:gravity="center"
+            android:text="Show Bottom Dialog"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/show_button_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_mood_ok"
+            android:gravity="center"
+            android:text="Show Bottom Dialog"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/show_button_tired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:drawableEnd="@drawable/ic_mood_tired"
+            android:gravity="center"
+            android:text="Show Bottom Dialog"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</layout>

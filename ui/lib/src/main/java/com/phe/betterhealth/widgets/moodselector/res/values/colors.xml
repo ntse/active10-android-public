@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bhMoodSelectorStartColor">#06818C</color>
+    <color name="bhMoodSelectorEndColor">#105FAD</color>
+</resources>

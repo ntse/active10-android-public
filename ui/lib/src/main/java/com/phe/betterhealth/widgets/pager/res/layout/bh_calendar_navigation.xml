@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bhWhite"
+    tools:context="com.phe.betterhealth.widgets.pager.BHPagerIndicator">
+
+    <TextView
+        android:id="@id/bhPagerIndicatorTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/bhPagerIndicatorPrevButton"
+        app:layout_constraintEnd_toStartOf="@id/bhPagerIndicatorNextButton"
+        app:layout_constraintStart_toEndOf="@id/bhPagerIndicatorPrevButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4"
+        tools:text="Week 3, 2024" />
+
+    <TextView
+        android:id="@+id/bhPagerIndicatorDescription"
+        style="?bhArticleCardContentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bhPagerIndicatorTitle"
+        app:layout_constraintVertical_bias="0"
+        tools:text="Friday, 22 March 2021"
+        tools:visibility="visible" />
+
+    <com.phe.betterhealth.widgets.button.BHButton
+        android:id="@id/bhPagerIndicatorPrevButton"
+        style="?bhPagerIndicatorButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        app:icon="@drawable/bh_indicator_left"
+        app:iconGravity="start"
+        app:layout_constraintEnd_toStartOf="@id/bhPagerIndicatorTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="0dp"
+        tools:text="Week 2" />
+
+    <com.phe.betterhealth.widgets.button.BHButton
+        android:id="@id/bhPagerIndicatorNextButton"
+        style="?bhPagerIndicatorButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical|end"
+        android:paddingStart="8dp"
+        android:paddingLeft="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        app:icon="@drawable/bh_indicator_right"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bhPagerIndicatorTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="0dp"
+        tools:text="Week 4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

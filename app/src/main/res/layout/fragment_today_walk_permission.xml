@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".presentation.todaywalk.TodayWalkPermissionFragment">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/horseShoeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="@dimen/margin_size_32"
+                android:layout_marginEnd="64dp"
+                app:layout_constraintBottom_toTopOf="@+id/textContainerFL"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintVertical_chainStyle="spread_inside">
+
+                <com.flipsidegroup.active10.utils.TodaysWalkHorseShoeProgressBar
+                    android:id="@+id/horseShoePB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/walkingLAV"
+                    android:layout_width="@dimen/walk_animation_size"
+                    android:layout_height="@dimen/walk_animation_size"
+                    android:layout_below="@+id/horseShoePB"
+                    android:layout_centerHorizontal="true"
+                    app:lottie_fileName="walking.json" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/textContainerFL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/margin_size_32"
+                android:paddingEnd="@dimen/margin_size_32"
+                app:layout_constraintBottom_toTopOf="@+id/continueBTN"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horseShoeContainer">
+
+                <TextView
+                    android:id="@+id/permissionHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/roboto_condensed_bold"
+                    android:text="@string/permission_fitness_data"
+                    android:textColor="@color/greyish_brown"
+                    android:textSize="@dimen/text_size_26" />
+
+                <TextView
+                    android:id="@+id/permissionDescriptionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/permission_fitness_data_description_today_walk"
+                    android:textColor="@color/greyish_brown"
+                    android:textSize="@dimen/text_size_17" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueBTN"
+                style="@style/PrimaryButtonLarge"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginBottom="@dimen/BU_20"
+                android:background="@null"
+                android:letterSpacing="0"
+                android:stateListAnimator="@null"
+                android:text="@string/button_allow_motion_fitness"
+                android:textColor="@color/colorPrimary"
+                app:backgroundTint="#0D000000"
+                app:cornerRadius="37.5dp"
+                app:icon="@drawable/ic_google_fit"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                app:iconTint="#ffffff"
+                app:iconTintMode="multiply"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textContainerFL"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="1dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

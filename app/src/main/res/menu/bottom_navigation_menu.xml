@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_today_walk"
+        android:enabled="true"
+        android:icon="@drawable/ic_today_walk_selector"
+        android:title="@string/bottom_nav_menu_today_walk"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_my_walks"
+        android:enabled="true"
+        android:icon="@drawable/ic_my_walk_selector"
+        android:title="@string/bottom_nav_menu_my_walks"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_discover"
+        android:enabled="true"
+        android:icon="@drawable/ic_discover_selector"
+        android:title="@string/bottom_nav_menu_discover"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_selector"
+        android:title="@string/bottom_nav_menu_settings"
+        app:showAsAction="ifRoom" />
+</menu>

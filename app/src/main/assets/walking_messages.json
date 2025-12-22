@@ -1,0 +1,59 @@
+{
+  "my_walks_dynamic_text": {
+    "days_target_hit": "Great work! You hit your target!",
+    "days_target_no_hit": "You didn't quite hit your target but you've still clocked up %d mins brisk walking!",
+    "days_no_brisk_walking": "Struggling to fit in brisk walking? Check our tips for some helpful guidance",
+    "weeks_current": "Keep coming back to see your progress this week.",
+    "weeks_last_target_hit_can_increase": "You hit your target every day this week! Shall we step it up for next week?",
+    "weeks_last_target_4_to_6_can_increase": "You hit your target on %d days this week. Good work!",
+    "weeks_last_target_1_days_1": "You hit your target on 1 days this week. We're with you every step of the way to help you get more active!",
+    "weeks_last_target_x_days_1": "You hit your target on 1 day this week. Remember you can adjust your targets - it's good to start small and build up!",
+    "weeks_last_target_1_days_x": "You hit your target on %d days this week. We're with you every step of the way to help you get more active!",
+    "weeks_last_target_x_days_x": "You hit your target on %d days this week. Remember you can adjust your targets - it's good to start small and build up!",
+    "weeks_brisk_150": "You hit the weekly recommended level for activity! Find out more.",
+    "weeks_days_7": "You hit your target every day this week. Great work!",
+    "weeks_days_4_6": "You hit your target on %d days this week. Good work!",
+    "weeks_days_0": "Looks like you haven't quite reached your targets this week. But don't let that stop you - you can do this!",
+    "weeks_days_1": "You hit your target on 1 day this week. Try and increase more of your walking to brisk to stay on track.",
+    "weeks_days_2_3": "You hit your target on %d days this week. Try and increase more of your walking to brisk to stay on track.",
+    "days_today_no_walking": "Try and get up to one Active 10 each day",
+    "no_rewards_this_day": "No reward badges this day. See which badges you could earn and how",
+    "no_rewards_this_week": "No reward badges this week. See which badges you could earn and how",
+    "no_rewards_this_month": "No reward badges this month. See which badges you could earn and how"
+  },
+  "todays_walks_dynamic_text": {
+    "target_1_a10s": {
+      "0_a10s_0_mins": "Let's get brisk walking to achieve an Active 10",
+      "0_a10s_x_mins": "Keep going to get today's first Active 10",
+      "1_a10s_0_mins": "Congratulations, you hit your target!",
+      "1_a10s_x_mins": "Keep going to get your second Active 10 of the day!",
+      "2_a10s_0_mins": "Fantastic! Two Active 10s Today so far!",
+      "2_a10s_x_mins": "You're on a roll! Keep going for a third Active 10!",
+      "3_a10s_0_mins": "Brilliant work! You've achieved three Active 10s today!",
+      "3_a10s_x_mins": "You're on a roll! Great work today!",
+      "more_than_3_active_tens": "You're on a roll! Great work today!"
+    },
+    "target_2_a10s": {
+      "0_a10s_0_mins": "Let's get brisk walking to achieve an Active 10",
+      "0_a10s_x_mins": "Keep going to get today's first Active 10",
+      "1_a10s_0_mins": "Great work, you've got one Active 10",
+      "1_a10s_x_mins": "Keep going to get your second Active 10 of the day!",
+      "2_a10s_0_mins": "Congratulations, you hit your target!",
+      "2_a10s_x_mins": "You're on a roll! Keep going for a third Active 10!",
+      "3_a10s_0_mins": "Brilliant work! You've achieved three Active 10s today!",
+      "3_a10s_x_mins": "You're on a roll! Great work today!",
+      "more_than_3_active_tens": "You're on a roll! Great work today!"
+    },
+    "target_3_a10s": {
+      "0_a10s_0_mins": "Let's get brisk walking to achieve an Active 10",
+      "0_a10s_x_mins": "Keep going to get today's first Active 10",
+      "1_a10s_0_mins": "Great work, you've got one Active 10",
+      "1_a10s_x_mins": "Keep going to get your second Active 10 of the day!",
+      "2_a10s_0_mins": "Fantastic! Two Active 10s Today so far!",
+      "2_a10s_x_mins": "You're on a roll! Keep going for a third Active 10!",
+      "3_a10s_0_mins": "Congratulations, you hit your target!",
+      "3_a10s_x_mins": "You're on a roll! Great work today!",
+      "more_than_3_active_tens": "You're on a roll! Great work today!"
+    }
+  }
+}

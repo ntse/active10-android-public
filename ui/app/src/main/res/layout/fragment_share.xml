@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="button1"
+            type="com.phe.betterhealth.components.share.ShareButton" />
+
+        <variable
+            name="button2"
+            type="com.phe.betterhealth.components.share.ShareButton" />
+
+        <variable
+            name="button3"
+            type="com.phe.betterhealth.components.share.ShareButton" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ccc"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context="com.phe.betterhealth.demo.views.ShareDemo"
+        tools:ignore="HardcodedText,UselessParent">
+
+        <include
+            layout="@layout/bh_share_button"
+            app:clickListener="@{onClick}"
+            app:shareButton="@{button1}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/white" />
+
+        <include
+            layout="@layout/bh_share_button"
+            app:clickListener="@{onClick}"
+            app:shareButton="@{button2}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/white" />
+
+        <include
+            layout="@layout/bh_share_button"
+            app:clickListener="@{onClick}"
+            app:shareButton="@{button3}" />
+    </LinearLayout>
+
+</layout>

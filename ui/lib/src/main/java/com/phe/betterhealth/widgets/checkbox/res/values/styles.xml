@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Widget.BetterHealth.CheckboxLayout">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <style name="Widget.BetterHealth.CheckboxLayoutError">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/bhCheckboxError</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/bhCheckboxText</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:lineHeight" tools:targetApi="p">24sp</item>
+        <item name="android:drawableEnd">@drawable/bh_checkbox_background</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="enforceMaterialTheme">false</item>
+        <item name="buttonTint">@color/bhCheckboxText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Checkbox.Card">
+        <item name="android:background">@drawable/bh_checkbox_layout_card</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+</resources>

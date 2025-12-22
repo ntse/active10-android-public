@@ -1,0 +1,32 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <variable
+            name="content"
+            type="String" />
+
+        <variable
+            name="isLast"
+            type="boolean" />
+    </data>
+
+    <TextView
+        android:id="@+id/article_item_content_text_view"
+        style="?bhArticleCardContentStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bhArticleWlpBackground"
+        android:elevation="5dp"
+        android:lineSpacingExtra="6sp"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="3dp"
+        android:textColor="@color/bhTextPrimary"
+        android:textColorLink="?colorPrimary"
+        app:textHtml="@{content}"
+        tools:lines="3"
+        tools:text="@tools:sample/lorem/random" />
+</layout>

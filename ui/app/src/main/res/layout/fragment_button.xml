@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaa"
+    tools:context="com.phe.betterhealth.demo.views.ButtonDemo"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Large.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Medium.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Filled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Destructive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar"
+                app:iconGravity="end" />
+
+            <com.phe.betterhealth.widgets.button.BHButton
+                style="@style/Widget.BetterHealth.Button.Small.Tertiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:enabled="false"
+                android:text="Button"
+                app:icon="@drawable/ic_calendar" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="0" />
+
+    </LinearLayout>
+</HorizontalScrollView>

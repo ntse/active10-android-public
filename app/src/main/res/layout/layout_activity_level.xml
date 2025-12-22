@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleTV"
+        style="@style/HeaderMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_12"
+        android:layout_marginEnd="@dimen/BU_12"
+        android:text="@string/activity_optional"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inactiveCheckboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_12"
+        android:layout_marginTop="@dimen/BU_20"
+        android:layout_marginEnd="@dimen/BU_12"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV">
+
+        <TextView
+            android:id="@+id/inactiveCheckboxTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/inactive_title"
+            app:layout_constraintBottom_toTopOf="@id/inactiveCheckboxText"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsNoActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/inactiveCheckboxText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/inactive_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsNoActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inactiveCheckboxTitle" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/userDetailsNoActiveRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_20"
+            android:layout_marginBottom="@dimen/BU_20"
+            android:button="@drawable/radiobutton_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/moderatelyActiveCheckboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_12"
+        android:layout_marginTop="@dimen/BU_8"
+        android:layout_marginEnd="@dimen/BU_12"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inactiveCheckboxLayout">
+
+        <TextView
+            android:id="@+id/moderatelyActiveCheckboxTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/moderatelyActive_title"
+            app:layout_constraintBottom_toTopOf="@id/moderatelyActiveCheckboxText"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsModerateActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/moderatelyActiveCheckboxText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/moderatelyActive_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsModerateActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/moderatelyActiveCheckboxTitle" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/userDetailsModerateActiveRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_20"
+            android:layout_marginBottom="@dimen/BU_20"
+            android:button="@drawable/radiobutton_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/veryActiveCheckboxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/BU_12"
+        android:layout_marginTop="@dimen/BU_8"
+        android:layout_marginEnd="@dimen/BU_12"
+        android:layout_marginBottom="@dimen/BU_12"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moderatelyActiveCheckboxLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/veryActiveCheckboxTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/active_title"
+            app:layout_constraintBottom_toTopOf="@id/veryActiveCheckboxText"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsVeryActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/veryActiveCheckboxText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/BU_12"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#1a1a1a"
+            android:textSize="@dimen/text_size_16sp"
+            android:text="@string/active_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/userDetailsVeryActiveRB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/veryActiveCheckboxTitle" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/userDetailsVeryActiveRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_20"
+            android:layout_marginBottom="@dimen/BU_20"
+            android:button="@drawable/radiobutton_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/veryActiveCheckboxLayout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/moderatelyActiveCheckboxLayout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/inactiveCheckboxLayout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toTopOf="@+id/inactiveCheckboxLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

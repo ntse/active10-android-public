@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/BU_10">
+
+    <ImageView
+        android:id="@+id/rewardImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/BU_110"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_goal_setter_badge" />
+
+    <TextView
+        android:id="@+id/numberTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/BU_33"
+        android:fontFamily="@font/roboto_condensed_bold"
+        android:importantForAccessibility="yes"
+        android:textColor="@color/white"
+        android:textSize="21dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rewardImage"
+        app:layout_constraintEnd_toEndOf="@id/rewardImage"
+        app:layout_constraintStart_toStartOf="@id/rewardImage"
+        app:layout_constraintTop_toTopOf="@id/rewardImage"
+        tools:text="5" />
+
+    <ImageView
+        android:id="@+id/checkReward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/BU_10"
+        android:layout_marginEnd="@dimen/BU_10"
+        android:src="@drawable/ic_check"
+        app:layout_constraintEnd_toEndOf="@+id/rewardImage"
+        app:layout_constraintTop_toTopOf="@+id/rewardImage" />
+
+    <TextView
+        android:id="@+id/descriptionReward"
+        style="@style/Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/BU_5"
+        android:paddingEnd="@dimen/BU_5"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/rewardImage"
+        tools:text="Goal getter" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="bhArticleCardSubtitleStyle" format="reference" />
+    <attr name="bhArticleCardTitleStyle" format="reference" />
+    <attr name="bhArticleCardContentStyle" format="reference" />
+    <attr name="bhArticleCardHeaderStyle" format="reference" />
+
+</resources>

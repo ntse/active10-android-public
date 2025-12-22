@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.phe.betterhealth.components.articles.ArticleAdapter">
+
+    <data>
+
+        <variable
+            name="content"
+            type="String" />
+
+        <variable
+            name="contentDescription"
+            type="String" />
+
+        <variable
+            name="isLast"
+            type="boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:paddingTop="3dp"
+        app:paddingBottom="@{isLast ? 26f : 3f}"
+        tools:paddingBottom="26dp">
+
+        <com.phe.betterhealth.widgets.button.BHButton
+            android:id="@+id/article_item_link_button"
+            style="@style/Widget.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="26dp"
+            android:text="@{content}"
+            android:backgroundTint="@color/bhArticleMentalHealthCtaBackground"
+            android:contentDescription="@{contentDescription}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp"
+            tools:text="YouTube"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

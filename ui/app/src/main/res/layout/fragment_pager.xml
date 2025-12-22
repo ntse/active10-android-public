@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.phe.betterhealth.demo.views.PagerDemo"
+    tools:ignore="HardcodedText">
+
+    <com.phe.betterhealth.widgets.pager.BHPagerIndicator
+        android:id="@+id/pager_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:pagerTitle="June" />
+
+    <com.phe.betterhealth.widgets.pager.BHPagerIndicator
+        android:id="@+id/pager_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <com.phe.betterhealth.widgets.pager.BHPagerIndicator
+        android:id="@+id/pager_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:pagerTitle="Header" />
+
+    <com.phe.betterhealth.widgets.pager.BHPagerIndicator
+        android:id="@+id/pager_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:pagerButtonNextContentDescription="Go to next page"
+        app:pagerButtonNextText="Next month"
+        app:pagerButtonPrevContentDescription="Navigate to previous page"
+        app:pagerButtonPrevText="Previous"
+        app:pagerDescription="This is a hardcoded description.\nIt can contain multiple lines"
+        app:pagerTitle="Test!" />
+
+</LinearLayout>

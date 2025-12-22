@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.BetterHealth.Button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+
+        <item name="cornerRadius">100dp</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="iconTint">@color/bhButtonFilledColorText</item>
+        <item name="rippleColor">@color/bhButtonFilledColorText</item>
+        <item name="android:textColor">@color/bhButtonFilledColorText</item>
+    </style>
+
+    <!-- sizes -->
+
+    <style name="Widget.BetterHealth.Button.Large">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">32.5dp</item>
+        <item name="android:paddingEnd">32.5dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">18dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">24.5dp</item>
+        <item name="android:paddingEnd">24.5dp</item>
+        <item name="android:paddingTop">9dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="iconPadding">6dp</item>
+        <item name="iconSize">16dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">9dp</item>
+        <item name="iconPadding">4dp</item>
+        <item name="iconSize">14dp</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Close">
+        <item name="android:textSize">14sp</item>
+        <item name="android:drawablePadding">4dp</item>
+    </style>
+
+    <!-- types -->
+
+    <!-- filled -->
+    <style name="Widget.BetterHealth.Button.Filled">
+        <item name="strokeColor">@color/bhButtonFilledColorText</item>
+        <item name="backgroundTint">@color/bh_button_filled_background</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Large.Filled">
+        <item name="strokeColor">@color/bhButtonFilledColorText</item>
+        <item name="backgroundTint">@color/bh_button_filled_background</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Medium.Filled">
+        <item name="strokeColor">@color/bhButtonFilledColorText</item>
+        <item name="backgroundTint">@color/bh_button_filled_background</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Small.Filled">
+        <item name="strokeColor">@color/bhButtonFilledColorText</item>
+        <item name="backgroundTint">@color/bh_button_filled_background</item>
+    </style>
+
+    <!-- outline -->
+
+    <style name="Widget.BetterHealth.Button.Large.Outline">
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="backgroundTint">@color/bhButtonOutlineColorBackground</item>
+        <item name="rippleColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Medium.Outline">
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="backgroundTint">@color/bhButtonOutlineColorBackground</item>
+        <item name="rippleColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Small.Outline">
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="backgroundTint">@color/bhButtonOutlineColorBackground</item>
+        <item name="rippleColor">?colorPrimary</item>
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="iconTint">?colorPrimary</item>
+    </style>
+
+    <!-- tertiary -->
+
+    <style name="Widget.BetterHealth.Button.Large.Tertiary">
+        <item name="strokeColor">@color/bhButtonTertiaryColorText</item>
+        <item name="backgroundTint">@color/bhButtonTertiaryColorBackground</item>
+        <item name="rippleColor">@color/bhButtonTertiaryColorText</item>
+        <item name="android:textColor">@color/bhButtonTertiaryColorText</item>
+        <item name="iconTint">@color/bhButtonTertiaryColorText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Medium.Tertiary">
+        <item name="strokeColor">@color/bhButtonTertiaryColorText</item>
+        <item name="backgroundTint">@color/bhButtonTertiaryColorBackground</item>
+        <item name="rippleColor">@color/bhButtonTertiaryColorText</item>
+        <item name="android:textColor">@color/bhButtonTertiaryColorText</item>
+        <item name="iconTint">@color/bhButtonTertiaryColorText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Small.Tertiary">
+        <item name="strokeColor">@color/bhButtonTertiaryColorText</item>
+        <item name="backgroundTint">@color/bhButtonTertiaryColorBackground</item>
+        <item name="rippleColor">@color/bhButtonTertiaryColorText</item>
+        <item name="android:textColor">@color/bhButtonTertiaryColorText</item>
+        <item name="iconTint">@color/bhButtonTertiaryColorText</item>
+    </style>
+
+    <!-- destructive -->
+
+    <style name="Widget.BetterHealth.Button.Large.Destructive">
+        <item name="strokeColor">@color/bhButtonDestructiveColorText</item>
+        <item name="backgroundTint">@color/bhButtonDestructiveColorBackground</item>
+        <item name="rippleColor">@color/bhButtonDestructiveColorText</item>
+        <item name="android:textColor">@color/bhButtonDestructiveColorText</item>
+        <item name="iconTint">@color/bhButtonDestructiveColorText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Medium.Destructive">
+        <item name="strokeColor">@color/bhButtonDestructiveColorText</item>
+        <item name="backgroundTint">@color/bhButtonDestructiveColorBackground</item>
+        <item name="rippleColor">@color/bhButtonDestructiveColorText</item>
+        <item name="android:textColor">@color/bhButtonDestructiveColorText</item>
+        <item name="iconTint">@color/bhButtonDestructiveColorText</item>
+    </style>
+
+    <style name="Widget.BetterHealth.Button.Small.Destructive">
+        <item name="strokeColor">@color/bhButtonDestructiveColorText</item>
+        <item name="backgroundTint">@color/bhButtonDestructiveColorBackground</item>
+        <item name="rippleColor">@color/bhButtonDestructiveColorText</item>
+        <item name="android:textColor">@color/bhButtonDestructiveColorText</item>
+        <item name="iconTint">@color/bhButtonDestructiveColorText</item>
+    </style>
+
+</resources>

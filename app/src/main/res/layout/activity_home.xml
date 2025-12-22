@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.home.activities.HomeActivity">
+
+    <com.flipsidegroup.active10.utils.NonSwipeableViewPager
+        android:id="@+id/contentVP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLL" />
+
+    <LinearLayout
+        android:id="@+id/bottomLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationBNV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:itemBackground="@drawable/menu_item_underline"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextAppearanceActive="@style/BottomNavigationStyle"
+            app:itemTextAppearanceInactive="@style/BottomNavigationStyle"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_overlay_todays_walk" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/confettiIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="confetti.json"
+        app:lottie_loop="false"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

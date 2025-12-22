@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingStart="@dimen/BU_20"
+    android:paddingEnd="@dimen/BU_20"
+    android:scrollbars="vertical"
+    tools:context=".presentation.onboarding.fragments.TermsAndConditionsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/terms_conditions_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_ready_to_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.flipsidegroup.active10.utils.view.HeadingTextView
+            android:id="@+id/terms_conditions_title"
+            style="@style/HeaderExtraLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_20"
+            android:gravity="center"
+            android:text="@string/intro_terms_title"
+            app:layout_constraintTop_toBottomOf="@+id/terms_conditions_image" />
+
+        <TextView
+            android:id="@+id/terms_conditions_subtitle"
+            style="@style/Description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/BU_10"
+            android:gravity="center"
+            android:text="@string/intro_terms_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terms_conditions_title" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider_color"
+            app:layout_constraintBottom_toBottomOf="@id/terms_conditions_terms_container" />
+
+        <LinearLayout
+            android:id="@+id/terms_conditions_terms_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:importantForAccessibility="yes"
+            app:layout_constraintTop_toBottomOf="@id/terms_conditions_subtitle"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/terms_conditions_terms_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start|center_vertical"
+                android:minHeight="48dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/view_terms_and_conditions"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/text_size_16" />
+
+            <ImageView
+                android:id="@+id/terms_conditions_terms_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="12dp"
+                android:src="@drawable/ic_chevron_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terms_conditions_policy_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:importantForAccessibility="yes"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/terms_conditions_terms_container"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/terms_conditions_policy_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start|center_vertical"
+                android:minHeight="48dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/view_privacy_and_policy"
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/text_size_16" />
+
+            <ImageView
+                android:id="@+id/terms_conditions_policy_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="12dp"
+                android:src="@drawable/ic_chevron_right"
+                app:layout_constraintBottom_toBottomOf="@id/terms_conditions_policy_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/terms_conditions_policy_tv"
+                app:layout_constraintTop_toTopOf="@id/terms_conditions_policy_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/divider_color"
+            app:layout_constraintBottom_toBottomOf="@id/terms_conditions_policy_container" />
+
+        <com.phe.betterhealth.widgets.checkbox.BHCheckBox
+            android:id="@+id/terms_conditions_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_bold"
+            android:importantForAccessibility="yes"
+            android:text="@string/intro_terms_and_conditions_large"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/text_size_16"
+            android:drawableEnd="@drawable/checkbox_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_conditions_policy_container" />
+
+        <TextView
+            android:id="@+id/terms_conditions_need_too_agree_error"
+            style="@style/DescriptionError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start|center_vertical"
+            android:labelFor="@+id/dialog_terms_radio_button"
+            android:text="@string/intro_terms_and_conditions_error"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_conditions_checkbox"
+            app:layout_constraintVertical_bias="0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

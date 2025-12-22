@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "What is an Active 10?",
+    "text": "An Active 10 is simply 10 minutes of walking briskly, that is, walking quikcer than usual at a pace that gets your heart pumping. To achieve an Active 10 you just need to clock up 10 minutes of brisk walking in one day. Every minute of brisk walking you do counts and you don't have to walk 10 minutes all in one go. We'll record all your brisk minutes, even if they're spread out across the day."
+  },
+  {
+    "id": 2,
+    "title": "Why is walking briskly good for my health?",
+    "text": "There is evidence to show that a brisk 10 minute walk each day brings the following health benefits:\n\n• Increased physical fitness\n• Greater ease in performing everyday physical activities\n• Improved mood\n• Improved quality of life\n• Increased physical leanness and healthier weight\n\nA regular 10 minute brisk walk can make you feel better in so many ways. It can boost your energy, clear your head and lift your mood, as well as lowering your risk of serious illnesses like heart disease, type 2 diabetes, dementia and some cancers"
+  },
+  {
+    "id": 3,
+    "title": "How can I tell that I'm walking briskly?",
+    "text": "Brisk walking is simply walking quicker than usual, at a pace that gets your heart pumping faster and makes you feel slightly out of breath. A good rule of thumb is that you're walking briskly if you can still talk, but not sing!\n\nThe app records your brisk walking as you're doing it, so if you want to check you're achieving a brisk pace, take a look at the app when you're walking. If you're walking briskly the horseshoe will 'fill up' more for every minute you do."
+  },
+  {
+    "id": 4,
+    "title": "What does the 'walking man' stay still, even when I'm walking?",
+    "text": "On Today's Walk, the 'walking man' icon should start moving when your phone detects that you are walking briskly. Every device is different so depending on what type of phone you use, it may take up to twenty seconds for the 'walking man' to start moving. Don't worry, even when he's not moving, we're still tracking your walking and whether or not it's brisk."
+  },
+  {
+    "id": 5,
+    "title": "How is my location data used?",
+    "text": "The app sends location information to a database to be analysed, but this data is anonymised and cannot be linked to a particular individual. This information is used to assess the success of the app, to feed into future improvements and research into mobility and physical activity. Allowing the app to track your location is optional and can be changed anytime in the 'app settings' section of your phone."
+  },
+  {
+    "id": 6,
+    "title": "How accurate is the app?",
+    "text": "The app works using the motion sensors on your phone, so accuracy will vary depending on the age and model of your particular device. Accuracy can also be affected by how the phone is carried – for best results we recommend that you carry it in a pocket close to your body rather than in a handbag or rucksack."
+  }
+]

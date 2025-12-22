@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.phe.betterhealth.demo.views.BottomNavigationDemo"
+    tools:ignore="HardcodedText">
+
+    <com.phe.betterhealth.widgets.bottomnavigation.BHBottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_demo_menu" />
+
+    <com.phe.betterhealth.widgets.bottomnavigation.BHBottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:itemIconTint="@color/purple_200"
+        app:itemTextColor="@color/bhColorPrimary"
+        app:menu="@menu/bottom_navigation_demo_menu" />
+
+    <com.phe.betterhealth.widgets.bottomnavigation.BHBottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/bhInputBorderError"
+        app:menu="@menu/bottom_navigation_demo_menu" />
+
+</LinearLayout>
