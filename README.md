@@ -1,20 +1,17 @@
 
 # Project Setup
 
-## Configuration file
+## Demo Fork Setup
 
-This project requires a `config.properties` file for configuration. To set up your local environment, follow these steps:
+This fork includes a checked-in [config.properties](/Users/sam/repos/active10-android-public/app/config.properties) with placeholder values so it can be built as a standalone PKCE demo without access to the original private backend configuration.
 
-1. Create a new file named `config.properties` in the `app/` directory.
-2. Add the following properties to the file:
-### DEV Environment
-DEV_APP_ENDPOINT, DEV_APP_ENDPOINT_V2, DEV_PARAGON_ENDPOINT, DEV_NHS_LOGIN_URL, DEV_NHS_UPDATE_URL, DEV_PARAGON_HEADER, DEV_PARAGON_TOKEN
-### UAT Environment
-UAT_APP_ENDPOINT, UAT_APP_ENDPOINT_V2, UAT_PARAGON_ENDPOINT, UAT_NHS_LOGIN_URL, UAT_NHS_UPDATE_URL, UAT_PARAGON_HEADER, UAT_PARAGON_TOKEN
-### PROD Environment
-PROD_APP_ENDPOINT, PROD_APP_ENDPOINT_V2, PROD_PARAGON_ENDPOINT, PROD_NHS_LOGIN_URL, PROD_NHS_UPDATE_URL, PROD_PARAGON_HEADER, PROD_PARAGON_TOKEN
-### CERTIFICATE PINNING
-CERTIFICATE_1, CERTIFICATE_2, CERTIFICATE_3, CERTIFICATE_4, CERTIFICATE_5
+If you want the login flow to work end-to-end, update the `DEV_*` values in [config.properties](/Users/sam/repos/active10-android-public/app/config.properties) to point to your own demo backend.
+
+The installable app IDs in this fork are:
+
+- `dev.active10.pkce`
+- `dev.active10.pkce.uat`
+- `dev.active10.pkce.prod`
 
 ## Backend
 
@@ -22,10 +19,7 @@ We do not provide the backend code for this project.
 
 ## Google Services Configuration
 
-This project requires a `google-services.json` file for Firebase configuration. To set up your local environment, follow these steps:
-
-1. Obtain the `google-services.json` file from your Firebase project.
-2. Place the file in the appropriate directory: `app/google-services.json`.
+This fork removes the Firebase Gradle plugin requirement and does not need `app/google-services.json` to compile.
 
 ## Licensee Configuration
 

@@ -30,6 +30,22 @@ class LoginRepositoryImpl(
     private val removeNhsUserDataUseCase: RemoveNhsUserDataUseCase,
 ): LoginRepository {
 
+    override fun exchangeAuthorizationCode(code: String, codeVerifier: String): Completable {
+        return loginApi.exchangeAuthorizationCode(code = code, codeVerifier = codeVerifier)
+            .map { response ->
+                response.accessToken ?: response.token
+            }
+            .flatMapCompletable { token ->
+                if (token.isNullOrBlank()) {
+                    Completable.error(IllegalStateException("Token exchange succeeded but no token was returned"))
+                } else {
+                    Completable.fromAction {
+                        settingsUtils.updateSettings(SettingsDataHolder(nhsToken = token))
+                    }
+                }
+            }
+    }
+
     override fun postSubscribeEmailPref(): Completable {
         val token = settingsUtils.getSettingsHolder().nhsToken
         val body = EmailPreferenceRequest(EMAIL_PREFERENCES_NAME)

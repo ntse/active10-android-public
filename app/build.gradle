@@ -1,12 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.google.devtools.ksp'
 apply plugin: 'realm-android'
-apply plugin: 'com.google.firebase.crashlytics'
-apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'app.cash.licensee'
 
 Properties keyStoreProps = new Properties()
@@ -28,7 +25,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.flipsidegroup.active10"
+        applicationId "dev.active10.pkce"
         minSdkVersion 23
         targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -92,7 +89,7 @@ android {
             buildConfigField "String", "NHS_SETTINGS_URL", "\"${configProps.getProperty('UAT_NHS_SETTINGS_URL')}\""
             buildConfigField "String", "PARAGON_TOKEN", "\"${configProps.getProperty('UAT_PARAGON_TOKEN')}\""
             resValue "string", "app_name", "Active 10-UAT"
-            applicationId "com.flipsidegroup.active10.uat"
+            applicationId "dev.active10.pkce.uat"
         }
         prod {
             buildConfigField "String", "APP_ENDPOINT", "\"${configProps.getProperty('PROD_APP_ENDPOINT')}\""
@@ -103,7 +100,7 @@ android {
             buildConfigField "String", "NHS_SETTINGS_URL", "\"${configProps.getProperty('PROD_NHS_SETTINGS_URL')}\""
             buildConfigField "String", "PARAGON_TOKEN", "\"${configProps.getProperty('PROD_PARAGON_TOKEN')}\""
             resValue "string", "app_name", "Active 10"
-            applicationId "uk.ac.shef.oak.pheactiveten"
+            applicationId "dev.active10.pkce.prod"
         }
     }
 
@@ -173,12 +170,6 @@ dependencies {
 
     implementation "com.google.android.play:review:2.0.1"
     implementation "com.google.android.play:review-ktx:2.0.1"
-
-    implementation platform('com.google.firebase:firebase-bom:33.7.0')
-    implementation 'com.google.firebase:firebase-crashlytics-ktx'
-    implementation "com.google.firebase:firebase-messaging-ktx"
-    implementation "com.google.firebase:firebase-analytics-ktx"
-    implementation "com.google.firebase:firebase-perf-ktx"
 
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation "net.danlew:android.joda:2.12.5"

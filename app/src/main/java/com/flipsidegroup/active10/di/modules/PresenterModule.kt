@@ -399,13 +399,11 @@ class PresenterModule {
 
     @Provides
     internal fun provideNhsLoginWebViewPresenter(
-        settingsUtils: SettingsUtils,
         loginRepository: LoginRepository,
         loginNotificationRepository: LocalNotificationRepository,
         screenRepository: ScreenRepository,
     ): NhsLoginWebViewPresenter {
         return NhsLoginWebViewPresenter(
-            settingsUtils,
             loginRepository,
             loginNotificationRepository,
             screenRepository

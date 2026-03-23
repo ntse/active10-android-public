@@ -12,6 +12,8 @@ import java.util.Optional
 
 interface LoginRepository {
 
+    fun exchangeAuthorizationCode(code: String, codeVerifier: String): Completable
+
     fun getUserDetails(): Single<Optional<NhsUserDetailsResponse>>
 
     fun getActivitiesForDate(date: Long): Single<List<NhsActivityResponse>>

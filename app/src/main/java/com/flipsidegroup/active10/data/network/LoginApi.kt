@@ -9,11 +9,14 @@ import com.flipsidegroup.active10.data.models.api.WalkingPlanDTO
 import com.flipsidegroup.active10.data.models.requests.EmailPreferenceRequest
 import com.flipsidegroup.active10.data.models.requests.LatestActivityLevelRequest
 import com.flipsidegroup.active10.data.models.requests.LatestMotivationRequest
+import com.flipsidegroup.active10.data.models.response.NhsTokenExchangeResponse
 import com.flipsidegroup.active10.data.models.response.NhsUserDetailsResponse
 import io.reactivex.Completable
 import io.reactivex.Single
 import retrofit2.http.Body
 import retrofit2.http.DELETE
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
@@ -25,6 +28,14 @@ import javax.inject.Singleton
 @JvmSuppressWildcards
 @Singleton
 interface LoginApi {
+
+    @FormUrlEncoded
+    @POST("nhs_login/token")
+    fun exchangeAuthorizationCode(
+        @Field("grant_type") grantType: String = "authorization_code",
+        @Field("code") code: String,
+        @Field("code_verifier") codeVerifier: String,
+    ): Single<NhsTokenExchangeResponse>
 
     @GET("v1/users/")
     fun getUserDetails(@Header("Authorization") token: String): Single<NhsUserDetailsResponse>
