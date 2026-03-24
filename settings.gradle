@@ -1,1 +1,3 @@
-include ':app', ':BriskCounter'
+include ':app', ':BriskCounter', ':ui:lib'
+
+project(':ui:lib').projectDir = new File(rootDir, 'ui/lib')

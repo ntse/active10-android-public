@@ -35,8 +35,6 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
-    private val certificatesList: List<String> = loadCertificates()
-
     private fun loadCertificates(): List<String> {
         return listOf(
             BuildConfig.CERTIFICATE_1,
@@ -44,13 +42,31 @@ class NetworkModule {
             BuildConfig.CERTIFICATE_3,
             BuildConfig.CERTIFICATE_4,
             BuildConfig.CERTIFICATE_5
-        ).map { "sha256/$it" }
+        ).map { it.trim() }
+            .filter { it.isNotEmpty() && !it.equals("dummy", ignoreCase = true) }
     }
 
-    private val certificatePinner = CertificatePinner.Builder()
-        .add(BuildConfig.APP_ENDPOINT.removePrefix("https://").split("/").first(), *certificatesList.toTypedArray())
-        .add(BuildConfig.NHS_LOGIN_URL.removePrefix("https://").split("/").first(), *certificatesList.toTypedArray())
-        .build()
+    private fun hostFromUrl(url: String): String =
+        url.removePrefix("https://")
+            .removePrefix("http://")
+            .substringBefore("/")
+
+    private fun buildCertificatePinner(): CertificatePinner {
+        val pins = loadCertificates().map { "sha256/$it" }
+        if (pins.isEmpty()) {
+            Timber.w("Certificate pinning disabled: no valid pins configured.")
+            return CertificatePinner.DEFAULT
+        }
+
+        val builder = CertificatePinner.Builder()
+        val appHost = hostFromUrl(BuildConfig.APP_ENDPOINT)
+        val nhsHost = hostFromUrl(BuildConfig.NHS_LOGIN_URL)
+        if (appHost.isNotBlank()) builder.add(appHost, *pins.toTypedArray())
+        if (nhsHost.isNotBlank()) builder.add(nhsHost, *pins.toTypedArray())
+        return builder.build()
+    }
+
+    private val certificatePinner = buildCertificatePinner()
 
     @Provides
     @Singleton

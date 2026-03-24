@@ -23,6 +23,7 @@ class NhsLoginWebViewPresenter(
 ) : BasePresenter<NhsLoginWebViewContract.View>(), NhsLoginWebViewContract.Presenter {
 
     private var codeVerifier: String? = null
+    private var loginState: String? = null
 
     private val jsInterface = object {
         @Suppress("unused")
@@ -47,7 +48,24 @@ class NhsLoginWebViewPresenter(
                 ): Boolean {
                     val url = webResourceRequest.url
                     Timber.d("NhsLoginWebViewPresenter shouldOverrideUrlLoading url: $url")
-                    if (url.authority == LOGGED_IN) {
+                    if (url.scheme == REDIRECT_SCHEME && url.host == REDIRECT_HOST) {
+                        val code = url.getQueryParameter("code")
+                        val state = url.getQueryParameter("state")
+                        val currentCodeVerifier = codeVerifier
+                        val expectedState = loginState
+                        if (code.isNullOrBlank() || currentCodeVerifier.isNullOrBlank()) {
+                            Timber.w("Missing authorization code or code verifier")
+                            view?.loginFailure()
+                            return true
+                        }
+                        if (expectedState.isNullOrBlank() || state != expectedState) {
+                            Timber.w("Invalid state returned from authorization")
+                            view?.loginFailure()
+                            return true
+                        }
+                        exchangeAuthorizationCode(code, currentCodeVerifier)
+                        return true
+                    } else if (url.authority == LOGGED_IN) {
                         val code = url.getQueryParameter("code")
                         val currentCodeVerifier = codeVerifier
                         if (code.isNullOrBlank() || currentCodeVerifier.isNullOrBlank()) {
@@ -83,11 +101,16 @@ class NhsLoginWebViewPresenter(
                 }
             }
             codeVerifier = PkceUtils.generateCodeVerifier()
+            val state = PkceUtils.generateState()
+            loginState = state
             loadUrl(
                 PkceUtils.buildLoginUrl(
                     baseUrl = BuildConfig.NHS_LOGIN_URL,
                     path = LOGIN_PATH,
                     codeChallenge = PkceUtils.createCodeChallenge(codeVerifier.orEmpty()),
+                    redirectUri = REDIRECT_URI,
+                    clientId = CLIENT_ID,
+                    state = state
                 )
             )
         }
@@ -138,7 +161,11 @@ class NhsLoginWebViewPresenter(
     }
 
     companion object {
-        private const val LOGIN_PATH = "nhs_login/active10/app-internal-id"
+        private const val LOGIN_PATH = "authorize"
+        private const val CLIENT_ID = "active10_mobile"
+        private const val REDIRECT_URI = "active10dev://oauth_callback"
+        private const val REDIRECT_SCHEME = "active10dev"
+        private const val REDIRECT_HOST = "oauth_callback"
         const val LOGGED_IN = "nhs_user_logged_in"
         const val NO_CONSENT = "nhs_noconsent"
     }

@@ -21,11 +21,28 @@ object PkceUtils {
         return digest.digest(codeVerifier.toByteArray(Charsets.US_ASCII)).toBase64Url()
     }
 
-    fun buildLoginUrl(baseUrl: String, path: String, codeChallenge: String): String {
+    fun generateState(): String {
+        val randomBytes = ByteArray(32)
+        secureRandom.nextBytes(randomBytes)
+        return randomBytes.toBase64Url()
+    }
+
+    fun buildLoginUrl(
+        baseUrl: String,
+        path: String,
+        codeChallenge: String,
+        redirectUri: String,
+        clientId: String,
+        state: String
+    ): String {
         return Uri.parse(baseUrl).buildUpon()
             .appendEncodedPath(path)
+            .appendQueryParameter("response_type", "code")
+            .appendQueryParameter("client_id", clientId)
+            .appendQueryParameter("redirect_uri", redirectUri)
             .appendQueryParameter("code_challenge", codeChallenge)
             .appendQueryParameter("code_challenge_method", "S256")
+            .appendQueryParameter("state", state)
             .build()
             .toString()
     }

@@ -30,7 +30,7 @@ import javax.inject.Singleton
 interface LoginApi {
 
     @FormUrlEncoded
-    @POST("nhs_login/token")
+    @POST("token")
     fun exchangeAuthorizationCode(
         @Field("grant_type") grantType: String = "authorization_code",
         @Field("code") code: String,

@@ -1,0 +1,35 @@
+### Gradle / Android
+.gradle/
+**/build/
+**/.cxx/
+**/.externalNativeBuild/
+**/local.properties
+**/captures/
+**/.idea/
+**/*.iml
+.android/
+
+### SDK / JDK (local tooling for builds)
+.android-sdk/
+.jdk/
+
+### Kotlin / Java
+*.class
+*.log
+
+### Android Studio / IntelliJ
+.idea/
+out/
+
+### VS Code
+.vscode/
+
+### OS
+.DS_Store
+Thumbs.db
+
+### Keystores / secrets
+*.jks
+*.keystore
+**/keystore.properties
+**/debug.keystore

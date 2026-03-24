@@ -1,16 +1,15 @@
 package com.google.firebase.perf.util
 
-class Optional<T> private constructor(
-    private val value: T?,
-    val isAvailable: Boolean,
-) {
-    fun get(): T = value ?: throw NoSuchElementException("Optional value is not available")
+/**
+ * Minimal Optional replacement to avoid bringing in Firebase Perf just for Optional.
+ */
+class Optional<T> private constructor(private val value: T?) {
+    val isAvailable: Boolean
+        get() = value != null
+
+    fun get(): T = value ?: throw NoSuchElementException("No value present")
 
     companion object {
-        @JvmStatic
-        fun <T> of(value: T): Optional<T> = Optional(value, true)
-
-        @JvmStatic
-        fun <T> absent(): Optional<T> = Optional(null, false)
+        fun <T> fromNullable(value: T?): Optional<T> = Optional(value)
     }
 }
