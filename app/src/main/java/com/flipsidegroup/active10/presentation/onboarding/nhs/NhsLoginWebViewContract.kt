@@ -1,6 +1,5 @@
 package com.flipsidegroup.active10.presentation.onboarding.nhs
 
-import android.webkit.WebView
 import com.flipsidegroup.active10.presentation.common.view.BaseView
 import com.flipsidegroup.active10.presentation.common.view.LifecycleAwarePresenter
 
@@ -13,7 +12,7 @@ interface NhsLoginWebViewContract {
     }
 
     interface Presenter : LifecycleAwarePresenter<View> {
-        fun handleWebView(webView: WebView)
+        fun completeLogin(accessToken: String)
     }
 
 }

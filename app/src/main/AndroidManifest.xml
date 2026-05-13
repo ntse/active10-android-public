@@ -15,6 +15,13 @@
     <queries>
         <package android:name="com.phe.couchto5K" />
         <package android:name="com.gojauntly.app" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
     </queries>
 
     <application
@@ -164,6 +171,21 @@
         <activity
             android:name=".presentation.onboarding.nhs.NhsLoginWebViewActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="callback"
+                    android:scheme="active10" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".presentation.nhsuserdetails.webview.NhsUpdateWebViewActivity"
             android:screenOrientation="portrait" />

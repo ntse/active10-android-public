@@ -34,6 +34,9 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         versionCode 1176
         versionName "6.3.3-login"
+        manifestPlaceholders = [
+                appAuthRedirectScheme: 'active10'
+        ]
 
         // Common properties, same for all flavors
         buildConfigField 'String', 'CERTIFICATE_1', "\"${configProps.getProperty('CERTIFICATE_1')}\""
@@ -79,6 +82,7 @@ android {
             buildConfigField "String", "PARAGON_ENDPOINT", "\"${configProps.getProperty('DEV_PARAGON_ENDPOINT')}\""
             buildConfigField "String", "NHS_LOGIN_URL", "\"${configProps.getProperty('DEV_NHS_LOGIN_URL')}\""
             buildConfigField "String", "NHS_SETTINGS_URL", "\"${configProps.getProperty('DEV_NHS_SETTINGS_URL')}\""
+            buildConfigField "String", "OIDC_DISCOVERY_URL", "\"${configProps.getProperty('DEV_OIDC_DISCOVERY_URL'}\""
             buildConfigField "String", "PARAGON_HEADER", "\"${configProps.getProperty('DEV_PARAGON_HEADER')}\""
             buildConfigField "String", "PARAGON_TOKEN", "\"${configProps.getProperty('DEV_PARAGON_TOKEN')}\""
             resValue "string", "app_name", "Active 10-DEV"
@@ -90,6 +94,7 @@ android {
             buildConfigField "String", "PARAGON_HEADER", "\"${configProps.getProperty('UAT_PARAGON_HEADER')}\""
             buildConfigField "String", "NHS_LOGIN_URL", "\"${configProps.getProperty('UAT_NHS_LOGIN_URL')}\""
             buildConfigField "String", "NHS_SETTINGS_URL", "\"${configProps.getProperty('UAT_NHS_SETTINGS_URL')}\""
+            buildConfigField "String", "OIDC_DISCOVERY_URL", "\"${configProps.getProperty('UAT_OIDC_DISCOVERY_URL')}\""
             buildConfigField "String", "PARAGON_TOKEN", "\"${configProps.getProperty('UAT_PARAGON_TOKEN')}\""
             resValue "string", "app_name", "Active 10-UAT"
             applicationId "com.flipsidegroup.active10.uat"
@@ -101,6 +106,7 @@ android {
             buildConfigField "String", "PARAGON_HEADER", "\"${configProps.getProperty('PROD_PARAGON_HEADER')}\""
             buildConfigField "String", "NHS_LOGIN_URL", "\"${configProps.getProperty('PROD_NHS_LOGIN_URL')}\""
             buildConfigField "String", "NHS_SETTINGS_URL", "\"${configProps.getProperty('PROD_NHS_SETTINGS_URL')}\""
+            buildConfigField "String", "OIDC_DISCOVERY_URL", "\"${configProps.getProperty('PROD_OIDC_DISCOVERY_URL')}\""
             buildConfigField "String", "PARAGON_TOKEN", "\"${configProps.getProperty('PROD_PARAGON_TOKEN')}\""
             resValue "string", "app_name", "Active 10"
             applicationId "uk.ac.shef.oak.pheactiveten"
@@ -198,6 +204,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
     implementation "com.squareup.okhttp3:logging-interceptor:4.11.0"
+    implementation 'net.openid:appauth:0.11.1'
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
